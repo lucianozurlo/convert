@@ -36,6 +36,17 @@ body {
     background: #F9F9F9;
 }
 
+a {
+    color: #F9F9F9;
+    text-decoration: underline;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    opacity: .8;
+}
+
 section {
     height: calc(100vh - 65px);
     width: 100%;
@@ -63,6 +74,7 @@ h6 {
     font-family: 'Thunder', sans-serif;
     letter-spacing: .05rem !important;
     line-height: unset !important;
+    margin: 0;
 }
 
 /* MENU */
@@ -482,9 +494,485 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #services-details h1 {
+    position: absolute;
     margin: 0;
     font-size: 610px;
+    line-height: 100% !important;
+    text-transform: uppercase;
+    text-align: center;
+    background: url('../img/winning-bg.png') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-attachment: fixed;
+    transform: translateY(48px);
+}
+
+#services-details .items {
+    z-index: 11;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    width: 1400px;
+}
+
+#services-details .items>* {
+    text-align: left;
+    color: #f4f5f8e6;
+}
+
+#services-details h4 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 110% !important;
+    text-transform: uppercase;
+}
+
+#services-details h5 {
+    font-family: 'Martian Grotesk';
+    font-size: 18px;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    max-width: 200px;
+}
+
+#services-details ul {
+    margin-bottom: 16px;
+    text-align: left !important;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#services-details ul li {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 110% !important;
+    margin-bottom: 10px;
+}
+
+#services-details ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* PROJECTS */
+#projects {
+    background-color: #000;
+    min-height: 1670px;
+}
+
+#projects .content {
+    flex-direction: column;
+}
+
+#projects .content h1 {
+    margin: 0;
+    transform: translateX(-10%);
+    font-size: 400px;
     line-height: 80% !important;
     text-transform: uppercase;
+    color: #F4F5F8;
+    background: black;
+}
+
+#projects .content h1 span {
+    display: flex;
+    margin-left: 195px;
+}
+
+#projects .content p.desc {
+    position: absolute;
+    transform: translate(89%, -435%);
+    width: 564px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 210%;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#projects .content .content-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 160px;
+}
+
+/* Swipper */
+#projects swiper-container {
+    width: 100%;
+    height: 740px;
+}
+
+#projects swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    width: 1100px !important;
+}
+
+#projects swiper-slide .slide {
+    width: 100%;
+    height: 740px;
+}
+
+#projects swiper-slide .slide img {
+    display: block;
+    width: 100%;
+    height: 675px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#projects swiper-slide .slide .details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20px;
+    width: 1100px;
+    height: 50px;
+    text-align: left;
+}
+
+#projects swiper-slide .slide .details h4 {
+    height: 40px;
+    font-size: 50px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: #F4F5F8;
+    line-height: 100% !important;
+}
+
+#projects swiper-slide .slide .details p {
+    max-width: 763px;
+    height: 40px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    transform: translateY(2px);
+    color: #F4F5F8;
+}
+
+/* ABOUT */
+#about {
+    background-image: url(../img/pattern.gif);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-top: 200px;
+}
+
+#about .content {
+    width: 1290px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+#about .about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#about .about-content h1 {
+    margin: 0;
+    width: 570px;
+    font-size: 400px;
+    line-height: 80% !important;
+    text-transform: uppercase;
+    color: #111;
+}
+
+#about .about-content h1 span {
+    display: flex;
+}
+
+#about .about-content .text {
+    transform: translateY(-18px);
+}
+
+#about .about-content p {
+    width: 720px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #111111e6;
+    margin-bottom: 24px;
+}
+
+#about .about-content p a {
+    color: #111111e6;
+}
+
+#about .testimonials-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+    padding-bottom: 200px;
+}
+
+#about .testimonials-content p {
+    position: absolute;
+    width: 574px;
+    height: 136px;
+    left: 0px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 210%;
+    transform: translateY(60px);
+    color: #111;
+}
+
+#about .testimonials-content h1 {
+    margin: 0;
+    font-size: 400px;
+    line-height: 80% !important;
+    text-transform: uppercase;
+    text-align: right !important;
+    color: #111;
+}
+
+#about .testimonials-content h1 span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#about .testimonials-content swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+#about .testimonials-content swiper-slide {
+    width: 100%;
+    height: 300px;
+}
+
+#about .testimonials-content swiper-slide .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    position: absolute;
+    width: 561px;
+    left: 0px;
+    top: 0px;
+}
+
+#about .testimonials-content swiper-slide .testimonial .text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #111111e6;
+}
+
+#about .testimonials-content swiper-slide .testimonial .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+#about .testimonials-content swiper-slide .testimonial .name>* {
+    height: 32px;
+    font-family: 'Martian Grotesk';
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+    letter-spacing: 0 !important;
+}
+
+#about .testimonials-content swiper-slide .testimonial .name h6 {
+    height: 24px;
+    font-family: 'Martian Grotesk';
+    font-weight: 500;
+    font-size: 14px;
+    color: #111;
+}
+
+#about .testimonials-content .controls {
+    position: absolute;
+    right: 0;
+    z-index: 1111;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+#about .testimonials-content .nav-link {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#about .testimonials-content .nav-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#about .testimonials-content .nav-link.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* FOOTER */
+#contact {
+    background-image: url('../img/contact-bg.png');
+    display: flex;
+    justify-content: center;
+}
+
+#contact .content {
+    width: 1440px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 120px 0;
+
+}
+
+#contact .content h3 {
+    font-size: 100px;
+    line-height: 100% !important;
+    text-transform: uppercase;
+    color: #F4F5F8;
+}
+
+
+#contact .content .form {
+    width: 416px;
+}
+
+#contact .content .form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#contact .content .form form label {
+    width: 416px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: unset !important;
+    letter-spacing: 0 !important;
+    line-height: 20px;
+    color: #F4F5F8;
+}
+
+#contact .content .form form input,
+#contact .content .form form textarea {
+    width: 100%;
+    margin-bottom: 14px;
+    height: 40px;
+    color: #F4F5F8;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    border: 0.5px solid #F4F5F860;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#contact .content .form form textarea {
+    height: 88px;
+}
+
+#contact .content .form form button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 19px 18px;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    color: #F4F5F8;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid #F4F5F8;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+#contact .content .form form button:hover {
+    border: 1px solid #F4F5F8;
+    background-color: #F4F5F8;
+    color: #111;
+}
+
+#contact .content .info {
+    width: 470px;
+}
+
+#contact .content .info .info-content p:nth-child(1),
+#contact .content .info .info-content p:nth-child(3) {
+    margin-bottom: 37px;
+}
+
+#contact .content .info .info-content p:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+#contact .content .info .social {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: 22px;
+}
+
+#contact .content .info .social a img {
+    height: 22px;
+    border-radius: 0;
+}
+
+#contact .content .info .footer {
+    margin-top: 100px;
+}
+
+#contact .content .info .footer img {
+    width: 196px;
+    margin-bottom: 15px;
+}
+
+#contact .content .info .footer {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
     color: #F4F5F8;
 }

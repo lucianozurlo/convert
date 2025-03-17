@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Convert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css/config.css">
+    <link type="text/css" rel="stylesheet" href="css/libs.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="css/convert.css">
+
+    <link rel="icon" href="img/favicon.png" sizes="32x32">
+</head>
+
+<body>
+    <header id="convert-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
+        <div class="convert-header-inner">
+            <div class="convert-header-lp">
+                <a href="./" class="convert-logo">
+                    <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
+                </a>
+            </div>
+            <!-- Main Menu -->
+            <div class="convert-header-mp">
+                <nav class="convert-nav">
+                    <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
+                        <li>
+                            <a href="#services">services</a>
+                        </li>
+                        <li>
+                            <a href="#projects">projects</a>
+                        </li>
+                        <li>
+                            <a href="#about">about</a>
+                        </li>
+                        <li>
+                            <a href="#contacts">contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Mobile Header -->
+        <div class="convert-mobile-header-inner">
+            <a href="./" class="convert-logo">
+                <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
+            </a>
+            <a href="#" class="convert-mobile-menu-toggler">
+                <i class="convert-menu-toggler-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </i>
+            </a>
+        </div>
+    </header>
+
+    <main id="convert-main">
+        <div class="stg-container">
+
+
+
+
+            <div class="section" style="padding-top: 80vh;">
+                <h1 class="parallax-text">SERVICES</h1>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Escuchamos el scroll para crear el efecto de parallax en el fondo del texto
+        window.addEventListener("scroll", function () {
+            let scrollPos = window.scrollY;
+            const parallaxText = document.querySelector("h1.parallax-text");
+            // Ajustá la velocidad cambiando el factor 0.3
+            parallaxText.style.backgroundPosition = `center calc(50% + ${scrollPos * 0.3}px)`;
+        });
+    </script>
+</body>
+
+</html>
