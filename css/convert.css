@@ -109,6 +109,9 @@ nav.convert-nav ul.main-menu>li>a {
     align-items: center;
 }
 
+nav.convert-nav ul.main-menu>li>a {
+    text-decoration: none !important;
+}
 
 nav.convert-nav ul.main-menu {
     gap: 0;
@@ -160,36 +163,17 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #home .buttons a {
-    width: 50%;
+    position: absolute;
+    width: 100vw;
     height: 100%;
 }
 
-#home .buttons p {
-    position: absolute;
-    bottom: 90px;
-    font-size: 18px;
-    font-weight: 300;
-    color: #111
-}
-
-#home .buttons a:hover p {
-    color: #111
-}
-
-#home .buttons .button-hardware p {
-    left: 80px;
-}
-
-#home .buttons .button-design p {
-    right: 80px;
-}
-
 #home .button-hardware {
-    background-color: transparent;
+    clip-path: inset(0 50% 0 0);
 }
 
 #home .button-design {
-    background-color: transparent;
+    clip-path: inset(0 0 0 50%);
 }
 
 #home .logo-home {
@@ -200,12 +184,135 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     justify-content: center;
     align-items: center;
     pointer-events: none;
+    z-index: 11;
 }
 
 #home .logo-home img {
+    position: absolute;
     height: 151px;
     border-radius: 0;
 }
+
+#home .buttons p {
+    position: absolute;
+    bottom: 90px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #111;
+    margin-bottom: 0;
+    z-index: 11;
+}
+
+#home .buttons .button-hardware p {
+    left: 80px;
+}
+
+#home .buttons .button-design p {
+    right: 80px;
+}
+
+#home .buttons a,
+#home .buttons a>*,
+#home .buttons a>*>* {
+    transition: all .4s ease-in-out;
+}
+
+#home .buttons .element {
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#home .buttons .button-hardware .element {
+    left: 0;
+}
+
+#home .buttons .button-design .element {
+    left: 50%;
+}
+
+#home .buttons .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .buttons .item img {
+    width: 48%;
+    z-index: 9;
+    opacity: .35;
+    filter: grayscale(1) blur(10px);
+    transition: all .6s ease-in-out;
+}
+
+#home .buttons .button-hardware .item img {
+    transform: translate(-9%, 2%);
+}
+
+#home .buttons .button-design .item img {
+    transform: translate(0%, 4%);
+}
+
+#home .buttons .texture {
+    mix-blend-mode: screen;
+    opacity: 1;
+    background-image: url('../img/home-texture-light.png');
+    background-repeat: repeat;
+    background-size: unset;
+    z-index: 10;
+}
+
+#home .buttons .bg {
+    opacity: 0;
+    background-size: cover;
+    z-index: 7;
+}
+
+#home .buttons .button-hardware .bg {
+    background-image: url('../img/home1-bg.png');
+}
+
+#home .buttons .button-design .bg {
+    background-image: url('../img/home2-bg.png');
+}
+
+#home .buttons a:hover {
+    opacity: 1 !important;
+}
+
+#home .buttons a:hover .logo-ok {
+    opacity: 0;
+}
+
+#home .buttons a:hover p {
+    color: #fff;
+    transform: translateY(100%);
+}
+
+#home .buttons a:hover .item img {
+    width: 50%;
+    opacity: 1;
+    filter: grayscale(0) blur(0);
+}
+
+#home .buttons a:hover .texture {
+    opacity: 0;
+}
+
+#home .buttons a:hover .bg {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
 
 /* WELCOME */
 #welcome {
