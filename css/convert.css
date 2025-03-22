@@ -33,11 +33,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    background: #F9F9F9;
+    background: #F4F5F8;
 }
 
 a {
-    color: #F9F9F9;
+    color: #F4F5F8;
     text-decoration: underline;
     opacity: 1;
     transition: all .2s ease-in-out;
@@ -80,6 +80,11 @@ h6 {
     line-height: unset !important;
     margin: 0;
 }
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
 
 /* MENU */
 #convert-header {
@@ -307,14 +312,6 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
 /* WELCOME */
 #welcome {
     background-color: #111;
@@ -396,7 +393,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #solutions .details .item,
-#winning .content .content-row.details .item-content {
+#winning .details .item-content {
     color: #F4F5F8;
     padding-left: 20px;
     padding-right: 30px;
@@ -405,7 +402,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #solutions .details .item:hover,
-#winning .content .content-row.details .item-content:hover {
+#winning .details .item-content:hover {
     padding-right: 0;
     border-left: 30px solid;
 }
@@ -520,8 +517,6 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 #winning {
     height: auto;
     padding: 190px 0;
-    background-image: url('../img/winning-bg.png');
-    background-position: center;
     display: flex;
     justify-content: center;
 }
@@ -535,66 +530,87 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     gap: 120px;
 }
 
-#winning .content .content-row {
+#winning .content-row {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#winning .content .content-row h1 {
+#winning .content-row h1 {
     font-size: 180px;
     line-height: 88% !important;
     margin: 0;
     text-transform: uppercase;
     color: #f4f5f8e6;
-    filter: drop-shadow(0px 0px 5px #F4F5F880);
+    text-shadow: 0px 0px 5px #F4F5F880;
+    -webkit-text-stroke: 2px #f4f5f800;
+    text-stroke: 2px #f4f5f800;
     opacity: 0.9;
+    transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
-#winning .content .content-row h1:last-child {
+#winning.clients .content-row h1.winning-edge,
+#winning .content-row h1.clients-benefits {
     color: #f4f5f800;
     -webkit-text-stroke: 2px #f4f5f8e6;
     text-stroke: 2px #f4f5f8e6;
-    transition: all .3s ease-in-out;
-
 }
 
-#winning .content .content-row h1:last-child:hover {
+#winning.clients .content-row h1.clients-benefits {
+    color: #f4f5f8e6;
+    -webkit-text-stroke: 2px #f4f5f800;
+    text-stroke: 2px #f4f5f800;
+}
+
+#winning.clients .content-row h1.winning-edge:hover,
+#winning .content-row h1.clients-benefits:hover {
     color: #f4f5f866;
 }
 
-#winning .content .content-row.details {
-    padding: 0px;
-    gap: 90px;
+#winning .items-details {
+    height: 143px;
 }
 
-#winning .content .content-row.details .item {
+#winning .details {
+    padding: 0px;
+    gap: 90px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#winning .details.winning-edge,
+#winning.clients .details.clients-benefits {
+    opacity: 1;
+    z-index: 111;
+}
+
+#winning.clients .details.winning-edge,
+#winning .details.clients-benefits {
+    opacity: 0;
+}
+
+#winning .details .item {
     width: 420px;
 }
 
-#winning .content .content-row.details .item-content {
-    color: #F4F5F8;
-    padding-left: 20px;
-    border-left: 1px solid;
-    width: 100%;
-}
-
-#winning .content .content-row.details h3 {
+#winning .details h3 {
     font-family: 'Martian Grotesk';
     font-size: 20px;
     margin-bottom: 20px;
     color: #F4F5F8;
 }
 
-#winning .content .content-row.details p {
+#winning .details p {
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
 }
 
-#winning .content .content-row h2 {
+#winning .content-row h2 {
     font-size: 100px;
     line-height: 120% !important;
     text-align: center;
@@ -603,20 +619,99 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     opacity: 0.95;
 }
 
-#winning .content .content-row.logos {
+#winning .content-row.logos {
     max-height: 50px;
     align-items: center;
 }
+
+#winning .circle {
+    transform: rotate(0deg);
+    transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#winning.clients .circle {
+    transform: rotate(180deg);
+}
+
+#winning .bg-content {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#winning .bg,
+#winning .bg2 {
+    overflow: visible;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#winning .bg {
+    opacity: 1;
+}
+
+#winning.clients .bg {
+    opacity: 0;
+}
+
+#winning .bg::before,
+#winning .bg2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('../img/winning-bg.png') no-repeat center center;
+    background-size: cover;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#winning .bg2::before {
+    background: url('../img/winning-bg2.png') no-repeat center center;
+    background-size: cover;
+}
+
+#winning.clients .bg::before,
+#winning.clients .bg2::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+
+
+
+
 
 /* SERVICES DETAILS */
 #services-details {
     background-color: #111;
     padding: 0;
     height: 817px;
+    position: relative;
+    overflow: hidden;
 }
 
+#services-details .content {
+    position: relative;
+    height: 100%;
+}
+
+/* Título de fondo centrado */
 #services-details h1 {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -41%);
+    /* Centrado horizontal y verticalmente */
     margin: 0;
     font-size: 610px;
     line-height: 100% !important;
@@ -628,11 +723,41 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     background-clip: text;
     color: transparent;
     background-attachment: fixed;
-    transform: translateY(54px);
+    z-index: 1;
+    transition: all .8s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
+/* Pseudo-elemento para la segunda imagen con efecto fade */
+#services-details h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/winning-bg2.png') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    z-index: 1;
+    transition: all .8s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#services-details .content:hover h1,
+#services-details .content:hover h1::after {
+    background-position-y: 30%;
+}
+
+#services-details .content:hover h1::after {
+    opacity: 1;
+}
+
+/* Estilos para los items (elementos encima del título) */
 #services-details .items {
     z-index: 11;
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: 60px;
@@ -1188,5 +1313,88 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #contact .content .info .footer>* {
+    margin-bottom: 0;
+}
+
+
+/* MODAL */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111111cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 111;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+}
+
+.modal-content {
+    background: #F4F5F8;
+    width: 1100px;
+    max-width: 90%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+}
+
+.modal-header {
+    position: relative;
+    padding: 60px 50px 0 50px;
+    flex-shrink: 0;
+}
+
+.modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 50px 60px 50px;
+}
+
+.close {
+    position: absolute;
+    top: 56px;
+    right: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-content>*>* {
+    color: #111111ef !important;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.modal-content p span {
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 14px;
     margin-bottom: 0;
 }

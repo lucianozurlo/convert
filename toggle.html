@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle grupo</title>
+    <style>
+        .toggle {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            margin: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .clients-open {
+            background-color: #28a745;
+            /* Color de ejemplo */
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle">1</div>
+    <div class="toggle">2</div>
+    <div class="toggle">3</div>
+    <div class="toggle">4</div>
+
+    <script>
+        const toggleDivs = document.querySelectorAll('.toggle');
+        let isOpen = false; // Estado global: false = cerrado, true = abierto
+
+        toggleDivs.forEach(div => {
+            div.addEventListener('click', () => {
+                if (!isOpen) {
+                    // Si está cerrado, agregamos .clients-open a todos
+                    toggleDivs.forEach(d => d.classList.add('clients-open'));
+                    isOpen = true;
+                } else {
+                    // Si está abierto, quitamos .clients-open a todos
+                    toggleDivs.forEach(d => d.classList.remove('clients-open'));
+                    isOpen = false;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

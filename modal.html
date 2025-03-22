@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modal con Fade, Scroll Interno y Botón Fijo</title>
+    <style>
+        /* Reseteo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* Quita el scroll del fondo cuando el modal está abierto */
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Enlace que actúa como botón */
+        a.btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 2rem;
+        }
+
+        /*
+      Overlay del modal
+      - Oculto por defecto usando visibility y opacity a 0
+      - pointer-events: none evita clics cuando está oculto
+    */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            display: flex;
+            /* Para centrar con Flexbox */
+            align-items: center;
+            /* Centrado vertical */
+            justify-content: center;
+            /* Centrado horizontal */
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            /* Transiciones para el efecto fade */
+            transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+        }
+
+        /* Al añadir la clase "show", aparece el overlay */
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transition-delay: 0s;
+            /* sin demora */
+        }
+
+        /* Contenedor principal del modal */
+        .modal-content {
+            background: #fff;
+            width: 400px;
+            max-width: 90%;
+            border-radius: 4px;
+
+            /* Para distribuir “header” y “body” en columna */
+            display: flex;
+            flex-direction: column;
+
+            max-height: 80vh;
+            /* Límite total de altura */
+        }
+
+        /* Encabezado del modal: botón fijo */
+        .modal-header {
+            position: relative;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+            /* Mantén el header en la parte de arriba */
+            flex-shrink: 0;
+            /* No se encoge al hacer scroll en .modal-body */
+        }
+
+        /* Contenedor que hará scroll */
+        .modal-body {
+            /* Se expande para ocupar el espacio sobrante */
+            flex-grow: 1;
+
+            /* Scroll interno si hay mucho contenido */
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        /* Botón (X) para cerrar el modal */
+        .close {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+            /* Ajusta el alto de línea */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Enlace para abrir el modal -->
+    <a href="#" id="openModalLink" class="btn-link">Abrir Modal</a>
+
+    <!-- Overlay del modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <!-- Contenido del modal -->
+        <div class="modal-content">
+            <!-- Encabezado del modal, con la X fija arriba -->
+            <div class="modal-header">
+                <h2>Título del Modal</h2>
+                <span class="close" id="closeModalBtn">&times;</span>
+            </div>
+
+            <!-- Cuerpo del modal, con scroll interno -->
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum diam eu neque facilisis, a
+                    vulputate nulla tincidunt. Maecenas ullamcorper venenatis ex, sit amet bibendum nisl suscipit quis.
+                </p>
+                <p>
+                    Duis ut lectus consectetur, commodo nulla id, molestie leo. In hac habitasse platea dictumst. Donec
+                    convallis luctus mi, quis scelerisque odio hendrerit eget. Nam aliquet massa ac mauris pretium, quis
+                    semper quam semper.
+                </p>
+                <p>
+                    Mauris eu sodales lacus. Aenean a quam quis turpis ultrices dapibus. Nulla eu nisi vulputate,
+                    molestie ipsum vitae, pulvinar dui.
+                </p>
+                <p>
+                    Integer nec mattis metus. Etiam at commodo nulla, id efficitur dui. Nullam vehicula fringilla mauris
+                    ac egestas. Cras non varius nisl, faucibus pretium mauris.
+                </p>
+                <p>
+                    Curabitur suscipit urna non massa porttitor, nec accumsan tellus commodo. Praesent viverra, magna
+                    sed pellentesque interdum, tortor diam bibendum lorem, sit amet fermentum urna sem a neque.
+                </p>
+                <p>
+                    Mauris vitae sapien nec dui semper pellentesque. Aenean facilisis placerat velit, consectetur cursus
+                    magna hendrerit id. Aenean cursus at quam quis pulvinar.
+                </p>
+                <p>
+                    Fusce commodo ante a consequat viverra. Nulla quis mi vitae tortor ultricies bibendum non vitae
+                    lorem. Vivamus ultrices mi quis sapien commodo ultricies.
+                </p>
+                <p>
+                    Proin turpis dui, lacinia in auctor vitae, blandit at libero. Vivamus sed nunc sit amet erat
+                    tincidunt ullamcorper non vel lacus. Donec interdum sem sed vestibulum maximus.
+                </p>
+                <p>
+                    Donec iaculis sed metus vitae facilisis. Suspendisse fermentum congue orci, a accumsan lectus tempor
+                    quis. In consectetur fringilla arcu. Integer sit amet semper sem.
+                </p>
+                <p>
+                    Vivamus eleifend orci ut sollicitudin lacinia. Vivamus dolor nisi, consectetur id placerat non,
+                    lacinia id lorem. Nulla facilisi. Aenean at dui faucibus, mollis ante quis, pretium erat.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openModalLink = document.getElementById('openModalLink');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalOverlay = document.getElementById('modalOverlay');
+
+        function openModal(event) {
+            // Evita que el enlace recargue la página
+            event.preventDefault();
+            // Bloquea el scroll del fondo
+            document.body.classList.add('modal-open');
+            // Muestra el overlay (con fade)
+            modalOverlay.classList.add('show');
+        }
+
+        function closeModal() {
+            // Restaura el scroll del fondo
+            document.body.classList.remove('modal-open');
+            // Inicia la transición de ocultar
+            modalOverlay.classList.remove('show');
+        }
+
+        // Abre el modal al hacer clic en el enlace
+        openModalLink.addEventListener('click', openModal);
+
+        // Cierra el modal al hacer clic en la X
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Cierra el modal al hacer clic fuera del contenido
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

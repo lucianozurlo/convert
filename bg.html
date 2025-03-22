@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen de fondo rotada sin espacios</title>
+    <style>
+        .div {
+            height: 300px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .rotate-bg {
+            position: relative;
+            overflow: hidden;
+            /* Oculta lo que sobresalga */
+        }
+
+        .rotate-bg::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Aumentamos a 300% para asegurarnos de cubrir completamente el contenedor,
+         incluso después de rotarlo 45°. Ajusta a 400% si aún ves espacios en pantallas muy anchas. */
+            width: 400%;
+            height: 400%;
+            background: url('img/winning-bg.png') no-repeat center center;
+            background-size: cover;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">Div 1</div>
+    <div class="div rotate-bg">Div 2</div>
+    <div class="div">Div 3</div>
+</body>
+
+</html>
