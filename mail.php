@@ -1,16 +1,11 @@
 <?php
-/**
- * Author: Shadow Themes
- * Author URL: http://shadow-themes.com
- */
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     # Replace this email with your email address
-    $mail_to = "yourmail@example.com";
+    $mail_to = "lucianozurlo@gmail.com";
 
     # Message Subject. You can modify that string with your message.
-    $subject = "Your Website Response";
+    $subject = "Message from Convert";
 
 	# Collect Data
     $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
