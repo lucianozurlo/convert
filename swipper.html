@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+
+        /* Swipper */
+        swiper-container {
+            width: 100%;
+            height: 740px;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 100px;
+            width: 1100px !important;
+        }
+
+        swiper-slide .slide {
+            width: 100%;
+            height: 740px;
+        }
+
+        swiper-slide .slide img {
+            display: block;
+            width: 100%;
+            height: 675px;
+            object-fit: cover;
+        }
+
+        swiper-slide .slide .details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding-top: 20px;
+            width: 1100px;
+            height: 50px;
+            text-align: left;
+        }
+
+        swiper-slide .slide .details h4 {
+            height: 40px;
+            font-size: 50px;
+            margin-right: 20px;
+            text-transform: uppercase;
+            color: #F4F5F8;
+            line-height: 100% !important;
+        }
+
+        swiper-slide .slide .details p {
+            max-width: 763px;
+            height: 40px;
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            transform: translateY(2px);
+            color: #F4F5F8;
+        }
+
+
+
+
+
+        /* ABOUT */
+        #about {
+            background-image: url(../img/pattern.gif);
+            background-repeat: repeat;
+            display: flex;
+            justify-content: center;
+            height: auto;
+            padding-top: 200px;
+        }
+
+        #about .content {
+            width: 1290px;
+            display: flex;
+            flex-direction: column;
+            gap: 160px;
+        }
+
+        #about .about-content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #about .about-content h1 {
+            margin: 0;
+            width: 570px;
+            font-size: 400px;
+            line-height: 80% !important;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        #about .about-content h1 span {
+            display: flex;
+        }
+
+        #about .about-content .text {
+            transform: translateY(-18px);
+        }
+
+        #about .about-content p {
+            width: 720px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 130%;
+            color: #111111e6;
+            margin-bottom: 24px;
+        }
+
+        #about .about-content p a {
+            color: #111111e6;
+        }
+
+        #about .testimonials-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 125px;
+            padding-bottom: 140px;
+        }
+
+        #about .testimonials-content p {
+            position: absolute;
+            width: 574px;
+            left: 0px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 210%;
+            transform: translateY(60px);
+            color: #111;
+        }
+
+        #about .testimonials-content h1 {
+            margin: 0;
+            font-size: 400px;
+            line-height: 80% !important;
+            text-transform: uppercase;
+            text-align: right !important;
+            color: #111;
+        }
+
+        #about .testimonials-content h1 span {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #about .testimonials-content swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #about .testimonials-content swiper-slide {
+            width: 100%;
+            height: 300px;
+        }
+
+        #about .testimonials-content swiper-slide .testimonial {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 32px;
+
+            position: absolute;
+            width: 561px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #about .testimonials-content swiper-slide .testimonial .text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 130%;
+            color: #111111e6;
+        }
+
+        #about .testimonials-content swiper-slide .testimonial .name {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+        }
+
+        #about .testimonials-content swiper-slide .testimonial .name>* {
+            height: 32px;
+            font-family: 'Martian Grotesk';
+            font-weight: 700;
+            font-size: 18px;
+            color: #111;
+            letter-spacing: 0 !important;
+        }
+
+        #about .testimonials-content swiper-slide .testimonial .name h6 {
+            height: 24px;
+            font-family: 'Martian Grotesk';
+            font-weight: 500;
+            font-size: 14px;
+            color: #111;
+        }
+
+        #about .testimonials-content .controls {
+            position: absolute;
+            right: 0;
+            z-index: 1111;
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            opacity: 1;
+            transition: all .2s ease-in-out;
+        }
+
+        #about .testimonials-content .nav-link {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #about .testimonials-content .nav-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #about .testimonials-content .nav-link.disabled {
+            pointer-events: none;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body id="about">
+
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
+        navigation="true">
+        <swiper-slide>
+            <div class="testimonial">
+                <div class="text">“Convert Studios were involved in the development of our smart
+                    ring, contributing their extensive product experience. Their work helped us
+                    launch our MVP into market, which is a huge milestone for any hardware
+                    startup.“
+                </div>
+                <div class="name">
+                    <h5>Olivia Orchowski</h5>
+                    <h6>Founder & CEO / Kyri</h6>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="testimonial">
+                <div class="text">“Working with Convert Studios has been fantastic! Their
+                    creativity and innovation have helped bring our unique designs to life,
+                    while their technical proficiency ensures practical execution.<br />
+                    I appreciate their user-centric approach, which prioritises the end-user
+                    experience. Their problem-solving skills shine through, especially in
+                    challenging and restrictive situations, and their communication is always
+                    efficient and smooth. I highly recommend Convert Studios for any design
+                    project!“
+                </div>
+                <div class="name">
+                    <h5>Dylan Morrison</h5>
+                    <h6>Design Manager / Steadyrack</h6>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="testimonial">
+                <div class="text">“Convert Studios have been communicative throughout the design
+                    and development process, which in addition to their attention to detail and
+                    professional attitude resulted a very high-quality output.“
+                </div>
+                <div class="name">
+                    <h5>Ben Klapaukh</h5>
+                    <h6>Mechatronics Team Lead / Softwire Systems</h6>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="testimonial">
+                <div class="text">“Convert Studios have been communicative throughout the design
+                    and development process, which in addition to their attention to detail and
+                    professional attitude resulted a very high-quality output.“
+                </div>
+                <div class="name">
+                    <h5>Ben Klapaukh</h5>
+                    <h6>Mechatronics Team Lead / Softwire Systems</h6>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="testimonial">
+                <div class="text">“Convert Studios offered a full design-to-manufacture service,
+                    aimed at our target market with, a line of accessory products for the CBS
+                    range. As a designer he is discerning to use the latest technologies in CAD,
+                    3D printing, rendering and manufacturing making the world smaller...a huge
+                    advantage... when Australia is so geographically challenged.“
+                </div>
+                <div class="name">
+                    <h5>Damian Galbally</h5>
+                    <h6>Organiser Wiz / former ANZ Head of Sales (CBS)</h6>
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+</body>
+
+</html>

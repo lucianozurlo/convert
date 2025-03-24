@@ -19,18 +19,20 @@
     <link rel="icon" href="img/favicon.png" sizes="32x32">
 </head>
 
-<body>
+<body id="home">
     <header id="convert-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <div class="convert-header-inner">
             <div class="convert-header-lp">
-                <a href="./" class="convert-logo">
+                <a href="#" onclick="scrollToTop(event)" class="convert-logo">
                     <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
                 </a>
             </div>
-            <!-- Main Menu -->
             <div class="convert-header-mp">
                 <nav class="convert-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
+                        <li>
+                            <a href="#ourOffer">our offer</a>
+                        </li>
                         <li>
                             <a href="#services">services</a>
                         </li>
@@ -49,7 +51,7 @@
         </div>
         <!-- Mobile Header -->
         <div class="convert-mobile-header-inner">
-            <a href="./" class="convert-logo">
+            <a href="#" onclick="scrollToTop(event)" class="convert-logo">
                 <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
             </a>
             <a href="#" class="convert-mobile-menu-toggler">
@@ -62,39 +64,31 @@
         </div>
     </header>
 
-
     <main id="convert-main">
         <div class="stg-container">
 
-            <section id="home">
+            <section id="hero">
                 <div class="buttons">
                     <a href="#hardware design" class="button-hardware">
-                        <div class="logo-home">
-                            <img src="img/convert-logo-stroke.svg" alt="">
-                            <img src="img/convert-logo.svg" alt="" class="logo-ok">
-                        </div>
-                        <p>hardware design</p>
+                        <h1>Hardware<br />Design.</h1>
                         <div class="element texture"></div>
                         <div class="element item"><img src="img/home1-item.png" alt=""></div>
                         <div class="element bg"></div>
+                        <h1 class="stroke">Hardware<br />Design.</h1>
                     </a>
                     <a href="#digital design" class="button-design">
-                        <div class="logo-home">
-                            <img src="img/convert-logo-stroke.svg" alt="">
-                            <img src="img/convert-logo.svg" alt="" class="logo-ok">
-                        </div>
-                        <p>digital design</p>
+                        <h1>Software<br />Design.</h1>
                         <div class="element texture"></div>
                         <div class="element item"><img src="img/home2-item.png" alt=""></div>
                         <div class="element bg"></div>
+                        <h1 class="stroke">Software<br />Design.</h1>
                     </a>
-                </div>
-
-                <div class="convert-hero-block">
-                    <div class="stg-row">
-                        <div class="stg-col-12" data-unload="fade-left">
-
-                        </div>
+                    <div class="explore">
+                        <p>build, launch, and grow seamlessly with Convert®</p>
+                        <a href="#welcome">
+                            <p>explore</p>
+                            <img src="img/arrow-down.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -139,16 +133,16 @@
                 </div>
             </section>
 
-            <section id="services">
+            <section id="ourOffer">
                 <div class="content" data-appear="fade-left" data-unload="fade-right">
                     <div class="item">
                         <div class="text">
                             <h2><span>01.</span><span>Hardware<br />Development</span></h2>
                             <div class="details">
-                                <p><img src="img/services1-icon1.svg" alt="">Prototyping and design
+                                <p><img src="img/ourOffer1-icon1.svg" alt="">Prototyping and design
                                     formanufacturability.</p>
-                                <p><img src="img/services1-icon2.svg" alt="">Industrial Design and Engineering.</p>
-                                <p><img src="img/services1-icon3.svg" alt="">IoT and smart device development.</p>
+                                <p><img src="img/ourOffer1-icon2.svg" alt="">Industrial Design and Engineering.</p>
+                                <p><img src="img/ourOffer1-icon3.svg" alt="">IoT and smart device development.</p>
                             </div>
                         </div>
                         <div class="item-image"></div>
@@ -158,11 +152,11 @@
                         <div class="text">
                             <h2><span>02.</span><span>Software<br />Development</span></h2>
                             <div class="details">
-                                <p><img src="img/services2-icon1.svg" alt="">Custom software solutions<br />
+                                <p><img src="img/ourOffer2-icon1.svg" alt="">Custom software solutions<br />
                                     (mobile, web, app, and embedded systems).</p>
-                                <p><img src="img/services2-icon2.svg" alt="">User experience (UX) and user interface
+                                <p><img src="img/ourOffer2-icon2.svg" alt="">User experience (UX) and user interface
                                     (UI) design.</p>
-                                <p><img src="img/services2-icon3.svg" alt="">Cloud and API integrations.</p>
+                                <p><img src="img/ourOffer2-icon3.svg" alt="">Cloud and API integrations.</p>
                             </div>
                         </div>
                     </div>
@@ -170,11 +164,11 @@
                         <div class="text">
                             <h2><span>03.</span><span>Hybrid <br />Solutions</span></h2>
                             <div class="details">
-                                <p><img src="img/services3-icon1.svg" alt="">Development of connected devices and IoT
+                                <p><img src="img/ourOffer3-icon1.svg" alt="">Development of connected devices and IoT
                                     ecosystems.</p>
-                                <p><img src="img/services3-icon2.svg" alt="">Embedded systems that combine hardware and
+                                <p><img src="img/ourOffer3-icon2.svg" alt="">Embedded systems that combine hardware and
                                     software.</p>
-                                <p><img src="img/services3-icon3.svg" alt="">Data collection and analytics for hardware
+                                <p><img src="img/ourOffer3-icon3.svg" alt="">Data collection and analytics for hardware
                                     products.</p>
                             </div>
                         </div>
@@ -183,12 +177,12 @@
                 </div>
             </section>
 
-            <section id="winning" class="toggle">
+            <section id="winning">
                 <div class="content" data-appear="fade-left" data-unload="fade-right">
                     <div class="content-row">
-                        <h1 class="winning-edge">Winning<br>Edge</h1>
+                        <h1 class="winning-edge show">Winning<br>Edge</h1>
                         <img src="img/winning-img.svg" class="circle" alt="">
-                        <h1 class="clients-benefits">Clients<br>Benefits</h1>
+                        <h1 class="clients-benefits toggle">Clients<br>Benefits</h1>
                     </div>
                     <div class="content-row items-details">
                         <div class="details winning-edge">
@@ -264,66 +258,66 @@
                 </div>
             </section>
 
-            <section id="services-details">
+            <section id="services">
                 <div class="content" data-appear="fade-left" data-unload="fade-right">
-                    <div class="items">
-                        <div class="item">
-                            <h4>01.</h4>
-                            <h5>Hardware Design Services</h5>
-                            <ul>
-                                <li>Concept Development</li>
-                                <li>Electronic Circuit Design</li>
-                                <li>PCB Layout and Prototyping</li>
-                                <li>Embedded Systems Engineering</li>
-                                <li>Industrial design, engineering (mech & Elec)</li>
-                            </ul>
+                    <div class="hover-content">
+                        <div class="items">
+                            <div class="item">
+                                <h4>01.</h4>
+                                <h5>Hardware Design Services</h5>
+                                <ul>
+                                    <li>Concept Development</li>
+                                    <li>Electronic Circuit Design</li>
+                                    <li>PCB Layout and Prototyping</li>
+                                    <li>Embedded Systems Engineering</li>
+                                    <li>Industrial design, engineering (mech & Elec)</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4>02.</h4>
+                                <h5>Digital Design Services</h5>
+                                <ul>
+                                    <li>UI/UX Design for Digital Interfaces</li>
+                                    <li>App and Website design and development</li>
+                                    <li>Interactive Wireframes and Mockups</li>
+                                    <li>Design Systems and Branding Integration</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4>03.</h4>
+                                <h5>Manufacturing Support</h5>
+                                <ul>
+                                    <li>Prototyping and Testing Development</li>
+                                    <li>Design for Manufacturability (DFM) Analysis</li>
+                                    <li>Supplier Vetting and Sourcing</li>
+                                    <li>Quality Control and Inspection</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4>04.</h4>
+                                <h5>Full Product Development</h5>
+                                <ul>
+                                    <li>Integrated Hardware and Software Development</li>
+                                    <li>Feasibility and Technical Assessment</li>
+                                    <li>Pilot Production Runs</li>
+                                    <li>Go-to-Market Strategy Support</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4>05.</h4>
+                                <h5>Additional Services</h5>
+                                <ul>
+                                    <li>Packaging and Branding Design</li>
+                                    <li>Sustainability Solutions for Product Design</li>
+                                    <li>Intellectual Property Consultation</li>
+                                    <li>Training and Process Documentation</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="item">
-                            <h4>02.</h4>
-                            <h5>Digital Design Services</h5>
-                            <ul>
-                                <li>UI/UX Design for Digital Interfaces</li>
-                                <li>App and Website design and development</li>
-                                <li>Interactive Wireframes and Mockups</li>
-                                <li>Design Systems and Branding Integration</li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <h4>03.</h4>
-                            <h5>Manufacturing Support</h5>
-                            <ul>
-                                <li>Prototyping and Testing Development</li>
-                                <li>Design for Manufacturability (DFM) Analysis</li>
-                                <li>Supplier Vetting and Sourcing</li>
-                                <li>Quality Control and Inspection</li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <h4>04.</h4>
-                            <h5>Full Product Development</h5>
-                            <ul>
-                                <li>Integrated Hardware and Software Development</li>
-                                <li>Feasibility and Technical Assessment</li>
-                                <li>Pilot Production Runs</li>
-                                <li>Go-to-Market Strategy Support</li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <h4>05.</h4>
-                            <h5>Additional Services</h5>
-                            <ul>
-                                <li>Packaging and Branding Design</li>
-                                <li>Sustainability Solutions for Product Design</li>
-                                <li>Intellectual Property Consultation</li>
-                                <li>Training and Process Documentation</li>
-                            </ul>
-                        </div>
+                        <h1 data-text="SERVICES" data-appear="fade-up" data-unload="fade-up">SERVICES</h1>
                     </div>
-                    <!-- Se agrega data-text para que el pseudo-elemento use el mismo contenido -->
-                    <h1 data-text="SERVICES" data-appear="fade-up" data-unload="fade-up">SERVICES</h1>
                 </div>
             </section>
-
 
             <section id="projects">
                 <div class="content" data-appear="fade-left" data-unload="fade-right">
@@ -527,7 +521,9 @@
                             <p>At Convert® Studios , we combine innovation, strategy, and execution to create products
                                 and experiences that drive success.</p>
                             <p>Let's build something great together.</p>
-                            <p><a href="mailto:info@convertstudios.com.au">Contact Us</a></p>
+                            <p><a href="mailto:info@convertstudios.com.au">
+                                    Contact Us</strong>
+                                </a></p>
                         </div>
                     </div>
 
@@ -547,7 +543,7 @@
                                     <img src="img/bt-next.svg" alt="Siguiente">
                                 </a>
                             </div>
-                            <swiper-container class="testimonials">
+                            <swiper-container class="testimonials" effect="fade">
                                 <swiper-slide>
                                     <div class="testimonial">
                                         <div class="text">“Convert Studios were involved in the development of our smart
@@ -565,7 +561,7 @@
                                     <div class="testimonial">
                                         <div class="text">“Working with Convert Studios has been fantastic! Their
                                             creativity and innovation have helped bring our unique designs to life,
-                                            while their technical proficiency ensures practical execution.<br />
+                                            while their technical proficiency ensures practical execution.
                                             I appreciate their user-centric approach, which prioritises the end-user
                                             experience. Their problem-solving skills shine through, especially in
                                             challenging and restrictive situations, and their communication is always
@@ -575,18 +571,6 @@
                                         <div class="name">
                                             <h5>Dylan Morrison</h5>
                                             <h6>Design Manager / Steadyrack</h6>
-                                        </div>
-                                    </div>
-                                </swiper-slide>
-                                <swiper-slide>
-                                    <div class="testimonial">
-                                        <div class="text">“Convert Studios have been communicative throughout the design
-                                            and development process, which in addition to their attention to detail and
-                                            professional attitude resulted a very high-quality output.“
-                                        </div>
-                                        <div class="name">
-                                            <h5>Ben Klapaukh</h5>
-                                            <h6>Mechatronics Team Lead / Softwire Systems</h6>
                                         </div>
                                     </div>
                                 </swiper-slide>
@@ -670,7 +654,6 @@
                     </div>
                 </div>
             </section>
-
 
         </div>
 
@@ -900,6 +883,17 @@
     <script src="js/classes.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        function scrollToTop(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const swiperEl = document.querySelector('.testimonials');
@@ -962,26 +956,34 @@
         });
     </script>
 
-
     <script>
-        const toggleDivs = document.querySelectorAll('.toggle');
-        let isOpen = false;
+        // Referencias a los elementos
+        const winningEdge = document.querySelector('.winning-edge');
+        const clientsBenefits = document.querySelector('.clients-benefits');
+        const winningSection = document.querySelector('#winning');
 
-        toggleDivs.forEach(div => {
-            div.addEventListener('click', () => {
-                if (!isOpen) {
-                    toggleDivs.forEach(d => d.classList.add('clients'));
-                    isOpen = true;
-                } else {
-                    toggleDivs.forEach(d => d.classList.remove('clients'));
-                    isOpen = false;
-                }
-            });
+        // Cuando se haga clic en "Winning Edge"
+        winningEdge.addEventListener('click', () => {
+            // Solo actuamos si este h1 tiene la clase "toggle"
+            if (winningEdge.classList.contains('toggle')) {
+                // Quitar la clase "clients" del section y cambiar el toggle
+                winningSection.classList.remove('clients');
+                winningEdge.classList.remove('toggle');
+                clientsBenefits.classList.add('toggle');
+            }
+        });
+
+        // Cuando se haga clic en "Clients Benefits"
+        clientsBenefits.addEventListener('click', () => {
+            // Solo actuamos si este h1 tiene la clase "toggle"
+            if (clientsBenefits.classList.contains('toggle')) {
+                // Agregar la clase "clients" al section y cambiar el toggle
+                winningSection.classList.add('clients');
+                clientsBenefits.classList.remove('toggle');
+                winningEdge.classList.add('toggle');
+            }
         });
     </script>
-
-
-
 
 </body>
 
