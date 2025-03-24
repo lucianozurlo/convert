@@ -20,6 +20,11 @@
 </head>
 
 <body id="home">
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <header id="convert-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <div class="convert-header-inner">
             <div class="convert-header-lp">
@@ -614,7 +619,7 @@
                         <div class="form-content">
                             <p>Start your next hardware or digital project with expert design and development support.
                             </p>
-                            <form>
+                            <form action="mail.php">
                                 <label for="name">Name:</label>
                                 <input type="text" id="name" name="name">
 
@@ -873,9 +878,6 @@
         </div>
     </div>
 
-    <!-- Dynamic Backlight -->
-    <div class="convert-backlight"></div>
-
     <!-- JS Scripts -->
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/libs.js"></script>
@@ -884,6 +886,16 @@
     <script src="js/classes.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
 
     <script>
         function scrollToTop(e) {
@@ -958,27 +970,20 @@
     </script>
 
     <script>
-        // Referencias a los elementos
         const winningEdge = document.querySelector('.winning-edge');
         const clientsBenefits = document.querySelector('.clients-benefits');
         const winningSection = document.querySelector('#winning');
 
-        // Cuando se haga clic en "Winning Edge"
         winningEdge.addEventListener('click', () => {
-            // Solo actuamos si este h1 tiene la clase "toggle"
             if (winningEdge.classList.contains('toggle')) {
-                // Quitar la clase "clients" del section y cambiar el toggle
                 winningSection.classList.remove('clients');
                 winningEdge.classList.remove('toggle');
                 clientsBenefits.classList.add('toggle');
             }
         });
 
-        // Cuando se haga clic en "Clients Benefits"
         clientsBenefits.addEventListener('click', () => {
-            // Solo actuamos si este h1 tiene la clase "toggle"
             if (clientsBenefits.classList.contains('toggle')) {
-                // Agregar la clase "clients" al section y cambiar el toggle
                 winningSection.classList.add('clients');
                 clientsBenefits.classList.remove('toggle');
                 winningEdge.classList.add('toggle');
