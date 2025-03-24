@@ -339,11 +339,11 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 }
 
 #hero .buttons .button-hardware .bg {
-    background-image: url('../img/home1-bg.png');
+    background-image: url('../img/home1-bg.jpg');
 }
 
 #hero .buttons .button-design .bg {
-    background-image: url('../img/home2-bg.png');
+    background-image: url('../img/home2-bg.jpg');
 }
 
 #hero .buttons a:hover {
@@ -397,7 +397,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 
 /* INNOVATIVE SOLUTIONS */
 #solutions {
-    background-image: url('../img/solutions-bg.png');
+    background-image: url('../img/solutions-bg.jpg');
     background-position: center;
 }
 
@@ -730,14 +730,14 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('../img/winning-bg.png') no-repeat center center;
+    background: url('../img/winning-bg.jpg') no-repeat center center;
     background-size: cover;
     transform: translate(-50%, -50%) rotate(0deg);
     transition: all 1s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
 #winning .bg2::before {
-    background: url('../img/winning-bg2.png') no-repeat center center;
+    background: url('../img/winning-bg2.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -783,7 +783,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     line-height: 100% !important;
     text-transform: uppercase;
     text-align: center;
-    background: url('../img/winning-bg.png') no-repeat center;
+    background: url('../img/winning-bg.jpg') no-repeat center;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -802,7 +802,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/winning-bg2.png') no-repeat center;
+    background: url('../img/winning-bg2.jpg') no-repeat center;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
