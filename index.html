@@ -27,14 +27,14 @@
 
     <header id="convert-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <div class="convert-header-inner">
-            <div class="convert-header-lp">
+            <div class="convert-header-lp" data-appear="fade-down" data-unload="fade-up">
                 <a href="#" onclick="scrollToTop(event)" class="convert-logo">
                     <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
                 </a>
             </div>
             <div class="convert-header-mp">
                 <nav class="convert-nav">
-                    <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
+                    <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75" data-unload="fade-up">
                         <li>
                             <a href="#ourOffer">our offer</a>
                         </li>
@@ -74,21 +74,23 @@
 
             <section id="hero">
                 <div class="buttons">
-                    <a href="#hardware design" class="button-hardware">
+                    <a href="#hardware design" class="button-hardware" data-stagger-appear="fade-down"
+                        data-stagger-delay="75" data-unload="fade-up">
                         <h1>Hardware<br />Design.</h1>
                         <div class="element texture"></div>
                         <div class="element item"><img src="img/home1-item.png" alt=""></div>
                         <div class="element bg"></div>
                         <h1 class="stroke">Hardware<br />Design.</h1>
                     </a>
-                    <a href="#digital design" class="button-design">
+                    <a href="#digital design" class="button-design" data-stagger-appear="fade-down"
+                        data-stagger-delay="75" data-unload="fade-up">
                         <h1>Software<br />Design.</h1>
                         <div class="element texture"></div>
                         <div class="element item"><img src="img/home2-item.png" alt=""></div>
                         <div class="element bg"></div>
                         <h1 class="stroke">Software<br />Design.</h1>
                     </a>
-                    <div class="explore">
+                    <div class="explore" data-stagger-appear="fade-down" data-stagger-delay="75" data-unload="fade-up">
                         <p>build, launch, and grow seamlessly with Convert®</p>
                         <a href="#welcome">
                             <p>explore</p>
@@ -99,8 +101,8 @@
             </section>
 
             <section id="welcome">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
-                    <h1 data-appear="fade-up" data-unload="fade-up">WEL<span>COME.<span></h1>
+                <div class="content">
+                    <h1 data-appear="fade-left" data-unload="fade-up">WEL<span>COME.<span></h1>
                     <p data-appear="fade-right" data-unload="fade-right">At Convert®, our mission is rooted in
                         empowering individuals and organisations to turn
                         their ideas into successful realities. We collaborate with founders, CEOs, startups, and
@@ -110,14 +112,15 @@
             </section>
 
             <section id="solutions">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content">
 
-                    <div class="title">
+                    <div class="title" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                         <h2>Innovative</h2>
                         <h2>Solutions</h2>
                     </div>
 
-                    <div class="details">
+                    <div class="details" data-stagger-appear="fade-left" data-stagger-delay="75"
+                        data-unload="fade-right">
                         <div class="item">
                             <h3>Seamless Integration</h3>
                             <p>We specialize in seamlessly integrating hardware engineering with digital innovation,
@@ -139,7 +142,7 @@
             </section>
 
             <section id="ourOffer">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                     <div class="item">
                         <div class="text">
                             <h2><span>01.</span><span>Hardware<br />Development</span></h2>
@@ -183,7 +186,7 @@
             </section>
 
             <section id="winning">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                     <div class="content-row">
                         <h1 class="winning-edge show">Winning<br>Edge</h1>
                         <img src="img/winning-img.svg" class="circle" alt="">
@@ -264,9 +267,10 @@
             </section>
 
             <section id="services">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-appear="fade-up" data-unload="fade-down">
                     <div class="hover-content">
-                        <div class="items">
+                        <div class="items" data-stagger-appear="fade-left" data-stagger-delay="75"
+                            data-unload="fade-right">
                             <div class="item">
                                 <h4>01.</h4>
                                 <h5>Hardware Design Services</h5>
@@ -325,7 +329,7 @@
             </section>
 
             <section id="projects">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-stagger-appear="fade-left" data-unload="fade-right">
                     <div class="text">
                         <h1 data-appear="fade-up" data-unload="fade-up">PRO<span>JECTS.<span></h1>
                         <p class="desc" data-appear="fade-right" data-unload="fade-right">Explore our latest projects,
@@ -333,7 +337,8 @@
                             Studios brings ideas to life with precision and impact. See how we've helped businesses
                             build, scale, and succeed.</p>
                     </div>
-                    <div class="content-row">
+                    <div class="content-row" data-stagger-appear="fade-left" data-stagger-delay="75"
+                        data-unload="fade-right">
                         <swiper-container class="mySwiper" space-between="0" slides-per-view="1.8">
                             <swiper-slide>
                                 <div class="slide">
@@ -461,7 +466,7 @@
 
             <section id="industry">
                 <div class="content">
-                    <div class="text">
+                    <div class="text" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                         <p>At Convert® Studios, we create digital and hardware solutions for industries that demand
                             innovation. From Healthcare and Consumer Electronics to Automotive and Industrial IoT, we
                             enhance digital presence and streamline development. In Workplace and Energy, we drive
@@ -469,7 +474,8 @@
                             product solutions to help businesses scale.</p>
                         <h1>INDUSTRY<span>FOCUS.</span></h1>
                     </div>
-                    <div class="content-row">
+                    <div class="content-row" data-stagger-appear="fade-up" data-stagger-delay="75"
+                        data-unload="fade-down">
                         <div class="item">
                             <img src="img/industry-icon1.svg" alt="">
                             <h4>Healthcare</h4>
@@ -499,7 +505,7 @@
             </section>
 
             <section id="about">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
 
                     <div class="about-content">
                         <h1>AB<span>OUT.</span></h1>
@@ -532,7 +538,8 @@
                         </div>
                     </div>
 
-                    <div class="testimonials-content">
+                    <div class="testimonials-content" data-stagger-appear="fade-left" data-stagger-delay="75"
+                        data-unload="fade-right">
                         <div class="testimonials-top">
                             <p>See what our clients have to say about working with Convert® Studios. From hardware to
                                 digital design, we help businesses turn ideas into results. Read their experiences and
@@ -613,7 +620,7 @@
             </section>
 
             <section id="contact">
-                <div class="content" data-appear="fade-left" data-unload="fade-right">
+                <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                     <div class="form">
                         <h3>Let's Talk.</h3>
                         <div class="form-content">
@@ -635,7 +642,8 @@
                         </div>
                     </div>
                     <div class="info">
-                        <div class="info-content">
+                        <div class="info-content" data-stagger-appear="fade-left" data-stagger-delay="75"
+                            data-unload="fade-right">
                             <h3>Contact Us.</h3>
                             <p>Convert® Studios is a fully remote company with team members across Australia and
                                 Argentina, developing products and services globally. Contact us today!</p>
@@ -651,8 +659,7 @@
                         </div>
                         <div class="footer">
                             <img src="img/convert-logo-light.svg" alt="">
-                            <p>2025</p>
-                            <p>Convert Group Pty Ltd (Convert Studios)</p>
+                            <p>Copyright © 2025 Convert Studios. All rights reserved</p>
                             <p><a href="#" id="openModalLink">Privacy Policy</a></p>
 
 
