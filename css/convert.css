@@ -789,6 +789,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
     background-clip: text;
     color: transparent;
     background-attachment: fixed;
+    background-position-y: 0%;
     z-index: 1;
     transition: all .8s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
@@ -813,7 +814,7 @@ nav.convert-nav ul.main-menu>li>a:hover::after {
 
 #services .hover-content:hover h1,
 #services .hover-content:hover h1::after {
-    background-position-y: 30%;
+    background-position-y: 70%;
 }
 
 #services .hover-content:hover h1::after {
