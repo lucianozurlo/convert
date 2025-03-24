@@ -802,12 +802,13 @@ nav.convert-nav ul.main-menu>li>a:hover {
     text-transform: uppercase;
     text-align: center;
     background: url('../img/winning-bg.jpg') no-repeat center;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 200%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     background-attachment: fixed;
-    background-position-y: 0%;
+    background-position-y: 30%;
     z-index: 1;
     transition: all .8s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
