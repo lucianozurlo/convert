@@ -15,6 +15,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
     <link type="text/css" rel="stylesheet" href="css/convert.css">
+    <link type="text/css" rel="stylesheet" href="css/convert-responsive.css">
 
     <link rel="icon" href="img/favicon.png" sizes="32x32">
 </head>
@@ -36,28 +37,29 @@
                 <nav class="convert-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75" data-unload="fade-up">
                         <li>
-                            <a href="#ourOffer">our offer</a>
+                            <a href="#ourOffer" onclick="closeMobileNav()">our offer</a>
                         </li>
                         <li>
-                            <a href="#services">services</a>
+                            <a href="#services" onclick="closeMobileNav()">services</a>
                         </li>
                         <li>
-                            <a href="#projects">projects</a>
+                            <a href="#projects" onclick="closeMobileNav()">projects</a>
                         </li>
                         <li>
-                            <a href="#about">about</a>
+                            <a href="#about" onclick="closeMobileNav()">about</a>
                         </li>
                         <li>
-                            <a href="#contact">contact</a>
+                            <a href="#contact" onclick="closeMobileNav()">contact</a>
                         </li>
+                        <img src="img/convert-logo-light.svg" alt="convert" class="logoNavMenu mob">
                     </ul>
                 </nav>
             </div>
         </div>
-        <!-- Mobile Header -->
+
         <div class="convert-mobile-header-inner">
             <a href="#" onclick="scrollToTop(event)" class="convert-logo">
-                <img src="img/convert-logo.svg" alt="convert" width="123" height="16">
+                <img src="img/convert-logo-light.svg" alt="convert" width="85" height="11">
             </a>
             <a href="#" class="convert-mobile-menu-toggler">
                 <i class="convert-menu-toggler-icon">
@@ -67,13 +69,14 @@
                 </i>
             </a>
         </div>
+
     </header>
 
     <main id="convert-main">
         <div class="stg-container">
 
             <section id="hero">
-                <div class="buttons">
+                <div class="buttons mobNo">
                     <a href="#hardware design" class="button-hardware" data-stagger-appear="fade-down"
                         data-stagger-delay="75" data-unload="fade-up">
                         <h1>Hardware<br />Design.</h1>
@@ -97,6 +100,20 @@
                             <img src="img/arrow-down.svg" alt="">
                         </a>
                     </div>
+                </div>
+
+                <div class="mob" style="
+                background-image: url(img/home-mb.png);
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-size: cover;
+                background-position: center;
+                max-height: 100vh;">
                 </div>
             </section>
 
@@ -995,6 +1012,40 @@
             }
         });
     </script>
+
+    <script>
+        function closeMobileNav() {
+            document.body.classList.remove('show-menu');
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var internalLinks = document.querySelectorAll('.convert-mobile-menu a[href^="#"]');
+
+            internalLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    if (typeof closeMobileNav === 'function') {
+                        closeMobileNav();
+                    }
+
+                    var targetID = link.getAttribute('href');
+                    var targetElement = document.querySelector(targetID);
+
+                    if (targetElement) {
+                        var elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        window.scrollTo({
+                            top: elementPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
 
 </body>
 

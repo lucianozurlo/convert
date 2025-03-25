@@ -1,3 +1,7 @@
+.mob {
+    display: none;
+}
+
 /* THUNDER FONT */
 @font-face {
     font-family: 'Thunder';
@@ -44,7 +48,7 @@
 .loader {
     width: 40px;
     height: 40px;
-    border: 5px solid #111;
+    border: 3px solid #111;
     border-top: 5px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -132,7 +136,7 @@ h6 {
 
 /* MENU */
 #convert-header {
-    background: #F4F5F8dd !important;
+    background: #F4F5F8dd;
 }
 
 #convert-header::before,
