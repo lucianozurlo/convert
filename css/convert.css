@@ -348,7 +348,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
 #hero .buttons .texture {
     mix-blend-mode: screen;
     opacity: 1;
-    background-image: url('../img/home-texture-light.png');
+    background-image: url('../img/hero-texture-light.png');
     background-repeat: repeat;
     background-size: unset;
     z-index: 10;
@@ -361,11 +361,11 @@ nav.convert-nav ul.main-menu>li>a:hover {
 }
 
 #hero .buttons .button-hardware .bg {
-    background-image: url('../img/home1-bg.jpg');
+    background-image: url('../img/hero1-bg.jpg');
 }
 
 #hero .buttons .button-design .bg {
-    background-image: url('../img/home2-bg.jpg');
+    background-image: url('../img/hero2-bg.jpg');
 }
 
 #hero .buttons a:hover {
