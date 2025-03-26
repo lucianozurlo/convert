@@ -159,16 +159,15 @@
     #hero {
         background-image: url(../img/hero-bg-mob.jpg);
         width: 100%;
-        height: 100%;
+        height: 100vh;
         top: 0;
         left: 0;
         background-size: cover;
         background-position: center;
-        height: 100vh;
     }
 
     #hero .buttons {
-        height: 100%;
+        height: calc(100% - 70px);
     }
 
     #hero .buttons .texture,
