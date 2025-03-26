@@ -158,8 +158,6 @@
 
     #hero {
         background-image: url(../img/hero-bg-mob.jpg);
-        /* background-image: url(../img/home-mb.png); */
-
         width: 100%;
         height: 100%;
         top: 0;
@@ -209,13 +207,30 @@
         left: 8%;
     }
 
+    #hero .buttons a.button-software h1 {
+        top: 64%;
+        right: 29%;
+    }
+
     #hero .buttons .item {
         z-index: 11;
     }
 
     #hero .buttons .element {
-        width: 120%;
         height: unset;
+    }
+
+    #hero .buttons .button-software .element {
+        left: -33%;
+    }
+
+    #hero .buttons .button-hardware .item {
+        width: 120%;
+    }
+
+    #hero .buttons .button-software .item {
+        width: 115%;
+        top: 48%;
     }
 
     #hero .buttons .item img {
@@ -228,6 +243,12 @@
     #hero .buttons .button-hardware .item img {
         transform: translate(8%, 23%);
     }
+
+    #hero .buttons .button-software .item img {
+        transform: translate(8%, 23%);
+    }
+
+
 
     #hero .buttons .explore {
         height: 100%;

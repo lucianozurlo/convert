@@ -211,7 +211,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     clip-path: inset(0 50% 0 0);
 }
 
-#hero .button-design {
+#hero .button-software {
     clip-path: inset(0 0 0 50%);
 }
 
@@ -231,7 +231,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     align-items: center;
 }
 
-#hero .buttons a.button-design h1 {
+#hero .buttons a.button-software h1 {
     text-align: right;
     left: 50%;
     opacity: 1;
@@ -323,7 +323,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     left: 0;
 }
 
-#hero .buttons .button-design .element {
+#hero .buttons .button-software .element {
     left: 50%;
 }
 
@@ -364,7 +364,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     background-image: url('../img/hero1-bg.jpg');
 }
 
-#hero .buttons .button-design .bg {
+#hero .buttons .button-software .bg {
     background-image: url('../img/hero2-bg.jpg');
 }
 
