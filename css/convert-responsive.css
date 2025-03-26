@@ -141,7 +141,7 @@
         width: 133px;
     }
 
-
+    /* 
     #hero .mob {
         background-image: url(../img/home-mb.png);
         display: flex !important;
@@ -154,5 +154,110 @@
         background-size: cover;
         background-position: center;
         max-height: 100vh;
+    } */
+
+    #hero {
+        background-image: url(../img/hero-bg-mob.jpg);
+        background-image: url(../img/home-mb.png);
+
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    #hero .buttons {
+        height: 100%;
+    }
+
+    #hero .buttons .texture,
+    #hero .buttons .bg {
+        display: none !important;
+    }
+
+    #hero a {
+        clip-path: unset !important;
+        pointer-events: none;
+    }
+
+    #hero .buttons a,
+    #hero .buttons a>*,
+    #hero .buttons a>*>* {
+        transition: unset;
+    }
+
+    #hero .buttons a h1 {
+        color: #F4F5F8;
+        width: 100%;
+        transition: unset !important;
+        font-size: 93px;
+        height: unset;
+        width: unset;
+        z-index: 1;
+    }
+
+    #hero .buttons a h1.stroke {
+        opacity: 1;
+        z-index: 111;
+    }
+
+    #hero .buttons a.button-hardware h1 {
+        top: 20%;
+        left: 8%;
+    }
+
+    #hero .buttons .item {
+        z-index: 11;
+    }
+
+    #hero .buttons .element {
+        width: 120%;
+        height: unset;
+    }
+
+    #hero .buttons .item img {
+        filter: unset;
+        opacity: 1;
+        transition: unset;
+        z-index: 11;
+    }
+
+    #hero .buttons .button-hardware .item img {
+        transform: translate(8%, 23%);
+    }
+
+    #hero .buttons .explore {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    #hero .buttons .explore>p {
+        position: absolute;
+        margin-bottom: 0;
+        color: #F4F5F8;
+        width: 60%;
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    #hero .buttons .explore a {
+        position: absolute;
+        bottom: 4%;
+    }
+
+    #hero .buttons .explore a p {
+        font-size: 18px;
+        line-height: 120%;
+        color: #F4F5F8;
+    }
+
+    #hero .buttons .explore a img {
+        filter: brightness(100);
     }
 }
