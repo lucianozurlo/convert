@@ -175,9 +175,12 @@
         display: none !important;
     }
 
+    #hero>a {
+        pointer-events: none;
+    }
+
     #hero a {
         clip-path: unset !important;
-        pointer-events: none;
     }
 
     #hero .buttons a,
@@ -247,8 +250,6 @@
         transform: translate(8%, 23%);
     }
 
-
-
     #hero .buttons .explore {
         height: 100%;
         width: 100%;
@@ -279,5 +280,9 @@
 
     #hero .buttons .explore a img {
         filter: brightness(100);
+    }
+
+    #hero .buttons .explore a:hover img {
+        transform: unset;
     }
 }
