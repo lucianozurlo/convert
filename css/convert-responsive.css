@@ -162,7 +162,9 @@
 
     #hero .buttons {
         position: relative;
-        height: calc(100% - 70px);
+        width: 100%;
+        max-width: 100%;
+        height: calc(100% - 100px);
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -220,6 +222,7 @@
 
     #hero .buttons .explore {
         order: 4;
+        display: none !important;
     }
 
     #hero .buttons a img.svg {
