@@ -482,6 +482,8 @@
 
     #winning .content-row h1 {
         font-size: 4rem;
+        letter-spacing: .1rem !important;
+        -webkit-text-stroke: 1px #f4f5f800;
         transition: all .3s ease-in-out;
     }
 
@@ -505,16 +507,10 @@
         position: absolute;
     }
 
-
-
-
-
     #winning.clients .content-row h1.winning-edge,
     #winning .content-row h1.client-benefits {
         color: #f4f5f800;
         -webkit-text-stroke: 1px #f4f5f8;
-        letter-spacing: .1rem !important;
-        text-stroke: 1px #f4f5f8e6;
     }
 
 
