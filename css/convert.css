@@ -428,6 +428,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
 #solutions {
     background-image: url('../img/solutions-bg.jpg');
     background-position: center;
+    background-size: cover;
 }
 
 #solutions .title {
