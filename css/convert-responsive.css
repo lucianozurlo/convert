@@ -139,7 +139,7 @@
     .mob-logo {
         height: 72px;
         position: absolute;
-        display: flex;
+        display: flex !important;
         align-items: center;
         padding-left: 2rem;
         z-index: 11111;
@@ -220,7 +220,7 @@
     }
 
     #hero .buttons .hero-circle {
-        background-color: transparent !important;
+        background: transparent !important;
         z-index: 111;
         position: relative;
         bottom: unset;
