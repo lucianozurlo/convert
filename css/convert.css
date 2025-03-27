@@ -775,20 +775,17 @@ nav.convert-nav ul.main-menu>li>a:hover {
     align-items: center;
 }
 
-/* Título de fondo centrado */
 #services h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -41%);
-    /* Centrado horizontal y verticalmente */
     margin: 0;
     font-size: 610px;
     line-height: 100% !important;
     text-transform: uppercase;
     text-align: center;
     background: url('../img/winning-bg.jpg') no-repeat center;
-    /* background-size: cover; */
     background-size: 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -799,7 +796,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
     transition: all .8s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
-/* Pseudo-elemento para la segunda imagen con efecto fade */
 #services h1::after {
     content: attr(data-text);
     position: absolute;
@@ -826,7 +822,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
     opacity: 1;
 }
 
-/* Estilos para los items (elementos encima del título) */
 #services .items {
     z-index: 11;
     position: relative;
@@ -979,7 +974,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
     transform: translateY(2px);
     color: #F4F5F8;
 }
-
 
 /* INDUSTRY FOCUS */
 #industry {

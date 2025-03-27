@@ -36,6 +36,13 @@
         backdrop-filter: unset;
     }
 
+    #convert-header.is-sticky {
+        position: absolute;
+        height: 72px;
+        display: flex;
+        align-items: center;
+    }
+
     .convert-mobile-nav.is-frosted {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
@@ -59,7 +66,9 @@
         width: 48px;
         height: 48px;
         border-radius: 0;
-        background-color: transparent !important;
+        background-color: #11111123;
+        position: fixed;
+        right: .7rem;
     }
 
     .convert-mobile-menu-toggler::before {
@@ -333,7 +342,7 @@
 
     #welcome p {
         position: relative;
-        width: 334px;
+        width: 100%;
         font-size: .9rem;
         line-height: 180%;
         transform: unset;
@@ -344,7 +353,7 @@
     #welcome .content {
         flex-direction: column;
         height: unset;
-        padding: 7rem 0;
+        padding: 7rem 2rem;
     }
 
     /* INNOVATIVE SOLUTIONS */
@@ -581,24 +590,134 @@
         height: auto;
     }
 
+    #projects .content {
+        padding: 6rem 0 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #projects .content .text {
+        padding: 0 2rem;
+        width: 100%;
+    }
+
     #projects .content h1 {
-        font-size: 9rem;
+        font-size: 7.5rem;
+        transform: unset;
+    }
+
+    #projects .content h1 span {
+        margin-left: 5rem;
     }
 
     #projects .content p.desc {
         position: relative;
         transform: unset;
-        ;
+        width: 100%;
+        font-size: .9rem;
+        line-height: 180%;
+        height: unset;
+        margin-top: .5rem;
     }
 
+    #projects .content .content-row {
+        padding-top: 40px;
+    }
 
+    #projects swiper-slide {
+        width: 433px !important;
+        padding-left: 2rem;
+    }
 
+    #projects swiper-container,
+    #projects swiper-slide .slide {
+        height: 305px;
+    }
 
+    #projects swiper-slide .slide img {
+        width: 394px;
+        height: 266px;
+    }
 
+    #projects swiper-slide .slide .details p {
+        display: none;
+    }
 
+    #projects swiper-slide .slide .details {
+        padding-top: 14px;
+        width: 433px;
+        height: 20px;
+    }
 
+    #projects swiper-slide .slide .details h4 {
+        height: 30px;
+        font-size: 29px;
+        margin-right: 0;
+    }
 
+    /* INDUSTRY FOCUS */
+    #industry {
+        height: auto;
+        border-top: 1px solid #111;
+    }
 
+    #industry .content {
+        width: 100%;
+        max-width: 100%;
+        padding: 6rem 0;
+        height: auto;
+    }
 
+    #industry .content .text {
+        margin-top: 0;
+        padding: 0 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
+    #industry .content .text h1 {
+        order: 1;
+        font-size: 7.5rem;
+        transform: unset;
+    }
+
+    #industry .content .text p {
+        position: relative;
+        transform: unset;
+        width: 100%;
+        font-size: .9rem;
+        line-height: 180%;
+        height: unset;
+        margin-top: .5rem;
+        text-align: left !important;
+        order: 2
+    }
+
+    #industry .content .content-row {
+        padding: 3rem 2rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #industry .content .content-row .item {
+        width: calc(33% - 20px);
+        min-width: calc(33% - 20px);
+        align-items: center;
+        margin-bottom: 36px;
+        height: 60px;
+    }
+
+    #industry .content .content-row .item img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #industry .content .content-row .item h4 {
+        font-size: 12px;
+        text-align: center;
+        font-weight: 400;
+        height: 26px;
+    }
 }
