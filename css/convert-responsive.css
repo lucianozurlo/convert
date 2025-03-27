@@ -1,6 +1,10 @@
 /* CUSTOM
    ============= */
 @media only screen and (max-width: 960px) {
+    html {
+        scroll-padding-top: -10px;
+    }
+
     .mob {
         display: unset !important;
     }
@@ -176,9 +180,9 @@
         display: none !important;
     }
 
-    #hero>a {
+    /* #hero>a {
         pointer-events: none;
-    }
+    } */
 
     #hero .buttons a,
     #hero .buttons a>*,
@@ -189,7 +193,6 @@
     #hero .buttons a[class*='button-'] {
         position: relative;
         width: 100%;
-        pointer-events: none !important;
     }
 
     #hero .button-hardware {

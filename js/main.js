@@ -1488,7 +1488,7 @@ jQuery (function ($) {
               core.$dom.body.find (this.hash).height () >
               0.5 * window.innerHeight
             ) {
-              origin = 'header';
+              origin = 0;
             }
             core.scrollToElement (jQuery (this.hash), true, origin);
           }
