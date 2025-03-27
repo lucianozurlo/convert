@@ -247,19 +247,24 @@ nav.convert-nav ul.main-menu>li>a:hover {
     /* background: #F4F5F8; */
     background-size: contain;
     bottom: 0;
-    width: 428px;
-    height: 214px;
-    border-top-left-radius: 214px;
-    border-top-right-radius: 214px;
+    width: 330px;
+    height: 165px;
+    border-top-left-radius: 165px;
+    border-top-right-radius: 165px;
     display: flex;
     text-decoration: none !important;
     padding-top: 20px;
-    gap: 30px;
+    gap: 15px;
     z-index: 11;
     flex-direction: column;
     justify-content: center;
     transform: all .3s ease-in-out;
 }
+
+#hero .buttons .hero-circle:hover {
+    /* background-image: url('../img/texture.jpg') !important; */
+}
+
 
 #hero .buttons .hero-circle .hero-text {
     position: relative;
