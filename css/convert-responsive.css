@@ -187,6 +187,7 @@
     #hero .buttons a[class*='button-'] {
         position: relative;
         width: 100%;
+        pointer-events: none !important;
     }
 
     #hero .button-hardware {
