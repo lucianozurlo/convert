@@ -592,6 +592,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
 }
 
 #winning .content-row {
+    gap: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -686,6 +687,13 @@ nav.convert-nav ul.main-menu>li>a:hover {
 #winning .content-row.logos {
     max-height: 50px;
     align-items: center;
+}
+
+#winning .content-row.logos div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #winning .circle {
