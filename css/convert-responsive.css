@@ -200,7 +200,7 @@
     }
 
     #hero .button-hardware {
-        padding-top: 3%;
+        padding-top: 6% !important;
         height: 47% !important;
         order: 1;
     }
@@ -209,6 +209,20 @@
         padding-top: 3%;
         height: 38% !important;
         order: 3;
+    }
+
+    #hero .buttons .hero-circle {
+        background-color: transparent !important;
+        z-index: 111;
+        position: relative;
+        bottom: unset;
+        height: auto;
+        padding: 0 0 4%;
+        order: 2;
+    }
+
+    #hero .buttons .hero-circle .hero-text p {
+        color: #F4F5F8;
     }
 
     #hero .buttons .hero-text {
@@ -285,28 +299,9 @@
         bottom: 10%;
         display: flex;
         align-items: center;
-    }
-
-    #hero .buttons .explore>p {
-        position: relative;
-        margin-bottom: 0;
-        color: #F4F5F8;
-        width: 60%;
-        font-size: 1.15rem;
-        line-height: 120%;
-    }
-
-    #hero .buttons .explore {
-        position: relative;
         bottom: 0;
     }
 
-    #hero .buttons .explore p {
-        font-size: 1.15rem;
-        line-height: 120%;
-        color: #F4F5F8;
-        margin-bottom: 3%;
-    }
 
     #hero .buttons .explore img {
         filter: brightness(100);
@@ -315,6 +310,7 @@
     #hero .buttons .explore a:hover img {
         transform: unset;
     }
+
 
     #hero .buttons a:hover img.svg,
     #hero .buttons a:hover img.svg.stroke,
