@@ -137,11 +137,11 @@
         font-family: 'Space Grotesk';
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 20px;
+        font-size: 1.15rem;
+        line-height: 1.2rem;
         text-decoration: none;
         color: #F4F5F8;
-        margin-bottom: 48px;
+        margin-bottom: 3rem;
     }
 
     .logoNavMenu {
@@ -214,7 +214,7 @@
     #hero .buttons .hero-text p {
         color: #F4F5F8;
         width: 60%;
-        font-size: 18px;
+        font-size: 1.15rem;
         margin: 0 auto;
     }
 
@@ -283,7 +283,7 @@
         margin-bottom: 0;
         color: #F4F5F8;
         width: 60%;
-        font-size: 18px;
+        font-size: 1.15rem;
         line-height: 120%;
     }
 
@@ -293,7 +293,7 @@
     }
 
     #hero .buttons .explore p {
-        font-size: 18px;
+        font-size: 1.15rem;
         line-height: 120%;
         color: #F4F5F8;
         margin-bottom: 3%;
@@ -334,7 +334,7 @@
     #welcome p {
         position: relative;
         width: 334px;
-        font-size: 14px;
+        font-size: .9rem;
         line-height: 180%;
         transform: unset;
         height: unset;
@@ -425,13 +425,13 @@
     #ourOffer .content .item .text h2 {
         margin-bottom: 0;
         flex-direction: row;
-        font-size: 50px;
+        font-size: 3.15rem;
         line-height: 100%;
         gap: 24px
     }
 
     #ourOffer .content .item .text h2 span:first-child {
-        font-size: 120px;
+        font-size: 7.25rem;
         line-height: 100%;
         margin-bottom: 0;
     }
@@ -442,7 +442,7 @@
     }
 
     #ourOffer .content .item .text .details p {
-        font-size: 14px;
+        font-size: .9rem;
     }
 
 
@@ -469,6 +469,11 @@
         padding: 2rem;
     }
 
+    #winning .content-row {
+        justify-content: center;
+        gap: 20px;
+    }
+
     #winning .content-row.items-details {
         flex-direction: column;
         height: auto;
@@ -477,6 +482,7 @@
 
     #winning .content-row h1 {
         font-size: 4rem;
+        transition: all .3s ease-in-out;
     }
 
     #winning .content-row h1:first-child {
@@ -498,6 +504,22 @@
     #winning.clients .details.client-benefits {
         position: absolute;
     }
+
+
+
+
+
+    #winning.clients .content-row h1.winning-edge,
+    #winning .content-row h1.client-benefits {
+        color: #f4f5f800;
+        -webkit-text-stroke: 1px #f4f5f8;
+        letter-spacing: .1rem !important;
+        text-stroke: 1px #f4f5f8e6;
+    }
+
+
+
+
 
     #winning .details .item {
         width: 100%;
@@ -530,7 +552,7 @@
     }
 
     #winning .content-row h2 {
-        font-size: 39px;
+        font-size: 2.45rem;
     }
 
     #winning .content-row.logos {
