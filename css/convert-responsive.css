@@ -10,7 +10,16 @@
     }
 
     section {
-        height: 100vh;
+        height: 100%;
+    }
+
+    section .content {
+        padding: 2rem;
+    }
+
+    section>* {
+        width: 97.7%;
+        max-width: 97.7%;
     }
 
     main#convert-main {
@@ -141,21 +150,6 @@
         width: 133px;
     }
 
-    /* 
-    #hero .mob {
-        background-image: url(../img/home-mb.png);
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-size: cover;
-        background-position: center;
-        max-height: 100vh;
-    } */
-
     #hero {
         background-image: url(../img/hero-bg-mob.jpg);
         width: 100%;
@@ -163,11 +157,16 @@
         top: 0;
         left: 0;
         background-size: cover;
-        /* background-position: center; */
+        /* background-position: 50% -40px; */
     }
 
     #hero .buttons {
+        position: relative;
         height: calc(100% - 70px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     #hero .buttons .texture,
@@ -179,39 +178,58 @@
         pointer-events: none;
     }
 
-    #hero a {
-        clip-path: unset !important;
-    }
-
     #hero .buttons a,
     #hero .buttons a>*,
     #hero .buttons a>*>* {
         transition: unset;
     }
 
-    #hero .buttons a h1 {
-        color: #F4F5F8;
+    #hero .buttons a[class*='button-'] {
+        position: relative;
         width: 100%;
-        transition: unset !important;
-        font-size: 93px;
-        height: unset;
-        width: unset;
+    }
+
+    #hero .button-hardware {
+        padding-top: 3%;
+        height: 47% !important;
+        order: 1;
+    }
+
+    #hero .button-software {
+        padding-top: 3%;
+        height: 38% !important;
+        order: 3;
+    }
+
+    #hero .buttons .hero-text {
+        position: relative;
+        order: 2;
+        width: 100%;
+        height: auto;
+        display: block;
+        bottom: unset;
+    }
+
+    #hero .buttons .hero-text p {
+        color: #F4F5F8;
+        width: 60%;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    #hero .buttons .explore {
+        order: 4;
+    }
+
+    #hero .buttons a img.svg {
+        padding: 0 8%;
+        width: 86%;
         z-index: 1;
     }
 
-    #hero .buttons a h1.stroke {
+    #hero .buttons a img.svg.stroke {
         opacity: 1;
         z-index: 111;
-    }
-
-    #hero .buttons a.button-hardware h1 {
-        top: 20%;
-        left: 8%;
-    }
-
-    #hero .buttons a.button-software h1 {
-        top: 64%;
-        right: 29%;
     }
 
     #hero .buttons .item {
@@ -232,7 +250,7 @@
 
     #hero .buttons .button-software .item {
         width: 115%;
-        top: 48%;
+        top: -11%;
     }
 
     #hero .buttons .item img {
@@ -243,7 +261,7 @@
     }
 
     #hero .buttons .button-hardware .item img {
-        transform: translate(8%, 23%);
+        transform: translateX(8%);
     }
 
     #hero .buttons .button-software .item img {
@@ -251,15 +269,15 @@
     }
 
     #hero .buttons .explore {
-        height: 100%;
+        position: relative;
         width: 100%;
-        top: 0;
+        bottom: 10%;
         display: flex;
         align-items: center;
     }
 
     #hero .buttons .explore>p {
-        position: absolute;
+        position: relative;
         margin-bottom: 0;
         color: #F4F5F8;
         width: 60%;
@@ -267,22 +285,108 @@
         line-height: 120%;
     }
 
-    #hero .buttons .explore a {
-        position: absolute;
-        bottom: 4%;
+    #hero .buttons .explore {
+        position: relative;
+        bottom: 0;
     }
 
-    #hero .buttons .explore a p {
+    #hero .buttons .explore p {
         font-size: 18px;
         line-height: 120%;
         color: #F4F5F8;
+        margin-bottom: 3%;
     }
 
-    #hero .buttons .explore a img {
+    #hero .buttons .explore img {
         filter: brightness(100);
     }
 
     #hero .buttons .explore a:hover img {
         transform: unset;
     }
+
+
+    /* WELCOME */
+    #welcome h1 {
+        font-size: 7.25rem;
+        display: contents;
+        margin: 0;
+    }
+
+    #welcome h1 span {
+        display: contents;
+        margin: 0;
+    }
+
+    #welcome p {
+        position: relative;
+        width: 334px;
+        font-size: 14px;
+        line-height: 180%;
+        transform: unset;
+        height: unset;
+        margin-top: .5rem;
+    }
+
+    #welcome .content {
+        flex-direction: column;
+        height: unset;
+        padding: 7rem 0;
+    }
+
+    /* INNOVATIVE SOLUTIONS */
+    #solutions .content {
+        flex-direction: column;
+    }
+
+    #solutions .title {
+        position: relative;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: unset;
+        left: unset;
+        gap: unset;
+        line-height: 1;
+    }
+
+    #solutions .title h2 {
+        font-size: 4rem;
+        height: 4rem !important;
+    }
+
+    #solutions .details {
+        position: relative;
+        align-items: center;
+        left: unset;
+        width: unset;
+        margin-top: 1.2rem;
+        gap: 1.5rem;
+    }
+
+    #solutions .details .item,
+    #winning .details .item-content {
+        pointer-events: none;
+        padding-left: 0;
+        padding-right: 0;
+        border-left: 0;
+        text-align: center;
+    }
+
+    #solutions .details h3 {
+        font-size: 1rem;
+        letter-spacing: normal !important;
+        margin-bottom: .5rem;
+    }
+
+    #solutions .details p {
+        font-size: 0.95rem;
+    }
+
+    #solutions .details .slash {
+        height: 2px;
+        width: 40px;
+        background-color: #F4F5F8;
+    }
+
 }

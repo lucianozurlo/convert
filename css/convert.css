@@ -1,5 +1,5 @@
 .mob {
-    display: none;
+    display: none !important;
 }
 
 /* THUNDER FONT */
@@ -200,58 +200,67 @@ nav.convert-nav ul.main-menu>li>a:hover {
     flex-direction: row;
 }
 
-#hero .buttons>a {
+#hero .buttons a[class*='button-'] {
     position: absolute;
-    width: 100vw;
+    width: 50%;
     height: 100%;
     cursor: default !important;
 }
 
-#hero .button-hardware {
-    clip-path: inset(0 50% 0 0);
-}
-
 #hero .button-software {
-    clip-path: inset(0 0 0 50%);
+    right: 0;
 }
 
-#hero .buttons a h1 {
-    font-family: 'Thunder', sans-serif;
-    font-weight: 800;
-    font-size: 250px;
-    line-height: 80% !important;
-    text-transform: uppercase;
-    color: #111111e6;
+#hero .buttons a img.svg {
     position: absolute;
-    z-index: 11;
     height: 100%;
-    width: 50%;
+    width: 100%;
+    padding: 0 10% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 11;
 }
 
-#hero .buttons a.button-software h1 {
-    text-align: right;
-    left: 50%;
+#hero .buttons a.button-software img.svg {
+    right: 0;
     opacity: 1;
     transition: all .6s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
-#hero .buttons a:hover h1 {
+#hero .buttons a:hover img.svg {
     opacity: 0;
 }
 
-#hero .buttons a h1.stroke {
+#hero .buttons a img.svg.stroke {
     opacity: 0;
     z-index: 8;
-    color: transparent;
-    -webkit-text-stroke: 1px #f4f5f8e6;
-    text-stroke: 1px #f4f5f8e6;
 }
 
-#hero .buttons a:hover h1.stroke {
+#hero .buttons a:hover img.svg.stroke {
     opacity: 1;
+}
+
+#hero .buttons .hero-text {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 180px;
+    z-index: 11111;
+    margin-bottom: 0;
+    pointer-events: none;
+    transition: all .6s cubic-bezier(0.4, -0.6, 0.3, 1.6)
+}
+
+#hero .buttons .hero-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #111;
+    text-align: center;
 }
 
 #hero .buttons .explore {
@@ -264,43 +273,23 @@ nav.convert-nav ul.main-menu>li>a:hover {
     left: 0;
     bottom: 100px;
     z-index: 11111;
-}
-
-#hero .buttons .explore>p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #111;
-    margin-bottom: 0;
-    text-align: center;
-    pointer-events: none;
-}
-
-#hero .buttons .explore>p {
-    margin-bottom: 45px;
-}
-
-#hero .buttons .explore a {
     text-decoration: none;
-    width: fit-content;
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    transition: all .6s cubic-bezier(0.4, -0.6, 0.3, 1.6)
 }
 
-#hero .buttons .explore a p {
+#hero .buttons .explore p {
     margin: 0 auto 7px;
     text-align: center;
     color: #111;
 }
 
-#hero .buttons .explore a img {
+#hero .buttons .explore img {
     width: 13px;
 }
 
-#hero .buttons .explore a:hover img {
+#hero .buttons .explore:hover img {
     transform: translateY(110%);
 }
 
@@ -312,7 +301,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
 
 #hero .buttons .element {
     position: absolute;
-    width: 50vw;
+    width: 100%;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -324,7 +313,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
 }
 
 #hero .buttons .button-software .element {
-    left: 50%;
+    right: 0;
 }
 
 #hero .buttons .item {
