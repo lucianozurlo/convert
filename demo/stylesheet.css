@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Thunder';
+    src: url('Thunder-ExtraBoldLC.eot');
+    src: url('Thunder-ExtraBoldLC.eot?#iefix') format('embedded-opentype'),
+        url('Thunder-ExtraBoldLC.woff2') format('woff2'),
+        url('Thunder-ExtraBoldLC.woff') format('woff'),
+        url('Thunder-ExtraBoldLC.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
