@@ -261,19 +261,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
     transform: all .3s ease-in-out;
 }
 
-#hero .buttons .hero-circle:hover {
-    /* background-image: url('../img/texture.jpg') !important; */
-}
-
-#hero .buttons .hero-circle.top {
-    border-bottom-left-radius: 214px;
-    border-bottom-right-radius: 214px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    bottom: unset;
-    top: 0;
-}
-
 #hero .buttons .hero-circle .hero-text {
     position: relative;
     width: 100%;
