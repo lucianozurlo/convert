@@ -841,5 +841,17 @@
         width: 140px;
     }
 
+    .modal-header {
+        position: relative;
+        padding: 40px 30px 0 30px;
+    }
 
+    .modal-body {
+        padding: 0 30px 40px 30px;
+    }
+
+    .close {
+        top: 20px;
+        right: 20px;
+    }
 }
