@@ -243,10 +243,12 @@ nav.convert-nav ul.main-menu>li>a:hover {
 
 #hero .buttons .hero-circle {
     position: absolute;
+    background-image: url('../img/texture.jpg');
+    /* background: #F4F5F8; */
+    background-size: contain;
     bottom: 0;
     width: 428px;
     height: 214px;
-    background-color: #F4F5F8;
     border-top-left-radius: 214px;
     border-top-right-radius: 214px;
     display: flex;
@@ -256,6 +258,11 @@ nav.convert-nav ul.main-menu>li>a:hover {
     z-index: 11;
     flex-direction: column;
     justify-content: center;
+    transform: all .3s ease-in-out;
+}
+
+#hero .buttons .hero-circle:hover {
+    /* background-image: url('../img/texture.jpg') !important; */
 }
 
 #hero .buttons .hero-circle.top {

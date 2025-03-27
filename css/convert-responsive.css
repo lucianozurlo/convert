@@ -221,7 +221,6 @@
 
     #hero .buttons .hero-circle {
         background-color: transparent !important;
-        background-image: url('../img/texture.png');
         z-index: 111;
         position: relative;
         bottom: unset;
