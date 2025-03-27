@@ -1,10 +1,6 @@
 /* CUSTOM
    ============= */
 @media only screen and (max-width: 960px) {
-    html {
-        scroll-padding-top: -10px;
-    }
-
     .mob {
         display: unset !important;
     }
@@ -149,11 +145,13 @@
     }
 
     .logoNavMenu {
-        position: absolute;
+        position: absolute !important;
         bottom: 60px;
         width: 133px;
     }
 
+
+    /* HERO */
     #hero {
         background-image: url(../img/hero-bg-mob.jpg);
         width: 100%;
@@ -180,10 +178,6 @@
         display: none !important;
     }
 
-    /* #hero>a {
-        pointer-events: none;
-    } */
-
     #hero .buttons a,
     #hero .buttons a>*,
     #hero .buttons a>*>* {
@@ -193,6 +187,7 @@
     #hero .buttons a[class*='button-'] {
         position: relative;
         width: 100%;
+        /* pointer-events: none !important; */
     }
 
     #hero .button-hardware {
@@ -312,6 +307,17 @@
         transform: unset;
     }
 
+    #hero .buttons a:hover img.svg,
+    #hero .buttons a:hover img.svg.stroke,
+    #hero .buttons a:hover,
+    #hero .buttons a:hover .bg {
+        opacity: 1;
+    }
+
+    #hero .buttons a:hover .item img {
+        width: 48%;
+    }
+
 
     /* WELCOME */
     #welcome h1 {
@@ -395,5 +401,167 @@
         width: 40px;
         background-color: #F4F5F8;
     }
+
+    /* INNOVATIVE SOLUTIONS */
+    #ourOffer {
+        padding: 100px 0 50px;
+    }
+
+    #ourOffer .content {
+        gap: 80px
+    }
+
+    #ourOffer .content .item {
+        flex-direction: column;
+        height: auto;
+        gap: 50px;
+    }
+
+    #ourOffer .content .item .text {
+        padding: 0 2rem;
+        order: 1;
+    }
+
+    #ourOffer .content .item .text h2 {
+        margin-bottom: 0;
+        flex-direction: row;
+        font-size: 50px;
+        line-height: 100%;
+        gap: 24px
+    }
+
+    #ourOffer .content .item .text h2 span:first-child {
+        font-size: 120px;
+        line-height: 100%;
+        margin-bottom: 0;
+    }
+
+    #ourOffer .content .item .text .details {
+        max-width: calc(100% - 3rem);
+        gap: 16px;
+    }
+
+    #ourOffer .content .item .text .details p {
+        font-size: 14px;
+    }
+
+
+    #ourOffer .content .item .item-image {
+        background-image: url(../img/ourOffer1.jpg);
+        height: 278px;
+        width: 100%;
+        order: 2;
+    }
+
+    /* WINNING */
+    #winning {
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+    }
+
+    #winning .content {
+        gap: 40px;
+    }
+
+    #winning .content,
+    #winning .bg-content {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    #winning .content-row.items-details {
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+
+    #winning .content-row h1 {
+        font-size: 4rem;
+    }
+
+    #winning .content-row h1:first-child {
+        text-align: right;
+    }
+
+    #winning .details {
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        left: unset;
+        width: unset;
+        margin-top: 0;
+        margin-bottom: 60px;
+        gap: 1.5rem;
+    }
+
+    #winning .details.client-benefits,
+    #winning.clients .details.client-benefits {
+        position: absolute;
+    }
+
+    #winning .details .item {
+        width: 100%;
+    }
+
+    #solutions .details .item,
+    #winning .details .item-content {
+        width: 100%;
+        pointer-events: none;
+        padding-left: 0;
+        padding-right: 0;
+        border-left: 0;
+        text-align: center;
+    }
+
+    #winning .details h3 {
+        font-size: 1rem;
+        letter-spacing: normal !important;
+        margin-bottom: .5rem;
+    }
+
+    #winning .details p {
+        font-size: 0.95rem;
+    }
+
+    #winning .details .slash {
+        height: 2px;
+        width: 40px;
+        background-color: #F4F5F8;
+    }
+
+    #winning .content-row h2 {
+        font-size: 39px;
+    }
+
+    #winning .content-row.logos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: unset;
+    }
+
+    #winning .content-row.logos div {
+        width: 100%;
+        height: 46px;
+        max-height: 46px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #winning .content-row.logos img {
+        transform: scale(.75);
+        height: 46px;
+        max-height: 46px;
+    }
+
+    #winning.clients .bg::before,
+    #winning.clients .bg2::before {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+
 
 }

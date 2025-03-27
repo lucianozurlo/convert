@@ -37,21 +37,22 @@
                 <nav class="convert-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75" data-unload="fade-up">
                         <li>
-                            <a href="#ourOffer" class="scroll-top" onclick="closeMobileNav()">our offer</a>
+                            <a href="#ourOffer" onclick="closeMobileNav()">our offer</a>
                         </li>
                         <li>
-                            <a href="#services" class="scroll-top" onclick="closeMobileNav()">services</a>
+                            <a href="#services" onclick="closeMobileNav()">services</a>
                         </li>
                         <li>
-                            <a href="#projects" class="scroll-top" onclick="closeMobileNav()">projects</a>
+                            <a href="#projects" onclick="closeMobileNav()">projects</a>
                         </li>
                         <li>
-                            <a href="#about" class="scroll-top" onclick="closeMobileNav()">about</a>
+                            <a href="#about" onclick="closeMobileNav()">about</a>
                         </li>
                         <li>
-                            <a href="#contact" class="scroll-top" onclick="closeMobileNav()">contact</a>
+                            <a href="#contact" onclick="closeMobileNav()">contact</a>
                         </li>
-                        <img src="img/convert-logo-light.svg" alt="convert" class="logoNavMenu mob">
+                        <a href="#" onclick="scrollToTop(event)" class="logoNavMenu mob">
+                            <img src="img/convert-logo-light.svg" alt="convert"></a>
                     </ul>
                 </nav>
             </div>
@@ -86,7 +87,7 @@
                         <div class="element bg"></div>
                         <img src="img/button-hardware-stroke.svg" class="svg stroke" alt="">
                     </a>
-                    <a href="#" class="button-software" data-stagger-appear="fade-down" data-stagger-delay="75"
+                    <a href="#welcome" class="button-software" data-stagger-appear="fade-down" data-stagger-delay="75"
                         data-unload="fade-up">
                         <img src="img/button-software-black.svg" class="svg black mobNo" alt="">
                         <img src="img/button-software.svg" class="svg mob" alt="">
@@ -201,8 +202,8 @@
                 <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
                     <div class="content-row">
                         <h1 class="winning-edge show">Winning<br>Edge</h1>
-                        <img src="img/winning-img.svg" class="circle" alt="">
-                        <h1 class="clients-benefits toggle">Clients<br>Benefits</h1>
+                        <img src="img/winning-img.svg" class="circle mobNo" alt="">
+                        <h1 class="client-benefits toggle">Client<br>Benefits</h1>
                     </div>
                     <div class="content-row items-details">
                         <div class="details winning-edge">
@@ -214,6 +215,7 @@
                                         the development cycle.</p>
                                 </div>
                             </div>
+                            <div class="slash mob"></div>
                             <div class="item">
                                 <div class="item-content">
                                     <h3>Proven Expertise</h3>
@@ -225,6 +227,7 @@
                                         results for your business.</p>
                                 </div>
                             </div>
+                            <div class="slash mob"></div>
                             <div class="item">
                                 <div class="item-content">
                                     <h3>Scalable Solutions</h3>
@@ -233,7 +236,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="details clients-benefits">
+                        <div class="details client-benefits">
                             <div class="item">
                                 <div class="item-content">
                                     <h3>Reduced Complexity</h3>
@@ -241,12 +244,14 @@
                                         hardware and software teams.</p>
                                 </div>
                             </div>
+                            <div class="slash mob"></div>
                             <div class="item">
                                 <div class="item-content">
                                     <h3>Cost Efficiency</h3>
                                     <p>Streamlined processes minimize overheads and maximize ROI.</p>
                                 </div>
                             </div>
+                            <div class="slash mob"></div>
                             <div class="item">
                                 <div class="item-content">
                                     <h3>Future-Ready Products</h3>
@@ -260,16 +265,22 @@
                         <h2>Trusted by Leading Brands – Delivering Design, Digital & Manufacturing Solutions. </h2>
                     </div>
                     <div class="content-row logos">
-                        <img src="img/logos/diversified.png" alt="" style="width: 143px; height: 37px">
-                        <img src="img/logos/hermanmiller.svg" alt="" style="width: 139px">
-                        <img src="img/logos/bhp.svg" alt="" style="width: 63px">
-                        <img src="img/logos/colebrook.png" alt="" style="width: 117px; height: 43px">
-                        <img src="img/logos/steadyrack.png" alt="" style="width: 129px; height: 19px">
-                        <img src="img/logos/woodside.svg" alt="" style="width: 129px; height: 19px">
-                        <img src="img/logos/cisco.svg" alt="" style="width: 62px">
-                        <img src="img/logos/titanict.png" alt="" style="width: 67px; height: 44px">
-                        <img src="img/logos/kyri.png" alt="" style="width: 64px; height: 29px">
-                        <img src="img/logos/chevron.svg" alt="" style="width: 50px">
+                        <div>
+                            <img src="img/logos/diversified.png" alt="" style="width: 143px; height: 37px">
+                            <img src="img/logos/hermanmiller.svg" alt="" style="width: 139px">
+                            <img src="img/logos/bhp.svg" alt="" style="width: 63px">
+                        </div>
+                        <div>
+                            <img src="img/logos/colebrook.png" alt="" style="width: 117px; height: 43px">
+                            <img src="img/logos/steadyrack.png" alt="" style="width: 129px; height: 19px">
+                            <img src="img/logos/woodside.svg" alt="" style="width: 129px; height: 19px">
+                        </div>
+                        <div>
+                            <img src="img/logos/cisco.svg" alt="" style="width: 62px">
+                            <img src="img/logos/titanict.png" alt="" style="width: 67px; height: 44px">
+                            <img src="img/logos/kyri.png" alt="" style="width: 64px; height: 29px">
+                            <img src="img/logos/chevron.svg" alt="" style="width: 50px">
+                        </div>
                     </div>
                 </div>
                 <div class="bg-content">
@@ -278,7 +289,7 @@
                 </div>
             </section>
 
-            <section id="services">
+            <section id="services" class="mobNo">
                 <div class="content" data-appear="fade-up" data-unload="fade-down">
                     <div class="hover-content">
                         <div class="items" data-stagger-appear="fade-left" data-stagger-delay="75"
@@ -633,7 +644,7 @@
 
             <section id="contact">
                 <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
-                    <div class="form">
+                    <div class="form mobNo">
                         <h3>Let's Talk.</h3>
                         <div class="form-content">
                             <p>Start your next hardware or digital project with expert design and development support.
@@ -921,6 +932,7 @@
                 top: 0,
                 behavior: 'smooth'
             });
+            closeMobileNav()
         }
     </script>
 
@@ -988,7 +1000,7 @@
 
     <script>
         const winningEdge = document.querySelector('.winning-edge');
-        const clientsBenefits = document.querySelector('.clients-benefits');
+        const clientsBenefits = document.querySelector('.client-benefits');
         const winningSection = document.querySelector('#winning');
 
         winningEdge.addEventListener('click', () => {
@@ -1012,33 +1024,6 @@
         function closeMobileNav() {
             document.body.classList.remove('show-menu');
         }
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var internalLinks = document.querySelectorAll('.convert-mobile-menu a[href^="#"]');
-
-            internalLinks.forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    if (typeof closeMobileNav === 'function') {
-                        closeMobileNav();
-                    }
-
-                    var targetID = link.getAttribute('href');
-                    var targetElement = document.querySelector(targetID);
-
-                    if (targetElement) {
-                        var elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                        window.scrollTo({
-                            top: elementPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
     </script>
 
 

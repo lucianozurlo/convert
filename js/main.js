@@ -1470,41 +1470,6 @@ jQuery (function ($) {
       }
     };
 
-    // Link Click Event
-    jQuery (document).on ('click', 'a', function (e) {
-      if (
-        this.getAttribute ('href').indexOf ('#') > -1 &&
-        this.getAttribute ('href').length > 1
-      ) {
-        if (
-          this.pathname === window.location.pathname &&
-          this.protocol === window.location.protocol &&
-          this.host === window.location.host
-        ) {
-          e.preventDefault ();
-          if (core.$dom.body.find (this.hash).length) {
-            let origin = 'center';
-            if (
-              core.$dom.body.find (this.hash).height () >
-              0.5 * window.innerHeight
-            ) {
-              origin = 0;
-            }
-            core.scrollToElement (jQuery (this.hash), true, origin);
-          }
-        }
-      } else {
-        if (template.checkURL (this)) {
-          e.preventDefault ();
-          if (this.getAttribute ('data-unload') !== null) {
-            this.classList.add ('is-unloading');
-          }
-          jQuery (this).parents ('[data-unload]').addClass ('is-unloading');
-          template.unloading (this.getAttribute ('href'));
-        }
-      }
-    });
-
     // Firefox Back Button Fix
     window.onunload = function () {};
 

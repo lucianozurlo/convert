@@ -204,6 +204,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     position: absolute;
     width: 50%;
     height: 100%;
+    padding: 0 5% 5%;
     cursor: default !important;
 }
 
@@ -215,7 +216,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
     position: absolute;
     height: 100%;
     width: 100%;
-    padding: 0 10% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -614,26 +614,26 @@ nav.convert-nav ul.main-menu>li>a:hover {
 }
 
 #winning.clients .content-row h1.winning-edge,
-#winning .content-row h1.clients-benefits {
+#winning .content-row h1.client-benefits {
     color: #f4f5f800;
     -webkit-text-stroke: 2px #f4f5f8e6;
     text-stroke: 2px #f4f5f8e6;
 }
 
-#winning.clients .content-row h1.clients-benefits {
+#winning.clients .content-row h1.client-benefits {
     color: #f4f5f8e6;
     -webkit-text-stroke: 2px #f4f5f800;
     text-stroke: 2px #f4f5f800;
 }
 
 #winning.clients .content-row h1.winning-edge:hover,
-#winning .content-row h1.clients-benefits:hover {
+#winning .content-row h1.client-benefits:hover {
     color: #f4f5f866;
     cursor: pointer;
 }
 
 #winning .content-row h1.winning-edge:hover,
-#winning.clients .content-row h1.clients-benefits:hover {
+#winning.clients .content-row h1.client-benefits:hover {
     color: #f4f5f8e6;
     cursor: default;
 }
@@ -653,13 +653,13 @@ nav.convert-nav ul.main-menu>li>a:hover {
 }
 
 #winning .details.winning-edge,
-#winning.clients .details.clients-benefits {
+#winning.clients .details.client-benefits {
     opacity: 1;
     z-index: 111;
 }
 
 #winning.clients .details.winning-edge,
-#winning .details.clients-benefits {
+#winning .details.client-benefits {
     opacity: 0;
 }
 
