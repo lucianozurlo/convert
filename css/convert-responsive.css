@@ -802,4 +802,44 @@
     #about .testimonials-content swiper-slide {
         height: 230px;
     }
+
+    /* FOOTER */
+    #contact {
+        height: auto;
+    }
+
+    #contact .content {
+        width: 100%;
+        max-width: 100%;
+        padding: 5rem 2rem;
+        height: auto;
+    }
+
+    #contact .content h3 {
+        line-height: 85% !important;
+        margin-bottom: 20px;
+    }
+
+    #contact .content .info {
+        width: 100%;
+        gap: 50px;
+    }
+
+    #contact .content .info .info-content p {
+        margin-bottom: 16px;
+        font-size: .9rem;
+        width: 96%;
+    }
+
+    #contact .content .info .footer {
+        height: auto;
+        gap: 20px;
+        padding-right: 20%;
+    }
+
+    #contact .content .info .footer img {
+        width: 140px;
+    }
+
+
 }
