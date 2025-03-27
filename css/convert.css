@@ -9,8 +9,7 @@
     src: url('fonts/Thunder.eot?#iefix') format('embedded-opentype'),
         url('fonts/Thunder.woff2') format('woff2'),
         url('fonts/Thunder.woff') format('woff'),
-        url('fonts/Thunder.ttf') format('truetype'),
-        url('fonts/Thunder.otf') format('opentype');
+        url('fonts/Thunder.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -523,7 +522,6 @@ nav.convert-nav ul.main-menu>li>a:hover {
 
 #ourOffer .content .item .text h2 {
     font-family: 'Thunder';
-    font-style: normal;
     font-size: 100px;
     line-height: 100% !important;
     text-transform: uppercase;
