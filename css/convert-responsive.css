@@ -384,12 +384,14 @@
     /* INNOVATIVE SOLUTIONS */
     #solutions .content {
         flex-direction: column;
+        padding: 3rem 2rem;
     }
 
     #solutions .title {
         position: relative;
         align-items: center;
         margin: 0;
+        margin-bottom: .75rem;
         padding: 0;
         width: unset;
         left: unset;
@@ -399,7 +401,7 @@
 
     #solutions .title h2 {
         font-size: 4rem;
-        height: 4rem !important;
+        height: 3.5rem !important;
     }
 
     #solutions .details {
