@@ -1083,7 +1083,7 @@
                 .then(response => response.text().then(text => ({status: response.status, text})))
                 .then(data => {
                     if (data.status === 200) {
-                        responseDiv.innerHTML = `<p style="color: green;">${data.text}</p>`;
+                        responseDiv.innerHTML = `<p>${data.text}</p>`;
                         form.reset();
                     } else {
                         responseDiv.innerHTML = `<p style="color: red;">${data.text}</p>`;
