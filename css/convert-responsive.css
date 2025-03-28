@@ -511,9 +511,17 @@
     }
 
     #winning .content-row.items-details {
-        flex-direction: column;
         height: auto;
         position: relative;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 25rem;
+        transition: all .6s ease-in-out;
+    }
+
+    #winning.clients .content-row.items-details {
+        height: 20.22rem;
     }
 
     #winning .content-row h1 {
@@ -534,7 +542,6 @@
         left: unset;
         width: unset;
         margin-top: 0;
-        margin-bottom: 60px;
         gap: 1.5rem;
     }
 
@@ -581,6 +588,7 @@
 
     #winning .content-row h2 {
         font-size: 3rem;
+        margin-top: 50px;
     }
 
     #winning .content-row.logos {
@@ -604,8 +612,6 @@
 
     #winning .content-row.logos img {
         transform: scale(.75);
-        /* height: 46px;
-        max-height: 46px; */
     }
 
     #winning.clients .bg::before,
