@@ -690,19 +690,20 @@
                         <div class="form-content">
                             <p>Start your next hardware or digital project with expert design and development support.
                             </p>
-                            <form action="mail.php" method="POST">
+                            <form id="contactForm" action="mail.php" method="POST">
                                 <label for="name">Name:</label>
-                                <input type="text" id="name" name="name">
+                                <input type="text" id="name" name="name" required>
 
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email">
+                                <input type="email" id="email" name="email" required>
 
                                 <label for="message">Message:</label>
-                                <textarea id="message" name="message"></textarea>
+                                <textarea id="message" name="message" required></textarea>
 
-                                <button type="submit">submit</button>
+                                <button type="submit">Submit</button>
                                 <div class="convert-contact-form__response"></div>
                             </form>
+
                         </div>
                     </div>
                     <div class="info">
@@ -1065,6 +1066,34 @@
         function closeMobileNav() {
             document.body.classList.remove('show-menu');
         }
+    </script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const responseDiv = form.querySelector('.convert-contact-form__response');
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.text().then(text => ({status: response.status, text})))
+                .then(data => {
+                    if (data.status === 200) {
+                        responseDiv.innerHTML = `<p style="color: green;">${data.text}</p>`;
+                        form.reset();
+                    } else {
+                        responseDiv.innerHTML = `<p style="color: red;">${data.text}</p>`;
+                    }
+                })
+                .catch(error => {
+                    responseDiv.innerHTML = `<p style="color: red;">Oops! Something went wrong.</p>`;
+                    console.error('Error:', error);
+                });
+        });
     </script>
 
 
