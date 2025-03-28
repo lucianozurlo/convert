@@ -660,13 +660,15 @@
     }
 
     #projects swiper-slide {
-        width: 433px !important;
+        width: 475px !important;
         padding-left: 2rem;
     }
 
     #projects swiper-container {
         height: 305px;
-        width: 207.36%;
+        width: 206.41%;
+        opacity: 1;
+        margin-left: -1.25rem;
     }
 
     #projects swiper-slide .slide {
@@ -684,7 +686,7 @@
 
     #projects swiper-slide .slide .details {
         padding-top: 14px;
-        width: 433px;
+        width: 475px;
         height: 20px;
     }
 
