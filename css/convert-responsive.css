@@ -664,7 +664,11 @@
         padding-left: 2rem;
     }
 
-    #projects swiper-container,
+    #projects swiper-container {
+        height: 305px;
+        width: 207.36%;
+    }
+
     #projects swiper-slide .slide {
         height: 305px;
     }
