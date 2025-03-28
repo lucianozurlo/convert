@@ -1415,6 +1415,19 @@ nav.convert-nav ul.main-menu>li>a:hover {
     margin-bottom: 0;
 }
 
+#contact .convert-contact-form__response {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    height: 50px;
+    font-size: unset;
+    font-weight: unset;
+    letter-spacing: unset;
+    color: unset;
+    text-transform: unset;
+    display: block;
+}
 
 /* MODAL */
 body.modal-open {
