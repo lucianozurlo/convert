@@ -243,16 +243,13 @@ nav.convert-nav ul.main-menu>li>a:hover {
 
 #hero .buttons .hero-circle {
     position: absolute;
-    /* background: #F4F5F8; */
     background-size: contain;
     bottom: 0;
     width: 330px;
-    height: 165px;
-    border-top-left-radius: 165px;
-    border-top-right-radius: 165px;
+    height: 140px;
+    border-radius: 50%;
     display: flex;
     text-decoration: none !important;
-    padding-top: 20px;
     gap: 15px;
     z-index: 11;
     flex-direction: column;
@@ -706,8 +703,14 @@ nav.convert-nav ul.main-menu>li>a:hover {
 #winning .content-row.logos div {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+#winning .content-row.logos img {
+    opacity: .9;
+    height: fit-content;
 }
 
 #winning .circle {
@@ -951,7 +954,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     justify-content: center;
     align-items: center;
     padding-left: 100px;
-    width: 1100px !important;
+    /* width: 1100px !important; */
 }
 
 #projects swiper-slide .slide {
