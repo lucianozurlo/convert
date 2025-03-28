@@ -1,5 +1,12 @@
 /* CUSTOM
    ============= */
+@media only screen and (max-width: 1870px) {
+    #services .items {
+        gap: 20px;
+        max-width: 85%;
+        width: 85%;
+    }
+}
 
 @media only screen and (max-width: 1499px) {
     #winning .content-row.logos {
