@@ -1276,8 +1276,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 120px 0;
-
+    padding: 120px 0 70px;
 }
 
 #contact .content h3 {
@@ -1391,6 +1390,7 @@ nav.convert-nav ul.main-menu>li>a:hover {
     align-items: flex-start;
     justify-content: space-between;
     padding: 0;
+    margin-bottom: 50px;
 }
 
 #contact .content .info .footer img {
