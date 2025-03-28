@@ -668,7 +668,7 @@
         height: 305px;
         width: 206.41%;
         opacity: 1;
-        margin-left: -1.25rem;
+        /* margin-left: -1.25rem; */
     }
 
     #projects swiper-slide .slide {
@@ -686,7 +686,7 @@
 
     #projects swiper-slide .slide .details {
         padding-top: 14px;
-        width: 475px;
+        width: 433px;
         height: 20px;
     }
 
