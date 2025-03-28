@@ -1,5 +1,26 @@
 /* CUSTOM
    ============= */
+
+@media only screen and (max-width: 1499px) {
+    #winning .content-row.logos {
+        max-height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #winning .content-row.logos div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 60px;
+    }
+
+}
+
+
 @media only screen and (max-width: 960px) {
     .mob {
         display: unset !important;
@@ -557,7 +578,7 @@
     }
 
     #winning .content-row h2 {
-        font-size: 2.45rem;
+        font-size: 3rem;
     }
 
     #winning .content-row.logos {
@@ -576,12 +597,13 @@
         position: relative;
         align-items: center;
         justify-content: space-around;
+        gap: 0;
     }
 
     #winning .content-row.logos img {
         transform: scale(.75);
-        height: 46px;
-        max-height: 46px;
+        /* height: 46px;
+        max-height: 46px; */
     }
 
     #winning.clients .bg::before,
