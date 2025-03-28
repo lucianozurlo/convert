@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    # Replace this email with your email address
+    #  info@convertstudios.com.au
     $mail_to = "lucianozurlo@gmail.com";
 
     # Message Subject. You can modify that string with your message.
