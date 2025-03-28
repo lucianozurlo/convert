@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     #  info@convertstudios.com.au
-    $mail_to = "lucianozurlo@gmail.com";
+    $mail_to = "info@convertstudios.com.au";
 
     # Message Subject. You can modify that string with your message.
     $subject = "Message from Convert";
