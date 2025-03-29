@@ -710,7 +710,8 @@ nav.convert-nav ul.main-menu>li>a:hover {
 
 #winning .content-row.logos img {
     opacity: .9;
-    height: fit-content;
+    height: -webkit-max-content;
+    height: max-content;
 }
 
 #winning .circle {
