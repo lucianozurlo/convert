@@ -708,7 +708,7 @@
 
   /* WELCOME */
   #welcome h1 {
-    font-size: 7.25rem;
+    font-size: 26vw;
     display: contents;
     margin: 0;
   }
@@ -826,7 +826,7 @@
   }
 
   #ourOffer .content .item .text h2 span:first-child {
-    font-size: 7.25rem;
+    font-size: 26vw;
     line-height: 100%;
     margin-bottom: 0;
   }
@@ -1081,7 +1081,7 @@
   }
 
   #projects .content h1 {
-    font-size: 7.25rem;
+    font-size: 26vw;
     display: contents;
     margin: 0;
   }
