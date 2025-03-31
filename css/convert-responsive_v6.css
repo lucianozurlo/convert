@@ -1030,6 +1030,7 @@
     background-size: 400%;
     margin-bottom: 20px;
     pointer-events: none;
+    background-position-y: 50%;
   }
 
   #services .hover-content {
