@@ -1029,6 +1029,7 @@
   #services h1 {
     background-size: 400%;
     margin-bottom: 20px;
+    pointer-events: none;
   }
 
   #welcome h1 span {
