@@ -1031,6 +1031,11 @@
     margin-bottom: 20px;
     pointer-events: none;
   }
+
+  #services .hover-content {
+    pointer-events: none;
+  }
+
   #services h1::after {
     display: none !important;
   }
