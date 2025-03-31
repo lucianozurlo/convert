@@ -947,7 +947,7 @@
   #winning .content-row h2 {
     font-size: 40px;
     letter-spacing: 1px !important;
-    margin-top: 30px;
+    margin: 30px 0 0;
   }
 
   #winning .content-row.logos {
@@ -1315,6 +1315,7 @@
     height: auto;
     gap: 20px;
     padding-right: 20%;
+    margin-top: 0;
   }
 
   #contact .content .info .footer img {
