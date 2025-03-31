@@ -40,7 +40,7 @@
                         <li>
                             <a href="#ourOffer" onclick="closeMobileNav()">our offer</a>
                         </li>
-                        <li class="mobNo">
+                        <li>
                             <a href="#services" onclick="closeMobileNav()">services</a>
                         </li>
                         <li>
@@ -196,7 +196,7 @@
 
             <section id="winning">
                 <div class="content" data-stagger-appear="fade-left" data-stagger-delay="75" data-unload="fade-right">
-                    <div class="content-row">
+                    <div class="content-row titles">
                         <h1 class="winning-edge show">Winning<br>Edge</h1>
                         <img src="img/winning-img.svg" class="circle mobNo" alt="">
                         <h1 class="client-benefits toggle">Client<br>Benefits</h1>
@@ -257,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content-row">
+                    <div class="content-row trusted">
                         <h2>Trusted by Leading Brands – Delivering Design, Digital & Manufacturing Solutions. </h2>
                     </div>
                     <div class="content-row logos">
@@ -285,7 +285,7 @@
                 </div>
             </section>
 
-            <section id="services" class="mobNo">
+            <section id="services">
                 <div class="content" data-appear="fade-up" data-unload="fade-down">
                     <div class="hover-content">
                         <div class="items" data-stagger-appear="fade-left" data-stagger-delay="75"
@@ -361,8 +361,8 @@
                     </div>
                     <div class="content-row" data-stagger-appear="fade-left" data-stagger-delay="75"
                         data-unload="fade-right">
-                        <swiper-container space-between="0" slides-per-view="1.8" free-mode="true"
-                            breakpoints='{"0": {"slidesPerView": 1}, "960": {"slidesPerView": 1.8}}'>
+                        <swiper-container space-between="0" slides-per-view="1.8"
+                            breakpoints='{"0": {"slidesPerView": 1}, "1873": {"slidesPerView": 1.8}}'>
                             <swiper-slide>
                                 <div class="slide">
                                     <img src="img/slider/slide1.jpg" alt="">
@@ -737,7 +737,6 @@
     </main>
 
     <div class="modal-overlay" id="modalOverlay">
-        <!-- Contenido del modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <h3>PRIVACY POLICY FOR WEBSITE</h3>
@@ -745,7 +744,6 @@
                 <span class="close" id="closeModalBtn">&times;</span>
             </div>
             <div class="modal-body">
-                <p>Effective Date: 23/07/2022</p>
                 <p class="mb-20">This privacy policy (hereinafter "Privacy Policy") deals with the protection of Your
                     privacy while
                     You use Our website which is hereinafter referred to as "the Product" and which is located at:
@@ -1081,7 +1079,7 @@
                 method: 'POST',
                 body: formData,
             })
-                .then(response => response.text().then(text => ({status: response.status, text})))
+                .then(response => response.text().then(text => ({ status: response.status, text })))
                 .then(data => {
                     if (data.status === 200) {
                         responseDiv.innerHTML = `<p>${data.text}</p>`;
