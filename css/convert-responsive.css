@@ -16,6 +16,10 @@
 }
 
 @media only screen and (max-width: 1499px) {
+  #welcome .text {
+    transform: translate(35%, -85%);
+  }
+
   #winning .content-row.logos {
     max-height: 50px;
     display: flex;
@@ -145,6 +149,11 @@
 }
 
 @media only screen and (max-width: 1329px) {
+  #welcome .text {
+    width: 47%;
+    transform: translate(40%, -65%);
+  }
+
   #welcome h1 {
     font-size: 28vw;
     display: flex;
@@ -191,9 +200,7 @@
 
 @media only screen and (max-width: 1219px) {
   #welcome p {
-    transform: translate(35%, -120%);
     line-height: 190%;
-    width: 50%;
     height: unset;
     font-size: 15px;
   }
@@ -312,9 +319,12 @@
 }
 
 @media only screen and (max-width: 1039px) {
-  #welcome p,
-  #projects p {
-    transform: translate(35%, -310%);
+  #welcome h4 {
+    font-size: 24px;
+    line-height: 130% !important;
+    margin-bottom: 24px;
+  }
+  #welcome p {
     font-size: 14px;
   }
   #winning {
@@ -351,10 +361,6 @@
     line-height: 1;
     width: 100%;
     justify-content: flex-end;
-  }
-  #welcome p,
-  #projects p {
-    transform: translate(35%, -85%);
   }
   #solutions .details {
     width: 46%;
@@ -712,6 +718,12 @@
     margin: 0;
   }
 
+  #welcome .text {
+    width: 100%;
+    position: relative;
+    transform: unset;
+  }
+
   #welcome p {
     position: relative;
     width: 100%;
@@ -935,7 +947,7 @@
   #winning .content-row h2 {
     font-size: 40px;
     letter-spacing: 1px !important;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   #winning .content-row.logos {
@@ -1207,6 +1219,7 @@
   #about .testimonials-content .text {
     transform: unset;
     margin-top: 1rem;
+    width: 100%;
   }
 
   #about .about-content h1,
@@ -1265,9 +1278,14 @@
     height: 230px;
   }
 
+  #about .testimonials-content swiper-container {
+    width: 100%;
+  }
+
   /* FOOTER */
   #contact {
     height: auto;
+    padding: 0;
   }
 
   #contact .content {
