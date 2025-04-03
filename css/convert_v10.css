@@ -823,7 +823,7 @@ nav.convert-nav ul.main-menu > li > a:hover {
   background-clip: text;
   color: transparent;
   background-attachment: fixed;
-  background-position-y: 30%;
+  background-position-y: 60%;
   z-index: 1;
   transition: all 0.8s cubic-bezier(0.4, -0.6, 0.3, 1.6);
 }
@@ -952,6 +952,11 @@ nav.convert-nav ul.main-menu > li > a:hover {
 #projects swiper-container {
   width: 100%;
   height: 740px;
+  cursor: grab;
+}
+
+#projects swiper-container:active {
+  cursor: grabbing;
 }
 
 #projects swiper-slide {
@@ -961,7 +966,11 @@ nav.convert-nav ul.main-menu > li > a:hover {
   justify-content: center;
   align-items: center;
   padding-left: 100px;
-  /* width: 1100px !important; */
+  transition: all 0.6s ease-in-out;
+}
+
+#projects swiper-container:hover swiper-slide {
+  transform: translateX(-80px);
 }
 
 #projects swiper-slide .slide {
