@@ -222,7 +222,8 @@
     align-items: flex-start;
   }
 
-  #services .hover-content {
+  #services .text {
+    -webkit-clip-path: unset;
     clip-path: unset;
     transform: unset;
     height: unset;
@@ -664,6 +665,7 @@
   }
 
   #hero .buttons .item img {
+    -webkit-filter: unset;
     filter: unset;
     opacity: 1;
     transition: unset;
@@ -688,6 +690,7 @@
   }
 
   #hero .buttons .explore img {
+    -webkit-filter: brightness(100);
     filter: brightness(100);
   }
 
@@ -1038,7 +1041,7 @@
     background-position-y: 50%;
   }
 
-  #services .hover-content {
+  #services .text {
     pointer-events: none;
   }
 
