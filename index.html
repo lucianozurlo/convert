@@ -14,8 +14,8 @@
     <link type="text/css" rel="stylesheet" href="css/libs.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
-    <link type="text/css" rel="stylesheet" href="css/convert_ok.css">
-    <link type="text/css" rel="stylesheet" href="css/convert-responsive_ok.css">
+    <link type="text/css" rel="stylesheet" href="css/convert_v14.css">
+    <link type="text/css" rel="stylesheet" href="css/convert-responsive_v14.css">
 
     <link rel="icon" href="img/favicon.ico" sizes="32x32">
 
@@ -24,7 +24,9 @@
 <body id="home">
 
     <div id="preloader">
-        <div class="loader"></div>
+        <div class="logo-container">
+            <img src="img/favicon.png" alt="Logo" class="logo">
+        </div>
     </div>
 
     <header id="convert-header" class="is-frosted is-sticky">
@@ -922,7 +924,6 @@
         </div>
     </div>
 
-    <!-- JS Scripts -->
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/libs.js"></script>
     <script src="js/contact_form.js"></script>
@@ -930,6 +931,19 @@
     <script src="js/classes.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 0.5s ease';
+                preloader.addEventListener('transitionend', () => {
+                    preloader.style.display = 'none';
+                });
+            }, 2500);
+        });
+    </script>
 
     <script>
         window.addEventListener('load', function () {
