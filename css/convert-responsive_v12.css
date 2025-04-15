@@ -3,8 +3,8 @@
 @media only screen and (max-width: 1870px) {
   #services .items {
     gap: 20px;
-    max-width: 85%;
-    width: 85%;
+    /* max-width: 85%; */
+    width: 100%;
   }
 
   #contact {
@@ -64,6 +64,10 @@
   #winning .details.winning-edge {
     height: 145px;
     width: 100%;
+  }
+
+  #services .text {
+    max-width: 1178px;
   }
 
   #projects .content h1 {
@@ -245,7 +249,7 @@
   }
   #services h1 {
     order: 1;
-    font-size: 28vw;
+    /* font-size: 28vw; */
     position: relative;
     transform: unset;
     left: 0;

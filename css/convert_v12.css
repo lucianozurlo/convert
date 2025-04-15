@@ -811,6 +811,7 @@ nav.convert-nav ul.main-menu > li > a:hover {
 
 #services .text {
   width: 100%;
+  max-width: 1440px;
   height: 100%;
   flex-direction: column;
   /* -webkit-clip-path: inset(22.75% 6.5% 23% 6.5%);
@@ -819,6 +820,7 @@ nav.convert-nav ul.main-menu > li > a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  container-type: inline-size;
 }
 
 #services h1 {
@@ -828,6 +830,7 @@ nav.convert-nav ul.main-menu > li > a:hover {
   /* transform: translate(-50%, -41%); */
   margin: 0;
   font-size: clamp(311px, calc(311px + 299 * ((100vw - 961px) / 909)), 610px);
+  font-size: 37.7cqw;
   line-height: 100% !important;
   text-transform: uppercase;
   text-align: center;
