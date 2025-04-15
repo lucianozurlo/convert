@@ -14,8 +14,8 @@
     <link type="text/css" rel="stylesheet" href="css/libs.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
-    <link type="text/css" rel="stylesheet" href="css/convert_v14.css">
-    <link type="text/css" rel="stylesheet" href="css/convert-responsive_v14.css">
+    <link type="text/css" rel="stylesheet" href="css/convert_v16.css">
+    <link type="text/css" rel="stylesheet" href="css/convert-responsive_v16.css">
 
     <link rel="icon" href="img/favicon.ico" sizes="32x32">
 
@@ -24,9 +24,13 @@
 <body id="home">
 
     <div id="preloader">
-        <div class="logo-container">
-            <img src="img/favicon.png" alt="Logo" class="logo">
+        <div class="preload-wrapper">
+            <img src="img/favicon.png" alt="Imagen de fondo" class="empty-image">
+            <img src="img/favicon.png" alt="Imagen de relleno" class="fill-image">
         </div>
+        <p id="loading-text">
+            Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+        </p>
     </div>
 
     <header id="convert-header" class="is-frosted is-sticky">
@@ -933,27 +937,37 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <script>
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
+        document.addEventListener("DOMContentLoaded", function () {
+            const fillImage = document.querySelector(".fill-image");
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.getElementById("mainContent");
+            const loadingText = document.getElementById("loading-text");
+
             setTimeout(() => {
-                preloader.style.opacity = '0';
-                preloader.style.transition = 'opacity 0.5s ease';
-                preloader.addEventListener('transitionend', () => {
-                    preloader.style.display = 'none';
-                });
-            }, 2500);
+                fillImage.style.clipPath = "inset(0 0 0 0)";
+            }, 100);
+
+            fillImage.addEventListener("transitionend", (e) => {
+                if (e.propertyName === "clip-path") {
+                    loadingText.style.transition = "transform 1s ease-out, opacity .3s ease-out";
+                    loadingText.style.transform = "translateY(100%)";
+                    loadingText.style.opacity = "0";
+
+                    preloader.style.transition = "opacity 1s ease-out";
+                    preloader.style.opacity = "0";
+                }
+            });
+
+            preloader.addEventListener("transitionend", (e) => {
+                if (e.propertyName === "opacity" && e.target === preloader) {
+                    preloader.style.display = "none";
+                    mainContent.style.transition = "opacity 1s ease-out";
+                    mainContent.style.opacity = "1";
+                }
+            });
         });
     </script>
 
-    <script>
-        window.addEventListener('load', function () {
-            const preloader = document.getElementById('preloader');
-            preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
-        });
-    </script>
 
     <script>
         function scrollToTop(e) {
