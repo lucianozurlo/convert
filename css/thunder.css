@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Thunder';
+    src: url('Thunder.eot');
+    src: url('font/Thunder.eot?#iefix') format('embedded-opentype'),
+        url('font/Thunder.woff2') format('woff2'),
+        url('font/Thunder.woff') format('woff'),
+        url('font/Thunder.ttf') format('truetype'),
+        url('font/Thunder.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
