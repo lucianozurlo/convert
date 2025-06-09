@@ -16,6 +16,14 @@
 }
 
 @media only screen and (max-width: 1499px) {
+  #convert-header a.button-mailto {
+    width: 244px;
+  }
+
+  #convert-header a:hover.button-mailto {
+    background-image: url(../img/button-mailto-linesblack-short.png);
+  }
+
   #welcome .text {
     transform: translate(35%, -85%);
   }
@@ -257,6 +265,11 @@
     margin: 0 auto;
   }
 
+  #services a.button-mailto {
+    order: 3;
+    margin-top: 35px;
+  }
+
   #projects .content h1 {
     font-size: 28vw;
     left: 13%;
@@ -324,6 +337,19 @@
 }
 
 @media only screen and (max-width: 1039px) {
+  header .convert-header-mp {
+    /* left: 200px;
+    position: absolute; */
+  }
+
+  #convert-header a.button-mailto {
+    width: 163px;
+  }
+
+  #convert-header a:hover.button-mailto {
+    background-image: url(../img/button-mailto-linesblack-shortplus.png);
+  }
+
   #welcome h4 {
     font-size: 24px;
     line-height: 130% !important;
@@ -365,7 +391,9 @@
   header .convert-header-mp {
     line-height: 1;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-left: 380px;
+    position: absolute;
   }
   #solutions .details {
     width: 46%;
@@ -426,6 +454,21 @@
     background: transparent;
     padding-left: 35px;
     padding-right: 25px;
+  }
+
+  a.button-mailto {
+    font-size: 16px;
+    width: 320px;
+    /* width: 100%; */
+    height: 40px;
+  }
+
+  a:hover.button-mailto {
+    background-image: url(../img/button-mailto-linesblack-mob.png);
+  }
+
+  a:hover.button-mailto.white {
+    background-image: url(../img/button-mailto-lineswhite-mob.png);
   }
 
   .convert-mobile-menu {
@@ -534,6 +577,19 @@
     text-decoration: none;
     color: #f4f5f8;
     margin-bottom: 3rem;
+  }
+
+  .convert-mobile-menu a.button-mailto {
+    height: 40px;
+    width: 320px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    display: flex !important
+;
+  }
+
+  .convert-mobile-menu a.button-mailto img {
+    display: inline;
   }
 
   .logoNavMenu {
@@ -751,6 +807,7 @@
   #solutions .content {
     flex-direction: column;
     padding: 3rem 2rem;
+    min-width: 100%;
   }
 
   #solutions .title {
@@ -822,6 +879,7 @@
   #ourOffer .content .item .text {
     padding: 0 2rem;
     order: 1;
+    width: 100%;
   }
 
   #ourOffer .content .item .text h2 {
@@ -1033,6 +1091,7 @@
   }
   #services .content {
     padding: 0;
+    flex-direction: column;
   }
   #services .items .item {
     width: 100%;
@@ -1087,7 +1146,7 @@
   }
 
   #projects .content {
-    padding: 6rem 0 0;
+    padding: 3rem 0 0;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -1269,6 +1328,10 @@
     font-size: 0.9rem;
   }
 
+  #about .about-content a.button-mailto {
+    margin-top: 15px;
+  }
+
   #about .testimonials-content {
     gap: 5px;
     padding-bottom: 20px;
@@ -1307,6 +1370,19 @@
   #about .testimonials-content swiper-container {
     width: 100%;
     height: 310px;
+  }
+
+  #about .testimonials-content swiper-slide .testimonial .name h5 {
+    font-size: 20px;
+  }
+
+  #about .testimonials-content swiper-slide .testimonial .name h6 {
+    font-size: 14px;
+  }
+
+  #about .testimonials-content a.button-mailto {
+    margin: 30px auto 0;
+    order: 3;
   }
 
   /* FOOTER */
