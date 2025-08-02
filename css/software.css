@@ -1,5 +1,6 @@
-#intro {
-   background-image: url('../img/sw-home.png');
+#software #intro {
+   background-image: url('../img/sw-home.jpg');
+   background-size: cover;
 }
 #intro .buttons {
    padding-left: 10px;

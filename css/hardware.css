@@ -1,117 +1,13 @@
 /* INTRO */
-#intro {
-   height: calc(100vh - 65px);
-   background-image: url('../img/hw-home.png');
+#hardware #intro {
+   background-image: url('../img/hw-home.jpg');
    background-size: cover;
-   padding: 160px 0;
-   display: flex;
-   justify-content: center;
 }
-
-#intro .mouse {
-   position: absolute;
-   width: 100%;
-   height: calc(100vh - 65px);
-   display: flex;
-   align-items: center;
-   flex-direction: row;
-   justify-content: center;
-}
-
-#intro .mouse .hero-circle {
-   position: absolute;
-   background-size: contain;
-   bottom: 20px;
-   border-radius: 50%;
-   display: flex;
-   text-decoration: none !important;
-   gap: 15px;
-   z-index: 11;
-   flex-direction: column;
-   justify-content: center;
-   transition: all 0.3s ease-in-out;
-}
-
-#intro .mouse .hero-circle .hero-text {
-   position: relative;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   z-index: 11111;
-   margin-bottom: 0;
-   pointer-events: none;
-   transition: all 0.6s cubic-bezier(0.4, -0.6, 0.3, 1.6);
-}
-
-#intro .mouse .hero-circle .hero-text p {
-   font-size: 16px;
-   font-weight: 300;
-   color: #111;
-   text-decoration: none !important;
-   text-align: center;
-}
-
-#intro .mouse .hero-circle .explore {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   z-index: 11111;
-   text-decoration: none;
-   margin: 0 auto;
-   text-align: center;
-   border-radius: 50%;
-}
-
-#intro .mouse .hero-circle .explore img {
-   width: 22px;
-   margin: 20px;
-   border-radius: 50%;
-}
-
-#intro .mouse .hero-circle:hover .explore img {
-   transform: translateY(40%);
-}
-
-#intro .mouse a,
-#intro .mouse a > *,
-#intro .mouse a > * > * {
-   transition: all 0.6s cubic-bezier(0.4, -0.6, 0.3, 1.6);
-}
-
-#intro .content {
-   max-width: 1440px;
-   flex-direction: column;
-   align-items: flex-start;
-   padding: 0px;
-   gap: 125px;
-}
-
-#intro .content .item {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   width: 100%;
-   height: 100%;
-   z-index: 11;
-}
-
 #intro .content .item .text {
    width: 591px;
    min-width: 591px;
-   padding-left: 100px;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: center;
-   padding: 0px;
    gap: 24px;
-   color: #111;
 }
-
 #intro .content .item .text h2 {
    font-family: 'Thunder';
    font-size: 100px;
@@ -127,24 +23,10 @@
 #intro .content .item .text h2 span:first-child {
    margin-bottom: 22px;
 }
-
-#intro .content .item .text .details {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   padding: 0px;
-   gap: 27px;
-}
-
 #intro .content .item .text .details p {
+   text-align: left;
    font-weight: 300;
-   font-size: 16px;
-   line-height: 32px;
-   margin-bottom: 0;
-   display: flex;
-   flex-direction: row;
 }
-
 #intro .content .item .text .details p img {
    margin-right: 16px;
 }
@@ -173,7 +55,6 @@
 }
 
 /* OUR SERVICES */
-
 #ourServices {
    background-color: #111;
    /* padding: 0; */

@@ -16,8 +16,8 @@
       <link type="text/css" rel="stylesheet" href="css/libs.css" />
       <link type="text/css" rel="stylesheet" href="css/style.css" />
       <link type="text/css" rel="stylesheet" href="css/responsive.css" />
-      <link type="text/css" rel="stylesheet" href="css/convert_v19.css" />
-      <link type="text/css" rel="stylesheet" href="css/convert-responsive_v19.css" />
+      <link type="text/css" rel="stylesheet" href="css/convert_v2.css" />
+      <link type="text/css" rel="stylesheet" href="css/convert-responsive_v2.css" />
 
       <link rel="icon" href="img/favicon.ico" sizes="32x32" />
 
@@ -54,6 +54,12 @@
             <div class="convert-header-mp">
                <nav class="convert-nav">
                   <ul class="main-menu">
+                     <li>
+                        <a href="./hardware/" onclick="closeMobileNav()">hardware</a>
+                     </li>
+                     <li>
+                        <a href="./software/" onclick="closeMobileNav()">software</a>
+                     </li>
                      <li>
                         <a href="#ourOffer" onclick="closeMobileNav()">our offer</a>
                      </li>
@@ -107,9 +113,9 @@
 
       <main id="convert-main">
          <div class="stg-container">
-            <section id="hero">
+            <!-- <section id="hero">
                <div class="buttons">
-                  <a href="#welcome" class="button-hardware">
+                  <a href="./hardware/" class="button-hardware">
                      <img src="img/button-hardware-black.svg" class="svg black mobNo" alt="" />
                      <img src="img/button-hardware.svg" class="svg mob" alt="" />
                      <div class="element texture mobNo"></div>
@@ -117,7 +123,7 @@
                      <div class="element bg"></div>
                      <img src="img/button-hardware-stroke.svg" class="svg stroke" alt="" />
                   </a>
-                  <a href="#welcome" class="button-software">
+                  <a href="./software/" class="button-software">
                      <img src="img/button-software-black.svg" class="svg black mobNo" alt="" />
                      <img src="img/button-software.svg" class="svg mob" alt="" />
                      <div class="element texture mobNo"></div>
@@ -134,10 +140,61 @@
                      </div>
                   </a>
                </div>
+            </section> -->
+            <section id="intro">
+               <div
+                  class="content"
+                  data-stagger-appear="fade-in"
+                  data-stagger-delay="25"
+                  data-unload="fade-out"
+               >
+                  <div class="item">
+                     <div class="text">
+                        <h1>
+                           Convert exists to create bold, boundary-pushing products that set our
+                           customers apart.
+                        </h1>
+                        <div class="details">
+                           <p>15+ years converting ideas into profitable products.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mouse">
+                     <a href="#" class="hero-circle">
+                        <div class="explore">
+                           <img src="img/arrow-down.svg" alt="" />
+                        </div>
+                     </a>
+                  </div>
+               </div>
             </section>
 
             <section id="welcome">
                <div class="content">
+                  <h1 data-appear="fade-up" data-unload="fade-up">What we<br />Offer.</h1>
+                  <div class="title-img">
+                     <img class="on" src="img/title-Welcome.png" alt="" />
+                     <img class="off" src="img/title-Welcome2.png" alt="" />
+                  </div>
+                  <div class="text">
+                     <h4
+                        class="mobNo"
+                        data-appear="fade-right"
+                        data-stagger-delay="25"
+                        data-unload="fade-right"
+                     >
+                        Build, launch, and grow seamlessly with Convert®
+                     </h4>
+                     <p data-appear="fade-right" data-unload="fade-right">
+                        At Convert®, our mission is rooted in empowering individuals and
+                        organisations to turn their ideas into successful realities. We collaborate
+                        with founders, CEOs, startups, and nonprofits to develop outstanding
+                        products and experiences, embracing a true partnership approach.
+                     </p>
+                  </div>
+               </div>
+
+               <!-- <div class="content">
                   <h1 data-appear="fade-left" data-stagger-delay="25" data-unload="fade-up">
                      WEL<span>COME.</span>
                   </h1>
@@ -157,62 +214,7 @@
                         products and experiences, embracing a true partnership approach.
                      </p>
                   </div>
-               </div>
-            </section>
-
-            <section id="solutions">
-               <div class="content">
-                  <div
-                     class="title"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
-                     <h2>Innovative</h2>
-                     <h2>Solutions</h2>
-                  </div>
-
-                  <div
-                     class="details"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
-                     <div class="item">
-                        <h3>Seamless Integration</h3>
-                        <p>
-                           We specialize in seamlessly integrating hardware engineering with digital
-                           innovation, delivering cohesive solutions that bridge the physical and
-                           digital worlds.
-                        </p>
-                     </div>
-                     <div class="slash mob"></div>
-                     <div class="item">
-                        <h3>End-to-End Solutions</h3>
-                        <p>
-                           From concept to launch, we provide comprehensive development services,
-                           ensuring your product is optimised for functionality, aesthetics, and
-                           user experience.
-                        </p>
-                     </div>
-                     <div class="slash mob"></div>
-                     <div class="item">
-                        <h3>Speed and Flexibility</h3>
-                        <p>
-                           With in-house expertise in both domains, we rapidly prototype, iterate,
-                           and refine solutions, reducing time to market without compromising
-                           quality.
-                        </p>
-                     </div>
-                     <a
-                        href="mailto:info@convertstudios.com.au"
-                        class="convert-logo button-main white"
-                     >
-                        get a custom quote
-                        <img src="img/arrow-left.svg" />
-                     </a>
-                  </div>
-               </div>
+               </div> -->
             </section>
 
             <section id="ourOffer">
@@ -245,7 +247,7 @@
                            href="mailto:info@convertstudios.com.au"
                            class="convert-logo button-main white"
                         >
-                           start your project today
+                           learn more
                            <img src="img/arrow-left.svg" />
                         </a>
                      </div>
@@ -276,35 +278,33 @@
                            href="mailto:info@convertstudios.com.au"
                            class="convert-logo button-main white"
                         >
-                           start your project today
+                           learn more
                            <img src="img/arrow-left.svg" />
                         </a>
                      </div>
                   </div>
                   <div class="item">
                      <div class="text">
-                        <h2>
-                           <span>03.</span><span>Hybrid <br />Solutions</span>
-                        </h2>
+                        <h2><span>03.</span><span>3d printing services</span></h2>
                         <div class="details">
                            <p>
-                              <img src="img/ourOffer3-icon1.svg" alt="" />Development of connected
-                              devices and IoT ecosystems.
+                              <img src="img/ourOffer3-icon1.svg" alt="" />Rapid prototyping and
+                              low-volume manufacturing for custom parts.
                            </p>
                            <p>
-                              <img src="img/ourOffer3-icon2.svg" alt="" />Embedded systems that
-                              combine hardware and software.
+                              <img src="img/ourOffer3-icon2.svg" alt="" />High-precision printing
+                              using FDM, SLA, and SLS technologies.
                            </p>
                            <p>
-                              <img src="img/ourOffer3-icon3.svg" alt="" />Data collection and
-                              analytics for hardware products.
+                              <img src="img/ourOffer3-icon3.svg" alt="" />Functional testing and
+                              validation with real-world materials.
                            </p>
                         </div>
                         <a
                            href="mailto:info@convertstudios.com.au"
                            class="convert-logo button-main white"
                         >
-                           start your project today
+                           learn more
                            <img src="img/arrow-left.svg" />
                         </a>
                      </div>
@@ -321,9 +321,15 @@
                   data-unload="fade-right"
                >
                   <div class="content-row titles">
-                     <h1 class="winning-edge show">Winning<br />Edge</h1>
-                     <img src="img/winning-img.svg" class="circle mobNo" alt="" />
-                     <h1 class="client-benefits toggle">Client<br />Benefits</h1>
+                     <div class="winning-edge show">
+                        <img src="img/winning-title.png" class="op-1" alt="" />
+                        <img src="img/winning-title2.png" class="op-0" alt="" />
+                     </div>
+                     <img src="img/winning-img.png" class="circle mobNo" alt="" />
+                     <div class="client-benefits toggle">
+                        <img src="img/client-title.png" class="op-1" alt="" />
+                        <img src="img/client-title2.png" class="op-0" alt="" />
+                     </div>
                   </div>
                   <div class="content-row items-details">
                      <div class="details winning-edge">
@@ -715,6 +721,61 @@
                         <img src="img/industry-icon6.svg" alt="" />
                         <h4>Energy</h4>
                      </div>
+                  </div>
+               </div>
+            </section>
+
+            <section id="solutions">
+               <div class="content">
+                  <div
+                     class="title"
+                     data-stagger-appear="fade-left"
+                     data-stagger-delay="25"
+                     data-unload="fade-right"
+                  >
+                     <h2>Innovative</h2>
+                     <h2>Solutions</h2>
+                  </div>
+
+                  <div
+                     class="details"
+                     data-stagger-appear="fade-left"
+                     data-stagger-delay="25"
+                     data-unload="fade-right"
+                  >
+                     <div class="item">
+                        <h3>Seamless Integration</h3>
+                        <p>
+                           We specialize in seamlessly integrating hardware engineering with digital
+                           innovation, delivering cohesive solutions that bridge the physical and
+                           digital worlds.
+                        </p>
+                     </div>
+                     <div class="slash mob"></div>
+                     <div class="item">
+                        <h3>End-to-End Solutions</h3>
+                        <p>
+                           From concept to launch, we provide comprehensive development services,
+                           ensuring your product is optimised for functionality, aesthetics, and
+                           user experience.
+                        </p>
+                     </div>
+                     <div class="slash mob"></div>
+                     <div class="item">
+                        <h3>Speed and Flexibility</h3>
+                        <p>
+                           With in-house expertise in both domains, we rapidly prototype, iterate,
+                           and refine solutions, reducing time to market without compromising
+                           quality.
+                        </p>
+                     </div>
+                     <a
+                        href="mailto:info@convertstudios.com.au"
+                        class="convert-logo button-main white"
+                     >
+                        get a custom quote
+                        <img src="img/arrow-left.svg" />
+                     </a>
                   </div>
                </div>
             </section>
