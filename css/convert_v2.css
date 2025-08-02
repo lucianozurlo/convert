@@ -504,6 +504,57 @@ body {
    transition:
       clip-path 3s linear,
       -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
+   transition:
+      clip-path 3s linear,
+      -webkit-clip-path 3s linear;
 }
 
 #mainContent {
@@ -1218,26 +1269,21 @@ nav.convert-nav ul.main-menu > li > a:hover {
    transform: translateX(-100%);
 }
 
-#winning .content-row img.op-0 {
+#winning .content-row img.op-0,
+#winning .content-row .toggle img.op-1 {
    opacity: 0;
 }
-
 #winning .content-row img.op-1 {
    opacity: 1;
 }
-#winning .content-row .selector:hover img.hover {
-   opacity: 0.6;
-}
-#winning .content-row .toggle {
-   cursor: pointer;
-}
-
 #winning .content-row .toggle img.op-0 {
    opacity: 1;
 }
-
-#winning .content-row .toggle img.op-1 {
-   opacity: 0;
+#winning .content-row .toggle:hover img.hover {
+   opacity: 0.7;
+}
+#winning .content-row .toggle {
+   cursor: pointer;
 }
 
 /* #winning.clients .content-row h1.winning-edge,
