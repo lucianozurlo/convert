@@ -535,8 +535,11 @@
    }
 
    #intro {
-      height: 100%;
+      /* height: 100%; */
       padding: 110px 0 0;
+      align-items: center;
+      min-height: 100vh;
+      background-size: cover;
    }
    #intro .content {
       padding: 0 32px !important;
@@ -545,6 +548,7 @@
    }
    #intro .content .item {
       flex-direction: column;
+      justify-content: center;
    }
    #intro .content .item .text,
    #intro .content .item .text h2,
@@ -555,6 +559,11 @@
    #intro .content .item .text {
       width: unset;
       min-width: unset;
+   }
+
+   #intro .content .item .text h1 {
+      font-size: 70px;
+      line-height: 0.9;
    }
    #intro .content .item .text h2 {
       font-size: 50px;
@@ -647,6 +656,40 @@
       padding-left: 32px !important;
       max-width: unset;
       width: 100% !important;
+   }
+   #winning .content-row .winning-edge,
+   #winning .content-row .client-benefits,
+   #winning .content-row.titles,
+   #winning .content-row.titles img {
+      height: unset;
+      width: 100%;
+      transform: unset !important;
+   }
+   #winning .content-row.titles .winning-edge,
+   #winning .content-row.titles .client-benefits {
+      width: 50%;
+      height: 26vw;
+      display: flex;
+   }
+   #winning .content-row.titles {
+      margin-bottom: 30px;
+   }
+   #winning .content-row.titles .winning-edge {
+      justify-content: flex-start;
+   }
+
+   #winning .content-row.titles .winning-edge img {
+      transform: translateX(-5%) !important;
+   }
+   #winning .content-row.titles .client-benefits {
+      justify-content: flex-end;
+   }
+
+   #winning .content-row.titles img {
+      width: calc(50% - 1.6rem - 20px);
+   }
+   #winning .content-row.trusted {
+      margin-top: 0;
    }
 }
 
@@ -866,6 +909,11 @@
    }
 
    /* HERO */
+   #intro .content .item .text h1 {
+      font-size: 60px;
+      line-height: 0.9;
+   }
+
    #hero {
       background-image: url(../img/hero-bg-mob.jpg);
       width: 100%;
@@ -1284,7 +1332,7 @@
    #winning .content-row h2 {
       font-size: 39px;
       letter-spacing: 1px !important;
-      margin: 30px 0 0;
+      margin: 60px 0 0;
    }
 
    #winning .content-row.logos {
