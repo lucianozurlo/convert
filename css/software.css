@@ -1,0 +1,65 @@
+:root {
+   --to: #262004;
+}
+
+#software #intro {
+   background-image: url('../img/sw-home.jpg');
+   background-size: cover;
+}
+/* #intro .buttons {
+   padding-left: 10px;
+}
+#intro .content .item {
+   flex-direction: row-reverse;
+}
+#intro .content .item .text {
+   width: 601px;
+   min-width: 601px;
+}
+#intro .content .item .text h2,
+#intro .content .item .text .details p {
+   text-align: right;
+}
+#intro .content .item .item-image {
+   padding-left: 0;
+   margin-top: 20px;
+} */
+#intro .content .item .item-image img {
+   width: 610px;
+   transform: translate(-25px, 10%);
+}
+#ourServices .content {
+   justify-content: flex-end;
+}
+#ourServices .text {
+   width: 520px;
+   transform: translate(-186%, 108%);
+   text-align: right;
+}
+#ourServices .items {
+   gap: 120px;
+}
+#ourServices .items p {
+   margin-top: 15px;
+   margin-bottom: 17px;
+}
+#whyWork .text {
+   flex-direction: row;
+   gap: 110px;
+}
+#whyWork .text h2,
+#whyWork .text p {
+   text-align: left;
+}
+#whyWork swiper-container:hover swiper-slide {
+   transform: translateX(-11.5vw);
+}
+
+#productIdea {
+   background-image: url(../img/bg-yellow.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   transition: background-position 0.1s linear;
+}

@@ -1,0 +1,281 @@
+:root {
+   --to: #111c0d;
+   --to: #252525;
+   /* --to: #330900; */
+}
+
+#printing3d #intro {
+   background-image: unset !important;
+}
+
+#intro .content .item .item-image {
+   padding-left: 0;
+}
+#intro .content .item .item-image img {
+   width: 100%;
+   transform: translate(-3%, -4%);
+}
+
+#printing3d #intro .content-row .logos {
+   gap: 0;
+   margin-top: 18px;
+   margin-bottom: 0;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   max-height: 50px;
+   position: absolute;
+   width: 870px;
+   left: 0;
+}
+
+#printing3d .content-row .logos div {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}
+
+#printing3d .content-row .logos img {
+   opacity: 0.8;
+   height: auto;
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   /* min-height: 36px; */
+}
+#ourServices .content {
+   justify-content: flex-end;
+}
+#ourServices .text {
+   width: 498px;
+   transform: translate(-186%, 130%);
+   text-align: right;
+}
+#ourServices .items {
+   gap: 120px;
+}
+#ourServices .items p {
+   margin-top: 15px;
+   margin-bottom: 17px;
+}
+#ourServices .text p span {
+   display: inline-block;
+   width: 380px;
+}
+#ourServices .content:last-child {
+   margin-top: 0;
+}
+
+#DesignPrint {
+   height: unset;
+   padding: 155px 0 115px;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+#DesignPrint .content {
+   width: 1440px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#DesignPrint .title {
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+   width: 100%;
+}
+
+#DesignPrint .title h1 {
+   max-width: 100%;
+   font-family: 'Thunder';
+   font-size: 310px;
+   line-height: 0.85 !important;
+   text-transform: uppercase;
+   text-align: left;
+   margin-bottom: 65px;
+   color: #111;
+}
+#DesignPrint .title h1.right {
+   margin-top: 140px;
+   text-align: right;
+}
+#DesignPrint .details {
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   padding: 0px;
+   gap: 60px;
+   width: 100%;
+}
+#DesignPrint .details .item {
+   color: #111;
+   padding: 0;
+   width: 410px;
+}
+#DesignPrint .details h3 {
+   font-family: 'Martian Grotesk';
+   font-size: 18px;
+   margin-bottom: 20px;
+   color: #111;
+   letter-spacing: 0 !important;
+   opacity: 0.9;
+}
+#DesignPrint .details p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 20px;
+   opacity: 0.9;
+}
+#DesignPrint .details h4 {
+   font-family: 'Martian Grotesk';
+   font-size: 14px;
+   color: #111;
+   margin-top: 24px;
+   letter-spacing: 0 !important;
+   opacity: 0.9;
+}
+#DesignPrint .title p {
+   position: absolute;
+   text-align: right;
+   color: #111;
+   font-weight: 700;
+   line-height: 2;
+   width: 420px;
+   transform: translate(-4%, 213%);
+}
+#DesignPrint .title img.center {
+   max-width: 940px;
+   margin: 0 auto;
+}
+
+#banner3dprint {
+   height: 260px;
+   display: flex;
+   justify-content: center;
+}
+#banner3dprint .content {
+   width: 1440px;
+}
+#banner3dprint .info {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   height: 100%;
+   align-items: center;
+   padding-top: 25px;
+}
+#banner3dprint .info div {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   gap: 10px;
+   justify-content: center;
+}
+#banner3dprint .info h2 {
+   font-size: 140px;
+   text-transform: uppercase;
+   line-height: 0.8 !important;
+   text-align: center;
+}
+#banner3dprint .info p {
+   font-size: 16px;
+   font-weight: 700;
+   text-align: center;
+}
+
+#differences {
+   height: unset;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 200px 0;
+}
+#differences .content {
+   width: 1440px;
+}
+#differences table {
+   overflow: auto;
+   width: 100%;
+   max-width: 1143;
+   font-size: 16px;
+}
+#differences table thead th {
+   padding: 0 0 25px;
+}
+#differences table th {
+   font-family: 'Thunder';
+   font-size: 40px;
+   color: #111;
+   padding: 5px;
+   text-align: left;
+   text-transform: uppercase;
+   padding-bottom: 40px;
+   letter-spacing: 0.5px;
+}
+#differences table td {
+   color: #111;
+   padding: 5px;
+   text-align: left;
+   padding: 14px 20px 14px 0;
+   min-width: 400px;
+}
+#differences table td:first-child {
+   font-size: 18px;
+   font-weight: 700;
+   padding: 14px 70px 14px 0;
+   min-width: 300px;
+}
+#differences table td img {
+   display: inline-flex;
+   padding-right: 10px;
+   transform: translateY(2px);
+}
+
+#productIdea,
+#banner3dprint {
+   background-image: url(../img/bg-innovative.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   transition: background-position 0.1s linear;
+}
+#productIdea h4 {
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 210% !important;
+   max-width: 1158px;
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 0;
+}
+#productIdea .title h4 {
+   margin-top: 10px;
+   margin-bottom: 40px;
+}
+#productIdea .ready-to-print-1 {
+   position: absolute;
+   width: 370px;
+   left: -6.5%;
+   top: -40%;
+}
+#productIdea .ready-to-print-2 {
+   position: absolute;
+   width: 260px;
+   right: -8%;
+   bottom: -37%;
+}
