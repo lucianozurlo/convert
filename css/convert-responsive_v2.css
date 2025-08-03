@@ -198,14 +198,14 @@
       transform: translate(40%, -65%);
    }
 
-   #welcome h1 {
+   /* #welcome h1 {
       font-size: 28vw;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       left: 13%;
       position: absolute;
-   }
+   } */
 
    #solutions .title {
       left: 3%;
@@ -407,6 +407,7 @@
       line-height: 0.8 !important;
       text-transform: uppercase;
    }
+   #welcome .content .title-img,
    #ourServices .content .title-img {
       display: none;
    }
@@ -590,6 +591,10 @@
       margin-top: 16px;
    }
 
+   #welcome {
+      height: unset !;
+   }
+
    #solutions .details {
       width: 46%;
    }
@@ -709,6 +714,9 @@
    section .content {
       width: 100%;
       padding: 0 32px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
    }
 
    /* section > * {
@@ -1085,16 +1093,45 @@
    }
 
    /* WELCOME */
-   #welcome h1 {
-      font-size: 26vw;
-      display: contents;
-      margin: 0;
+   #welcome {
+      padding: 100px 0;
    }
 
    #welcome h1 span {
       display: contents;
       margin: 0;
    }
+   #welcome .content {
+      width: 100%;
+      padding: 0 32px;
+   }
+   #welcome .content h1 {
+      display: block;
+      font-size: 120px;
+      line-height: 0.8 !important;
+      text-transform: uppercase;
+      position: relative;
+   }
+   #welcome p {
+      position: relative;
+      width: 100%;
+      font-size: 0.9rem;
+      line-height: 180%;
+      transform: unset;
+      height: unset;
+      margin-top: 0.5rem;
+   }
+
+   /* #welcome .content {
+      flex-direction: column;
+      height: unset;
+      padding: 7rem 2rem;
+   } */
+
+   /* #welcome h1 span {
+      display: contents;
+      margin: 0;
+   } */
 
    #welcome .text {
       width: 100%;
@@ -1115,7 +1152,7 @@
    #welcome .content {
       flex-direction: column;
       height: unset;
-      padding: 7rem 2rem;
+      /* padding: 7rem 2rem; */
    }
 
    /* INNOVATIVE SOLUTIONS */
@@ -1425,26 +1462,6 @@
 
    #services h1::after {
       display: none !important;
-   }
-   #welcome h1 span {
-      display: contents;
-      margin: 0;
-   }
-
-   #welcome p {
-      position: relative;
-      width: 100%;
-      font-size: 0.9rem;
-      line-height: 180%;
-      transform: unset;
-      height: unset;
-      margin-top: 0.5rem;
-   }
-
-   #welcome .content {
-      flex-direction: column;
-      height: unset;
-      padding: 7rem 2rem;
    }
 
    #winning .content-row.titles,
@@ -1757,7 +1774,7 @@
    /* HARDWARE & SOFTWARE */
 
    #ourServices {
-      padding: 55px 0 100px;
+      padding: 100px 0;
    }
 
    #ourServices .content h1 {
