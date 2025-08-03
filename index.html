@@ -1555,32 +1555,29 @@
       </script>
 
       <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const BP = 768;
-            const nav = document.querySelector('nav.convert-nav');
-            const dropdownLi = document.querySelector('.dropdown');
-            const toggleLink = dropdownLi.querySelector('.toggle-sub');
+         document.addEventListener('DOMContentLoaded', function () {
+            const toggleLink = document.querySelector('.main-menu .dropdown > .toggle-sub');
+            const nav = document.querySelector('.convert-nav');
+            const dropdown = document.querySelector('.main-menu .dropdown');
 
-            // Forzar href vacío en mobile para evitar navegación
-            if (window.innerWidth < BP) {
-               toggleLink.setAttribute('href', 'javascript:void(0)');
-            }
+            if (toggleLink && nav && dropdown) {
+               toggleLink.addEventListener('click', function (e) {
+                  // Solo en mobile
+                  if (window.innerWidth <= 1024) {
+                     e.preventDefault();
 
-            toggleLink.addEventListener('click', (e) => {
-               if (window.innerWidth < BP) {
-                  e.preventDefault();
+                     // Toggle de clase .open
+                     dropdown.classList.toggle('open');
 
-                  const isOpen = dropdownLi.classList.contains('open');
-
-                  if (isOpen) {
-                     dropdownLi.classList.remove('open');
-                     nav.classList.remove('has-dropdown-open');
-                  } else {
-                     dropdownLi.classList.add('open');
-                     nav.classList.add('has-dropdown-open');
+                     // Toggle de clase al <nav>
+                     if (dropdown.classList.contains('open')) {
+                        nav.classList.add('submenu-open');
+                     } else {
+                        nav.classList.remove('submenu-open');
+                     }
                   }
-               }
-            });
+               });
+            }
          });
       </script>
    </body>

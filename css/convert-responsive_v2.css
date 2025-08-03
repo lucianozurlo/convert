@@ -1085,7 +1085,7 @@
    .dropdown:hover > .submenu {
       opacity: 1;
       transform: translate(-50%, 0);
-      pointer-events: auto;
+      pointer-events: none !important;
    }
 
    /* HERO */
@@ -1625,7 +1625,7 @@
       background-size: 400%;
       margin-bottom: 20px;
       pointer-events: none;
-      background-position-y: 50%;
+      background-position-y: 0%;
    }
 
    #services .text {
