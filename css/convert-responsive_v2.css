@@ -535,11 +535,16 @@
       transform: translateX(25px);
    }
 
+   #home #intro {
+      padding: 65px 0 0;
+   }
+
    #intro {
       /* height: 100%; */
-      padding: 65px 0 0;
-      padding: 0;
+      padding: 110px 0 0;
+      /* padding: 0; */
       align-items: center;
+      height: auto !important;
       min-height: 100vh;
       background-size: cover;
    }
@@ -551,6 +556,7 @@
    #intro .content .item {
       flex-direction: column;
       justify-content: center;
+      justify-content: flex-start;
    }
    #intro .content .item .text,
    #intro .content .item .text h2,
@@ -561,6 +567,7 @@
    #intro .content .item .text {
       width: unset;
       min-width: unset;
+      gap: 20px;
    }
 
    #intro .content .item .text h1 {
@@ -591,9 +598,152 @@
    #intro a.button-main:first-child {
       margin-top: 16px;
    }
+   #intro .content .item .text .details p {
+      text-align: center;
+   }
+   #printing3d #intro .content .item .text .details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 
+   #printing3d #intro .content .item .text .details.bottom {
+      margin-bottom: 30px;
+   }
+   #printing3d #intro .content-row .logos {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+   }
+
+   #printing3d #intro .buttons {
+      margin-bottom: 10px;
+   }
+
+   #printing3d .content-row .logos div {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+   }
+
+   #printing3d #intro .content .item .item-image img {
+      transform: translateY(65px);
+      margin-bottom: 130px;
+   }
+   #printing3d #ourServices .content:last-child {
+      margin-top: 0;
+   }
+   #printing3d #ourServices .text {
+      max-width: 100%;
+   }
+
+   #printing3d #DesignPrint {
+      max-width: 100%;
+      padding: 100px 30px;
+   }
+
+   #printing3d #DesignPrint .content {
+      max-width: 100%;
+      padding: 0;
+   }
+
+   #printing3d #DesignPrint .title h1 {
+      font-size: 100px;
+      line-height: 0.8;
+   }
+   #printing3d #DesignPrint .details {
+      flex-direction: column;
+      gap: 60px;
+      width: 100%;
+      max-width: 100%;
+   }
+   #printing3d #DesignPrint .details .item {
+      max-width: 100%;
+   }
+   #printing3d #DesignPrint .title h1.right {
+      margin-top: 100px;
+      text-align: left;
+      margin-bottom: 0;
+   }
+   #printing3d #DesignPrint .title p {
+      max-width: 100%;
+      text-align: left;
+      line-height: 1.4;
+      position: relative;
+      transform: unset;
+   }
+   #printing3d #DesignPrint .title img {
+      display: none;
+   }
+
+   #printing3d #banner3dprint {
+      height: 190px;
+   }
+   #printing3d #banner3dprint .info {
+      padding: 0;
+   }
+   #printing3d #banner3dprint .info div {
+      width: 33.33333%;
+   }
+   #printing3d #banner3dprint .info h2 {
+      font-size: 50px;
+   }
+   #printing3d #banner3dprint .info p {
+      height: 60px;
+   }
+
+   #printing3d #differences {
+      padding: 100px 30px;
+   }
+   #printing3d #differences .content {
+      max-width: 100% !important;
+      padding: 0 !important;
+   }
+   #printing3d #differences table {
+      max-width: 100% !important;
+      padding: 0 !important;
+   }
+   #printing3d #differences table thead th {
+      padding: 0 0 15px;
+   }
+   #printing3d #differences table th {
+      font-size: 30px;
+      line-height: 1;
+   }
+   #printing3d #differences table td {
+      padding-right: 10px !important;
+      font-size: 14px !important;
+      min-width: unset !important;
+   }
+   #printing3d #differences table td:last-child {
+      padding-right: 0 !important;
+   }
+   #printing3d #differences table td img {
+      padding-right: 6px;
+      transform: translateY(1px);
+      height: 13px;
+   }
+   #printing3d #productIdea .ready-to-print-1,
+   #printing3d #productIdea .ready-to-print-2 {
+      display: none;
+   }
+   /**/
    #welcome {
       height: unset !;
+   }
+   #ourServices h4 {
+      display: block;
+   }
+
+   #ourServices h5 {
+      line-height: 150% !important;
+      margin-bottom: 10px;
    }
 
    #solutions .details {
@@ -652,6 +802,7 @@
    #whyWork .text p {
       text-align: left;
       margin-bottom: 35px;
+      margin-top: 10px;
    }
    #whyWork swiper-container {
       max-width: unset;
@@ -915,6 +1066,26 @@
       position: absolute !important;
       bottom: 60px;
       width: 133px;
+   }
+
+   .convert-mobile-menu li.menu-item-has-children > a::after {
+      display: none;
+   }
+   nav.convert-nav ul.main-menu > li > a {
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+   }
+   .convert-nav.has-dropdown-open ul.main-menu > li:not(.dropdown) > a {
+      opacity: 0.2;
+   }
+   .convert-nav.has-dropdown-open ul.main-menu > li:not(.dropdown) > a:hover {
+      opacity: 0.5;
+   }
+
+   .dropdown:hover > .submenu {
+      opacity: 1;
+      transform: translate(-50%, 0);
+      pointer-events: auto;
    }
 
    /* HERO */
@@ -1797,7 +1968,7 @@
       align-items: flex-start;
    }
    #productIdea .title h2 {
-      font-size: 120px;
+      font-size: 85px;
       line-height: 0.8 !important;
       text-align: left;
    }
@@ -1805,8 +1976,12 @@
       width: 100%;
    }
    #productIdea h4 {
+      text-align: left;
       font-size: 14px;
       line-height: 210% !important;
       margin-top: 40px;
+   }
+   #printing3d #productIdea .title h4 {
+      margin-top: 20px;
    }
 }

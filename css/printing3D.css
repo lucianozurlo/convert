@@ -210,7 +210,7 @@
 #differences table {
    overflow: auto;
    width: 100%;
-   max-width: 1143;
+   max-width: 1143px;
    font-size: 16px;
 }
 #differences table thead th {

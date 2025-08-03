@@ -93,34 +93,6 @@
 
       <main id="convert-main">
          <div class="stg-container">
-            <!-- <section id="hero">
-               <div class="buttons">
-                  <a href="./hardware/" class="button-hardware">
-                     <img src="img/button-hardware-black.svg" class="svg black mobNo" alt="" />
-                     <img src="img/button-hardware.svg" class="svg mob" alt="" />
-                     <div class="element texture mobNo"></div>
-                     <div class="element item"><img src="img/hero1-item.png" alt="" /></div>
-                     <div class="element bg"></div>
-                     <img src="img/button-hardware-stroke.svg" class="svg stroke" alt="" />
-                  </a>
-                  <a href="./software/" class="button-software">
-                     <img src="img/button-software-black.svg" class="svg black mobNo" alt="" />
-                     <img src="img/button-software.svg" class="svg mob" alt="" />
-                     <div class="element texture mobNo"></div>
-                     <div class="element item"><img src="img/hero2-item.png" alt="" /></div>
-                     <div class="element bg"></div>
-                     <img src="img/button-software-stroke.svg" class="svg stroke" alt="" />
-                  </a>
-                  <a href="#welcome" class="hero-circle">
-                     <div class="hero-text mob">
-                        <p>build, launch, and<br />grow seamlessly with Convert®</p>
-                     </div>
-                     <div class="explore">
-                        <img src="img/arrow-down.svg" alt="" />
-                     </div>
-                  </a>
-               </div>
-            </section> -->
             <section id="intro">
                <div
                   class="content"
@@ -1584,34 +1556,31 @@
 
       <script>
          document.addEventListener('DOMContentLoaded', () => {
-            const parallaxSections = ['#solutions']
-               .map((id) => document.querySelector(id))
-               .filter(Boolean);
+            const BP = 768;
+            const nav = document.querySelector('nav.convert-nav');
+            const dropdownLi = document.querySelector('.dropdown');
+            const toggleLink = dropdownLi.querySelector('.toggle-sub');
 
-            const speedFactor = 0.3;
+            // Forzar href vacío en mobile para evitar navegación
+            if (window.innerWidth < BP) {
+               toggleLink.setAttribute('href', 'javascript:void(0)');
+            }
 
-            const updateParallax = () => {
-               const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            toggleLink.addEventListener('click', (e) => {
+               if (window.innerWidth < BP) {
+                  e.preventDefault();
 
-               parallaxSections.forEach((section) => {
-                  const rect = section.getBoundingClientRect();
-                  const sectionHeight = rect.height;
+                  const isOpen = dropdownLi.classList.contains('open');
 
-                  if (rect.bottom > 0 && rect.top < viewportHeight) {
-                     const distanceScrolled = viewportHeight - rect.top;
-                     const totalScroll = viewportHeight + sectionHeight;
-
-                     const progress = Math.min(1, Math.max(0, distanceScrolled / totalScroll));
-                     const backgroundY = progress * 100 * speedFactor;
-
-                     section.style.backgroundPosition = `center ${backgroundY}%`;
+                  if (isOpen) {
+                     dropdownLi.classList.remove('open');
+                     nav.classList.remove('has-dropdown-open');
+                  } else {
+                     dropdownLi.classList.add('open');
+                     nav.classList.add('has-dropdown-open');
                   }
-               });
-
-               requestAnimationFrame(updateParallax);
-            };
-
-            updateParallax();
+               }
+            });
          });
       </script>
    </body>

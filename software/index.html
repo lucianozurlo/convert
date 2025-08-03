@@ -45,7 +45,7 @@
                <nav class="convert-nav">
                   <ul class="main-menu">
                      <li class="dropdown">
-                        <a href="#ourOffer" class="toggle-sub">our offer</a>
+                        <a href="#" class="toggle-sub">our offer</a>
                         <ul class="submenu">
                            <li><a href="../hardware/" onclick="closeMobileNav()">hardware</a></li>
                            <li>
@@ -58,18 +58,18 @@
                            </li>
                         </ul>
                      </li>
-                     <li><a href="#services" onclick="closeMobileNav()">services</a></li>
-                     <li><a href="#projects" onclick="closeMobileNav()">projects</a></li>
-                     <li><a href="#about" onclick="closeMobileNav()">about</a></li>
-                     <li><a href="#contact" onclick="closeMobileNav()">contact</a></li>
+                     <li><a href="../#services" onclick="closeMobileNav()">services</a></li>
+                     <li><a href="../#projects" onclick="closeMobileNav()">projects</a></li>
+                     <li><a href="../#about" onclick="closeMobileNav()">about</a></li>
+                     <li><a href="../#contact" onclick="closeMobileNav()">contact</a></li>
                      <a
                         href="mailto:info@convertstudios.com.au"
                         class="convert-logo button-main white mob"
                      >
-                        let's talk<img src="img/arrow-left.svg" />
+                        let's talk<img src="../img/arrow-left.svg" />
                      </a>
-                     <a href="#" onclick="scrollToTop(event)" class="logoNavMenu mob">
-                        <img src="img/convert-logo-light.svg" alt="convert"
+                     <a href="../" onclick="scrollToTop(event)" class="logoNavMenu mob">
+                        <img src="../img/convert-logo-light.svg" alt="convert"
                      /></a>
                   </ul>
                </nav>
@@ -92,7 +92,7 @@
          </div>
       </header>
 
-      <a href="#" onclick="scrollToTop(event)" class="mob-logo mob">
+      <a href="../" onclick="scrollToTop(event)" class="mob-logo mob">
          <img src="../img/convert-logo.svg" alt="convert" width="85" height="11" />
       </a>
 
@@ -1009,6 +1009,36 @@
             };
 
             updateParallax();
+         });
+      </script>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const BP = 768;
+            const nav = document.querySelector('nav.convert-nav');
+            const dropdownLi = document.querySelector('.dropdown');
+            const toggleLink = dropdownLi.querySelector('.toggle-sub');
+
+            // Forzar href vacío en mobile para evitar navegación
+            if (window.innerWidth < BP) {
+               toggleLink.setAttribute('href', 'javascript:void(0)');
+            }
+
+            toggleLink.addEventListener('click', (e) => {
+               if (window.innerWidth < BP) {
+                  e.preventDefault();
+
+                  const isOpen = dropdownLi.classList.contains('open');
+
+                  if (isOpen) {
+                     dropdownLi.classList.remove('open');
+                     nav.classList.remove('has-dropdown-open');
+                  } else {
+                     dropdownLi.classList.add('open');
+                     nav.classList.add('has-dropdown-open');
+                  }
+               }
+            });
          });
       </script>
    </body>
