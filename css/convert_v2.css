@@ -470,7 +470,7 @@ ul.main-menu li > a::after {
 
 /* Colores base */
 :root {
-   --from: #333;
+   --from: #111;
    --to: #111;
 }
 
