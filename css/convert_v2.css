@@ -456,7 +456,7 @@ ul.main-menu li > a::after {
 
 /* WELCOME */
 #welcome {
-   /* background-color: #111; */
+   background-color: #111;
    /* padding: 0; */
    /* height: unset; */
    padding: 100px 0;
@@ -651,7 +651,7 @@ ul.main-menu li > a::after {
 /* INNOVATIVE SOLUTIONS */
 #ourOffer {
    height: unset;
-   background-color: #000;
+   background-color: #111;
    padding: 160px 0;
    display: flex;
    justify-content: center;
