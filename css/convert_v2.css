@@ -247,11 +247,11 @@ nav.convert-nav ul.main-menu > li > a:hover {
    left: 50%;
    transform: translate(-50%, -10px);
    background: #f4f5f8dd;
-   -webkit-backdrop-filter: saturate(150%) blur(12px);
-   backdrop-filter: saturate(150%) blur(12px);
+   -webkit-backdrop-filter: saturate(150%) blur(12px) !important;
+   backdrop-filter: saturate(150%) blur(12px) !important;
    min-width: 200px;
    padding: 16px 0;
-   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+   /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
    border-radius: 0; /* ✅ sin bordes redondeados */
 
    display: flex;

@@ -198,7 +198,7 @@
 }
 
 #whyWork .content {
-   width: 1440px;
+   /* width: 1440px; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -230,7 +230,8 @@
    align-items: flex-start;
    padding: 0px;
    gap: 60px;
-   width: 100%;
+   /* width: 100%; */
+   width: 1440px;
 }
 
 #whyWork .details .item {
@@ -262,6 +263,7 @@
    align-items: center;
    justify-content: space-between;
    gap: 150px;
+   width: 1440px;
 }
 
 #whyWork .text h2 {
