@@ -131,6 +131,7 @@
                      <img class="on" src="img/title-Welcome.png" alt="" />
                      <img class="off" src="img/title-Welcome2.png" alt="" />
                   </div>
+
                   <div class="text">
                      <h4
                         class="mobNo"
@@ -1511,27 +1512,6 @@
             );
 
             sections.forEach((section) => observer.observe(section));
-         });
-      </script>
-
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const section = document.querySelectorAll('.par-grad');
-            const vh = () => window.innerHeight || document.documentElement.clientHeight;
-
-            const update = () => {
-               const rect = section.getBoundingClientRect();
-
-               const total = rect.height + vh();
-               const passed = vh() - rect.top;
-               const prog = Math.min(1, Math.max(0, passed / total));
-
-               section.style.setProperty('--s', (prog * 100).toFixed(2));
-
-               requestAnimationFrame(update);
-            };
-
-            update();
          });
       </script>
 

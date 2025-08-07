@@ -534,9 +534,38 @@ main#convert-main {
    z-index: 111;
    height: 100%;
    min-height: 100%;
+
+   position: relative;
+   display: inline-block;
 }
+
 #welcome .content .title-img img {
    width: 1230px;
+   display: block;
+}
+
+/* ---------- Textura enmascarada ---------- */
+.title-img::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   z-index: 3;
+   pointer-events: none;
+
+   /* Pattern repetido */
+   background: url('../img/texture-main.png') repeat;
+   mix-blend-mode: multiply; /* opcional */
+   opacity: 0.4;
+
+   /* Máscara con la PNG “on” (estado por defecto) */
+   -webkit-mask: url('../img/title-Welcome.png') center / contain no-repeat;
+   mask: url('../img/title-Welcome.png') center / contain no-repeat;
+}
+
+/* Cuando está en viewport, cambiamos la máscara a la PNG “off” */
+.title-img.in-view::after {
+   -webkit-mask-image: url('../img/title-Welcome2.png');
+   mask-image: url('../img/title-Welcome2.png');
 }
 
 /* #welcome .content .title-img img.on {
