@@ -586,6 +586,7 @@ main#convert-main {
    position: absolute;
    transform: translate(110%, -110%);
    width: 660px;
+   z-index: 10;
 }
 
 #welcome .text * {
