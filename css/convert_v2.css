@@ -544,7 +544,6 @@ main#convert-main {
    display: block;
 }
 
-/* ---------- Textura enmascarada ---------- */
 .title-img::after {
    content: '';
    position: absolute;
@@ -552,17 +551,14 @@ main#convert-main {
    z-index: 3;
    pointer-events: none;
 
-   /* Pattern repetido */
    background: url('../img/texture-main.png') repeat;
-   mix-blend-mode: multiply; /* opcional */
+   mix-blend-mode: multiply;
    opacity: 0.4;
 
-   /* Máscara con la PNG “on” (estado por defecto) */
    -webkit-mask: url('../img/title-Welcome.png') center / contain no-repeat;
    mask: url('../img/title-Welcome.png') center / contain no-repeat;
 }
 
-/* Cuando está en viewport, cambiamos la máscara a la PNG “off” */
 .title-img.in-view::after {
    -webkit-mask-image: url('../img/title-Welcome2.png');
    mask-image: url('../img/title-Welcome2.png');
@@ -1010,6 +1006,18 @@ main#convert-main {
    z-index: -1;
 }
 
+#winning .bg-content::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   z-index: 3;
+   pointer-events: none;
+
+   background: url('../img/texture-main.png') repeat;
+   mix-blend-mode: overlay;
+   opacity: 0.4;
+}
+
 #winning .bg,
 #winning .bg2 {
    overflow: visible;
@@ -1081,6 +1089,18 @@ main#convert-main {
    justify-content: center;
    align-items: center;
    container-type: inline-size;
+}
+
+#services .text::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   z-index: 3;
+   pointer-events: none;
+
+   background: url('../img/texture-main.png') repeat;
+   mix-blend-mode: overlay;
+   opacity: 0.4;
 }
 
 #services h1 {
