@@ -81,6 +81,7 @@ section .content {
    display: flex;
    justify-content: center;
    align-items: center;
+   z-index: 10;
 }
 
 .stg-container {
@@ -105,7 +106,8 @@ h6 {
 
 /* MENU */
 #convert-header {
-   background: #f4f5f8dd;
+   /* background: #f4f5f8dd; */
+   background: #ffffffaa;
 }
 
 #convert-header::before,
@@ -240,19 +242,18 @@ nav.convert-nav ul.main-menu > li > a:hover {
    color: #111;
 }
 
-/* --- Submenú con fondo blur y transición --- */
 .submenu {
    position: absolute;
    top: 100%;
    left: 50%;
    transform: translate(-50%, -10px);
-   background: #f4f5f8dd;
+   background: #ffffffaa;
    -webkit-backdrop-filter: saturate(150%) blur(12px) !important;
    backdrop-filter: saturate(150%) blur(12px) !important;
    min-width: 200px;
    padding: 16px 0;
    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
-   border-radius: 0; /* ✅ sin bordes redondeados */
+   border-radius: 0;
 
    display: flex;
    flex-direction: column;
@@ -266,7 +267,6 @@ nav.convert-nav ul.main-menu > li > a:hover {
    z-index: 99;
 }
 
-/* Mostrar en hover (desktop) o con clase .open (mobile) */
 .dropdown:hover > .submenu,
 .dropdown.open > .submenu {
    opacity: 1;
@@ -274,7 +274,6 @@ nav.convert-nav ul.main-menu > li > a:hover {
    pointer-events: auto;
 }
 
-/* --- Estilo de los links del submenú --- */
 .submenu li {
    width: 100%;
 }
@@ -314,16 +313,54 @@ ul.main-menu li > a::after {
    pointer-events: none;
 }
 
+.texture-main {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+}
+
+.texture-main::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: url('../img/texture-main.png') repeat;
+   mix-blend-mode: overlay;
+   opacity: 1;
+   pointer-events: none;
+   z-index: 2;
+}
+
+.texture-main video {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   transform: translate(-50%, -50%);
+   pointer-events: none;
+   border-radius: 0;
+}
+
 /* HOME */
+main#convert-main {
+   padding-top: 0;
+}
 #intro {
-   height: calc(100vh - 65px);
-   background-image: url('../img/home.jpg');
+   /* height: calc(100vh - 65px); */
+   height: 100vh;
+   /* background-image: url('../img/home.jpg'); */
    background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
-   padding: 160px 0;
+   padding: 225px 0 160px;
    display: flex;
    justify-content: center;
+   overflow: hidden;
 }
 #intro .content {
    max-width: 1440px;
