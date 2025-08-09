@@ -557,6 +557,7 @@
     flex-direction: column;
     justify-content: center;
     justify-content: flex-start;
+    align-items: center;
   }
   #intro .content .item .text,
   #intro .content .item .text h2,
@@ -578,7 +579,8 @@
     font-size: 50px;
   }
   #intro .content .item .text .details p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 1.2;
   }
   #intro .buttons {
