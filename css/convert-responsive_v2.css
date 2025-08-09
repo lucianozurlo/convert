@@ -772,12 +772,15 @@
     line-height: 0.8 !important;
     margin-bottom: 80px;
   }
-  #whyWork .details .item {
-    width: 100%;
-  }
   #whyWork .details {
     flex-direction: column;
+    width: 100%;
   }
+  #whyWork .details .item {
+    width: 100%;
+    opacity: 1;
+  }
+
   #whyWork .details h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -788,6 +791,11 @@
   #whyWork .details p {
     font-size: 14px;
   }
+  #whyWork .text {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
   #whyWork .text h2 {
     width: 100%;
     min-width: unset;
@@ -797,10 +805,7 @@
     margin-top: 105px;
     margin-bottom: 20px;
   }
-  #whyWork .text {
-    flex-direction: column;
-    gap: 0;
-  }
+
   #whyWork .text p {
     text-align: left;
     margin-bottom: 35px;
