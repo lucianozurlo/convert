@@ -1116,6 +1116,17 @@
    }
 
    /* HERO */
+   #intro .mob {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+   }
+   #intro .mob img {
+      width: 120px;
+   }
+
    #intro .content .item .text h1 {
       font-size: 70px;
       line-height: 0.9;
@@ -1468,6 +1479,16 @@
    #winning {
       padding-top: 2rem;
       padding-bottom: 1rem;
+   }
+
+   #winning .winning-edge img {
+      background: url('../img/winning-title2.png');
+      background-size: contain;
+   }
+
+   #winning .client-benefits img {
+      background: url('../img/client-title2.png');
+      background-size: contain;
    }
 
    #winning .content {
