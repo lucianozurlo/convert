@@ -1049,7 +1049,7 @@
       height: 20px;
       font-family: 'Space Grotesk';
       font-style: normal;
-
+      text-align: center;
       font-size: 1.15rem;
       line-height: 1.2rem;
       text-decoration: none;
@@ -1095,8 +1095,33 @@
       display: none;
    }
 
-   .convert-mobile-menu li:first-child {
+   /* .convert-mobile-menu li:first-child {
       display: none;
+   } */
+
+   .convert-mobile-menu .submenu {
+      position: relative;
+      opacity: 1;
+      transform: unset;
+      top: unset;
+      left: unset;
+      background: unset !important;
+      color: #f4f5f8 !important;
+      -webkit-backdrop-filter: unset !important;
+      backdrop-filter: unset !important;
+   }
+   .convert-mobile-menu a,
+   .convert-mobile-menu .submenu li a {
+      color: #f4f5f8 !important;
+      opacity: 1;
+      font-weight: 300 !important;
+      margin-bottom: 20px !important;
+      pointer-events: all;
+   }
+   .convert-mobile-menu .dropdown:hover > .submenu,
+   .convert-mobile-menu .dropdown.open > .submenu {
+      transform: unset !important;
+      pointer-events: inherit;
    }
 
    nav.convert-nav ul.main-menu > li > a {
