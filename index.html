@@ -1612,5 +1612,23 @@
             else document.addEventListener('DOMContentLoaded', attemptPlay);
          })();
       </script>
+
+      <script>
+         // Contar desde que todo está cargado (imágenes, fuentes, etc.)
+         window.addEventListener(
+            'load',
+            function () {
+               setTimeout(function () {
+                  document.documentElement.classList.add('textures-on');
+               }, 200);
+            },
+            { once: true }
+         );
+
+         // Si preferís contar desde que el DOM está listo (sin esperar imágenes):
+         // document.addEventListener('DOMContentLoaded', () => {
+         //   setTimeout(() => document.documentElement.classList.add('textures-on'), 2000);
+         // }, { once: true });
+      </script>
    </body>
 </html>
