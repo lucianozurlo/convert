@@ -536,7 +536,8 @@
    }
 
    #home #intro {
-      padding: 65px 0 0;
+      /* padding: 65px 0 0; */
+      padding: 0;
    }
 
    #intro {
@@ -1671,10 +1672,11 @@
       max-width: 100%;
    }
    #services h1 {
-      background-size: 400%;
+      background-size: 100%;
       margin-bottom: 20px;
       pointer-events: none;
       background-position-y: 0%;
+      background-attachment: initial;
    }
 
    #services .text {
