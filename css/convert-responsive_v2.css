@@ -1077,8 +1077,12 @@
       width: 320px;
       margin-top: 4rem;
       margin-bottom: 5rem;
-      display: flex !important
-;
+      display: flex !important;
+      color: #222;
+   }
+
+   .convert-mobile-menu li:last-child a {
+      margin-bottom: 0 !important;
    }
 
    .convert-mobile-menu a.button-main img {
@@ -1109,6 +1113,7 @@
       color: #f4f5f8 !important;
       -webkit-backdrop-filter: unset !important;
       backdrop-filter: unset !important;
+      padding-top: 0 !important;
    }
    .convert-mobile-menu a,
    .convert-mobile-menu .submenu li a {
