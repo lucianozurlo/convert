@@ -1072,6 +1072,9 @@
     margin-bottom: 30px;
   }
 
+  .convert-mobile-menu a {
+  }
+
   .convert-mobile-menu a.button-main {
     height: 40px;
     width: 320px;
@@ -1096,7 +1099,8 @@
     position: absolute !important;
     bottom: 60px;
     width: 133px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    margin-top: 20px !important;
   }
 
   .convert-mobile-menu li.menu-item-has-children > a::after {
