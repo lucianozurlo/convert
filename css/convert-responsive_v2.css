@@ -1129,6 +1129,10 @@
       pointer-events: inherit;
    }
 
+   .convert-mobile-menu .dropdown {
+      margin-top: -3.5rem;
+   }
+
    nav.convert-nav ul.main-menu > li > a {
       opacity: 0.6;
       transition: opacity 0.3s ease;
