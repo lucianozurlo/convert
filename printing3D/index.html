@@ -14,10 +14,10 @@
       <link type="text/css" rel="stylesheet" href="../css/libs.css" />
       <link type="text/css" rel="stylesheet" href="../css/style.css" />
       <link type="text/css" rel="stylesheet" href="../css/responsive.css" />
-      <link type="text/css" rel="stylesheet" href="../css/convert_v2.css" />
+      <link type="text/css" rel="stylesheet" href="../css/convert_v3.css" />
       <link type="text/css" rel="stylesheet" href="../css/hardware.css" />
       <link type="text/css" rel="stylesheet" href="../css/printing3D.css" />
-      <link type="text/css" rel="stylesheet" href="../css/convert-responsive_v2.css" />
+      <link type="text/css" rel="stylesheet" href="../css/convert-responsive_v3.css" />
 
       <link rel="icon" href="../img/favicon.ico" sizes="32x32" />
 
@@ -33,6 +33,8 @@
    </head>
 
    <body id="printing3d">
+      <div id="cursor-splashes"></div>
+
       <header id="convert-header" class="is-frosted is-sticky">
          <div class="convert-header-inner">
             <div class="convert-header-lp">
@@ -1047,6 +1049,111 @@
          //   setTimeout(() => document.documentElement.classList.add('textures-on'), 2000);
          // }, { once: true });
       </script>
+
+
+      <script>
+         (function () {
+            const container = document.getElementById('cursor-splashes');
+            if (!container) return;
+
+            // Colores para el haz: violeta → naranja
+            const startColor = { r: 0x98, g: 0x36, b: 0xff }; // #9836ff
+            const endColor = { r: 0xfe, g: 0xda, b: 0x4b };   // #feda4b
+
+            function lerp(a, b, t) {
+               return a + (b - a) * t;
+            }
+
+            // última posición conocida del cursor (para rellenar el camino)
+            let lastX = null;
+            let lastY = null;
+
+            const maxGap = 11; // distancia máxima entre gotas (~fluidez)
+
+            function createSplash(x, y) {
+               const splash = document.createElement('div');
+               splash.classList.add('cursor-splash');
+
+               // Posición de la gota
+               splash.style.left = `${x}px`;
+               splash.style.top = `${y}px`;
+
+               // Variación leve de tamaño para que se vea orgánico
+               const size = 20 + Math.random() * 5;
+               splash.style.width = `${size}px`;
+               splash.style.height = `${size}px`;
+
+               // t según posición horizontal → mezcla violeta/naranja
+               let t = x / window.innerWidth;
+               if (t < 0) t = 0;
+               if (t > 1) t = 1;
+
+               const r = Math.round(lerp(startColor.r, endColor.r, t));
+               const g = Math.round(lerp(startColor.g, endColor.g, t));
+               const b = Math.round(lerp(startColor.b, endColor.b, t));
+
+               const core = `rgba(${r}, ${g}, ${b}, 0.5)`;
+               const edge = `rgba(${r}, ${g}, ${b}, 0)`;
+
+               splash.style.background = `
+                    radial-gradient(circle at 30% 30%,
+                        ${core},
+                        ${edge})
+                `;
+
+               // Leve delay aleatorio
+               const delay = Math.random() * 40;
+               splash.style.animationDelay = `${delay}ms`;
+
+               container.appendChild(splash);
+
+               // Limpiar del DOM cuando termina la animación
+               splash.addEventListener('animationend', () => {
+                  splash.remove();
+               });
+            }
+
+            window.addEventListener('mousemove', (e) => {
+               const x = e.clientX;
+               const y = e.clientY;
+
+               // primera vez
+               if (lastX === null || lastY === null) {
+                  createSplash(x, y);
+                  lastX = x;
+                  lastY = y;
+                  return;
+               }
+
+               const dx = x - lastX;
+               const dy = y - lastY;
+               const distance = Math.sqrt(dx * dx + dy * dy);
+
+               if (distance <= maxGap) {
+                  // movimiento corto → una sola gota
+                  createSplash(x, y);
+               } else {
+                  // movimiento largo → rellenamos el camino con varias gotas
+                  const steps = Math.ceil(distance / maxGap);
+                  for (let i = 1; i <= steps; i++) {
+                     const t = i / steps;
+                     const ix = lastX + dx * t;
+                     const iy = lastY + dy * t;
+                     createSplash(ix, iy);
+                  }
+               }
+
+               lastX = x;
+               lastY = y;
+            });
+
+            // Ocultar en pantallas táctiles (opcional)
+            window.addEventListener('touchstart', () => {
+               container.style.display = 'none';
+            });
+         })();
+      </script>
+
    </body>
 
 </html>

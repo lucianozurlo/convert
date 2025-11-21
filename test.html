@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Splash Cursor Effect</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            /* Demo layout (podés borrar esto y usar tu propio diseño) */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                /* background: radial-gradient(circle at top, #15151f 0, #050509 50%, #020207 100%); */
+                color: #f5f5f5;
+                overflow-x: hidden;
+            }
+
+            h1 {
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                max-width: 520px;
+                text-align: center;
+                opacity: 0.8;
+                line-height: 1.5;
+            }
+
+            /* ===== Splash Cursor Effect ===== */
+
+            /* Contenedor de las salpicaduras */
+            #cursor-splashes {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                pointer-events: none;
+                overflow: hidden;
+                z-index: 9999;
+            }
+
+            /* Cada gota */
+            .cursor-splash {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 999px;
+                /* el color real lo setea JS */
+                background: radial-gradient(circle at 30% 30%,
+                        rgba(0, 183, 235, 0.5),
+                        rgba(0, 183, 235, 0));
+                opacity: 0.2;
+                filter: blur(2px);
+                transform: translate(-50%, -50%) scale(0.4);
+                /* 🔧 haz más corto: animación más rápida */
+                animation: splash-pop 320ms ease-out forwards;
+            }
+
+            /* Animación: la gota crece, se dispersa y se desvanece (haz más corto) */
+            @keyframes splash-pop {
+                0% {
+                    opacity: 0.5;
+                    transform: translate(-50%, -50%) scale(0.4);
+                    filter: blur(1px);
+                }
+
+                15% {
+                    opacity: 0.2;
+                    transform: translate(-50%, -50%) scale(1.1);
+                    filter: blur(3px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(1.5);
+                    filter: blur(6px);
+                }
+            }
+
+            /* Respeto a usuarios con "reducir movimiento" */
+            @media (prefers-reduced-motion: reduce) {
+                .cursor-splash {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Contenido de ejemplo -->
+        <h1>Splash Cursor</h1>
+        <p>
+            Mové el mouse por la pantalla. Las gotitas siguen el cursor con un efecto suave
+            y continuo, con una estela más corta y sin huecos grandes, variando entre violeta y naranja.
+        </p>
+
+        <!-- Contenedor de las gotas -->
+        <div id="cursor-splashes"></div>
+
+        <script>
+            (function () {
+                const container = document.getElementById('cursor-splashes');
+                if (!container) return;
+
+                // Colores para el haz: violeta → naranja
+                const startColor = { r: 0x98, g: 0x36, b: 0xff }; // #9836ff
+                const endColor = { r: 0xfe, g: 0xda, b: 0x4b };   // #feda4b
+
+                function lerp(a, b, t) {
+                    return a + (b - a) * t;
+                }
+
+                // última posición conocida del cursor (para rellenar el camino)
+                let lastX = null;
+                let lastY = null;
+
+                const maxGap = 11; // distancia máxima entre gotas (~fluidez)
+
+                function createSplash(x, y) {
+                    const splash = document.createElement('div');
+                    splash.classList.add('cursor-splash');
+
+                    // Posición de la gota
+                    splash.style.left = `${x}px`;
+                    splash.style.top = `${y}px`;
+
+                    // Variación leve de tamaño para que se vea orgánico
+                    const size = 20 + Math.random() * 5;
+                    splash.style.width = `${size}px`;
+                    splash.style.height = `${size}px`;
+
+                    // t según posición horizontal → mezcla violeta/naranja
+                    let t = x / window.innerWidth;
+                    if (t < 0) t = 0;
+                    if (t > 1) t = 1;
+
+                    const r = Math.round(lerp(startColor.r, endColor.r, t));
+                    const g = Math.round(lerp(startColor.g, endColor.g, t));
+                    const b = Math.round(lerp(startColor.b, endColor.b, t));
+
+                    const core = `rgba(${r}, ${g}, ${b}, 0.5)`;
+                    const edge = `rgba(${r}, ${g}, ${b}, 0)`;
+
+                    splash.style.background = `
+                    radial-gradient(circle at 30% 30%,
+                        ${core},
+                        ${edge})
+                `;
+
+                    // Leve delay aleatorio
+                    const delay = Math.random() * 40;
+                    splash.style.animationDelay = `${delay}ms`;
+
+                    container.appendChild(splash);
+
+                    // Limpiar del DOM cuando termina la animación
+                    splash.addEventListener('animationend', () => {
+                        splash.remove();
+                    });
+                }
+
+                window.addEventListener('mousemove', (e) => {
+                    const x = e.clientX;
+                    const y = e.clientY;
+
+                    // primera vez
+                    if (lastX === null || lastY === null) {
+                        createSplash(x, y);
+                        lastX = x;
+                        lastY = y;
+                        return;
+                    }
+
+                    const dx = x - lastX;
+                    const dy = y - lastY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance <= maxGap) {
+                        // movimiento corto → una sola gota
+                        createSplash(x, y);
+                    } else {
+                        // movimiento largo → rellenamos el camino con varias gotas
+                        const steps = Math.ceil(distance / maxGap);
+                        for (let i = 1; i <= steps; i++) {
+                            const t = i / steps;
+                            const ix = lastX + dx * t;
+                            const iy = lastY + dy * t;
+                            createSplash(ix, iy);
+                        }
+                    }
+
+                    lastX = x;
+                    lastY = y;
+                });
+
+                // Ocultar en pantallas táctiles (opcional)
+                window.addEventListener('touchstart', () => {
+                    container.style.display = 'none';
+                });
+            })();
+        </script>
+    </body>
+
+</html>

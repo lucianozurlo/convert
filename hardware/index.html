@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,18 +8,15 @@
       <title>Convert Studios | Build. Launch & Grow</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-         rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
 
       <link type="text/css" rel="stylesheet" href="../css/config.css" />
       <link type="text/css" rel="stylesheet" href="../css/libs.css" />
       <link type="text/css" rel="stylesheet" href="../css/style.css" />
       <link type="text/css" rel="stylesheet" href="../css/responsive.css" />
-      <link type="text/css" rel="stylesheet" href="../css/convert_v2.css" />
+      <link type="text/css" rel="stylesheet" href="../css/convert_v3.css" />
       <link type="text/css" rel="stylesheet" href="../css/hardware.css" />
-      <link type="text/css" rel="stylesheet" href="../css/convert-responsive_v2.css" />
+      <link type="text/css" rel="stylesheet" href="../css/convert-responsive_v3.css" />
 
       <link rel="icon" href="../img/favicon.ico" sizes="32x32" />
 
@@ -34,6 +32,8 @@
    </head>
 
    <body id="hardware">
+      <div id="cursor-splashes"></div>
+
       <header id="convert-header" class="is-frosted is-sticky">
          <div class="convert-header-inner">
             <div class="convert-header-lp">
@@ -58,15 +58,11 @@
                      <li><a href="../#projects" onclick="closeMobileNav()">projects</a></li>
                      <li><a href="../#about" onclick="closeMobileNav()">about</a></li>
                      <li><a href="../#contact" onclick="closeMobileNav()">contact</a></li>
-                     <a
-                        href="mailto:info@convertstudios.com.au"
-                        class="convert-logo button-main white mob"
-                     >
+                     <a href="mailto:info@convertstudios.com.au" class="convert-logo button-main white mob">
                         let's talk<img src="../img/arrow-left.svg" />
                      </a>
                      <a href="#" class="logoNavMenu mob">
-                        <img src="../img/convert-logo-light.svg" alt="convert"
-                     /></a>
+                        <img src="../img/convert-logo-light.svg" alt="convert" /></a>
                   </ul>
                </nav>
             </div>
@@ -95,12 +91,7 @@
       <main id="convert-main">
          <div class="stg-container">
             <section id="intro">
-               <div
-                  class="content"
-                  data-stagger-appear="fade-left"
-                  data-stagger-delay="25"
-                  data-unload="fade-right"
-               >
+               <div class="content" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                   <div class="item">
                      <div class="text">
                         <h2>From Concept to Production-Ready Hardware.</h2>
@@ -160,12 +151,7 @@
                </div>
 
                <div class="content">
-                  <div
-                     class="items"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
+                  <div class="items" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                      <div class="item">
                         <h4>01.</h4>
                         <h5>Industrial Design</h5>
@@ -205,21 +191,11 @@
 
             <section id="whyWork">
                <div class="content">
-                  <div
-                     class="title"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
+                  <div class="title" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                      <h2>Why Work With Convert Studios</h2>
                   </div>
 
-                  <div
-                     class="details"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
+                  <div class="details" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                      <div class="item">
                         <h3>Hybrid Hardware + Software Expertise</h3>
                         <p>
@@ -263,16 +239,9 @@
                </div>
 
                <div class="full-width">
-                  <div
-                     class="content-row"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
-                     <swiper-container
-                        slides-per-view="2.65"
-                        free-mode="true"
-                        breakpoints='{
+                  <div class="content-row" data-stagger-appear="fade-left" data-stagger-delay="25"
+                     data-unload="fade-right">
+                     <swiper-container slides-per-view="2.65" free-mode="true" breakpoints='{
                            "0": {
                               "slidesPerView": 1,
                               "spaceBetween": 0
@@ -281,8 +250,7 @@
                               "slidesPerView": 2.65,
                               "spaceBetween": -35
                            }
-                        }'
-                     >
+                        }'>
                         <swiper-slide>
                            <div class="slide">
                               <img src="../img/slider/slide1.jpg" alt="" />
@@ -346,22 +314,13 @@
 
             <section id="productIdea">
                <div class="content">
-                  <div
-                     class="title"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
+                  <div class="title" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                      <h2>Got a Product Idea?</h2>
                      <h2>Let's Build It Together.</h2>
                   </div>
 
-                  <div
-                     class="buttons-inline"
-                     data-stagger-appear="fade-left"
-                     data-stagger-delay="25"
-                     data-unload="fade-right"
-                  >
+                  <div class="buttons-inline" data-stagger-appear="fade-left" data-stagger-delay="25"
+                     data-unload="fade-right">
                      <a href="#" class="convert-logo button-main white">
                         send a product enquiry
                         <img src="../img/arrow-left.svg" />
@@ -384,12 +343,7 @@
             </section>
 
             <section id="contact">
-               <div
-                  class="content"
-                  data-stagger-appear="fade-left"
-                  data-stagger-delay="25"
-                  data-unload="fade-right"
-               >
+               <div class="content" data-stagger-appear="fade-left" data-stagger-delay="25" data-unload="fade-right">
                   <div class="form mobNo">
                      <h3>Let's Talk.</h3>
                      <div class="form-content">
@@ -413,12 +367,8 @@
                      </div>
                   </div>
                   <div class="info">
-                     <div
-                        class="info-content"
-                        data-stagger-appear="fade-left"
-                        data-stagger-delay="25"
-                        data-unload="fade-right"
-                     >
+                     <div class="info-content" data-stagger-appear="fade-left" data-stagger-delay="25"
+                        data-unload="fade-right">
                         <h3>Contact Us.</h3>
                         <p>
                            Convert® Studios is a fully remote company with team members across
@@ -430,20 +380,15 @@
                         </p>
                         <p>
                            Direct Contact -
-                           <strong
-                              ><a href="mailto:info@convertstudios.com.au">Contact Here</a></strong
-                           >
+                           <strong><a href="mailto:info@convertstudios.com.au">Contact Here</a></strong>
                         </p>
                         <div class="social">
-                           <a href="https://au.linkedin.com/company/convert-studios" target="_blank"
-                              ><img src="../img/icon-linkedin.svg" alt=""
-                           /></a>
-                           <a href="https://www.instagram.com/convertstudios/" target="_blank"
-                              ><img src="../img/icon-instagram.svg" alt=""
-                           /></a>
-                           <a href="https://www.youtube.com/@convertstudios5758" target="_blank"
-                              ><img src="../img/icon-youtube.svg" alt=""
-                           /></a>
+                           <a href="https://au.linkedin.com/company/convert-studios" target="_blank"><img
+                                 src="../img/icon-linkedin.svg" alt="" /></a>
+                           <a href="https://www.instagram.com/convertstudios/" target="_blank"><img
+                                 src="../img/icon-instagram.svg" alt="" /></a>
+                           <a href="https://www.youtube.com/@convertstudios5758" target="_blank"><img
+                                 src="../img/icon-youtube.svg" alt="" /></a>
                         </div>
                      </div>
                      <div class="footer">
@@ -1091,5 +1036,110 @@
          //   setTimeout(() => document.documentElement.classList.add('textures-on'), 2000);
          // }, { once: true });
       </script>
+
+      <script>
+         (function () {
+            const container = document.getElementById('cursor-splashes');
+            if (!container) return;
+
+            // Colores para el haz: violeta → naranja
+            const startColor = { r: 0x98, g: 0x36, b: 0xff }; // #9836ff
+            const endColor = { r: 0xfe, g: 0xda, b: 0x4b };   // #feda4b
+
+            function lerp(a, b, t) {
+               return a + (b - a) * t;
+            }
+
+            // última posición conocida del cursor (para rellenar el camino)
+            let lastX = null;
+            let lastY = null;
+
+            const maxGap = 11; // distancia máxima entre gotas (~fluidez)
+
+            function createSplash(x, y) {
+               const splash = document.createElement('div');
+               splash.classList.add('cursor-splash');
+
+               // Posición de la gota
+               splash.style.left = `${x}px`;
+               splash.style.top = `${y}px`;
+
+               // Variación leve de tamaño para que se vea orgánico
+               const size = 20 + Math.random() * 5;
+               splash.style.width = `${size}px`;
+               splash.style.height = `${size}px`;
+
+               // t según posición horizontal → mezcla violeta/naranja
+               let t = x / window.innerWidth;
+               if (t < 0) t = 0;
+               if (t > 1) t = 1;
+
+               const r = Math.round(lerp(startColor.r, endColor.r, t));
+               const g = Math.round(lerp(startColor.g, endColor.g, t));
+               const b = Math.round(lerp(startColor.b, endColor.b, t));
+
+               const core = `rgba(${r}, ${g}, ${b}, 0.5)`;
+               const edge = `rgba(${r}, ${g}, ${b}, 0)`;
+
+               splash.style.background = `
+                    radial-gradient(circle at 30% 30%,
+                        ${core},
+                        ${edge})
+                `;
+
+               // Leve delay aleatorio
+               const delay = Math.random() * 40;
+               splash.style.animationDelay = `${delay}ms`;
+
+               container.appendChild(splash);
+
+               // Limpiar del DOM cuando termina la animación
+               splash.addEventListener('animationend', () => {
+                  splash.remove();
+               });
+            }
+
+            window.addEventListener('mousemove', (e) => {
+               const x = e.clientX;
+               const y = e.clientY;
+
+               // primera vez
+               if (lastX === null || lastY === null) {
+                  createSplash(x, y);
+                  lastX = x;
+                  lastY = y;
+                  return;
+               }
+
+               const dx = x - lastX;
+               const dy = y - lastY;
+               const distance = Math.sqrt(dx * dx + dy * dy);
+
+               if (distance <= maxGap) {
+                  // movimiento corto → una sola gota
+                  createSplash(x, y);
+               } else {
+                  // movimiento largo → rellenamos el camino con varias gotas
+                  const steps = Math.ceil(distance / maxGap);
+                  for (let i = 1; i <= steps; i++) {
+                     const t = i / steps;
+                     const ix = lastX + dx * t;
+                     const iy = lastY + dy * t;
+                     createSplash(ix, iy);
+                  }
+               }
+
+               lastX = x;
+               lastY = y;
+            });
+
+            // Ocultar en pantallas táctiles (opcional)
+            window.addEventListener('touchstart', () => {
+               container.style.display = 'none';
+            });
+         })();
+      </script>
+
    </body>
+
 </html>
