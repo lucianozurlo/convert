@@ -1,8 +1,8 @@
 /* INTRO */
-#hardware #intro {
+/* #hardware #intro {
    background-image: url('../img/hw-home.jpg');
    background-size: cover;
-}
+} */
 #intro .content .item .text {
    width: 591px;
    min-width: 591px;
