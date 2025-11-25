@@ -157,8 +157,11 @@
    transform: translate(-4%, 213%);
 }
 #DesignPrint .title img.center {
-   max-width: 940px;
-   margin: 0 auto;
+   /* max-width: 940px;
+   margin: 0 auto; */
+   min-width: 72%;
+   max-width: 940px !important;
+   margin: -8% auto -18%;
 }
 
 #banner3dprint {
