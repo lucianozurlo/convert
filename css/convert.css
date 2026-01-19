@@ -480,7 +480,7 @@ main#convert-main {
 #intro .content .item .text .details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   gap: 27px;
 }
@@ -492,6 +492,9 @@ main#convert-main {
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+#intro .content .item .text .details a {
+  margin-top: 3rem;
 }
 #intro .mouse {
   position: absolute;
