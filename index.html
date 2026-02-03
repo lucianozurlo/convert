@@ -1637,15 +1637,31 @@
             });
          })();
       </script> -->
+
       <script>
-         document.addEventListener('DOMContentLoaded', function () {
-            const video = document.querySelector('video');
-            video.play().catch(error => {
-               console.log("Autoplay bloqueado. Mostrando botón de Play.");
-               // Oculta el poster o muestra un botón de play aquí
-               // video.style.display = 'none';
+         (function () {
+            const v = document.getElementById("alphaVideo");
+            if (!v) return;
+
+            // Clave: muted BEFORE play()
+            v.muted = true;
+            v.setAttribute("muted", "");
+            v.setAttribute("playsinline", "");
+            v.setAttribute("webkit-playsinline", "");
+
+            const tryPlay = () => {
+               const p = v.play();
+               if (p && typeof p.catch === "function") p.catch(() => { });
+            };
+
+            v.addEventListener("canplay", tryPlay, { once: true });
+            document.addEventListener("visibilitychange", () => {
+               if (!document.hidden) tryPlay();
             });
-         });
+
+            // Fallback: primer toque del usuario (por si Safari se pone duro)
+            window.addEventListener("touchstart", tryPlay, { once: true, passive: true });
+         })();
       </script>
    </body>
 
