@@ -1637,7 +1637,16 @@
             });
          })();
       </script> -->
-
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('video');
+            video.play().catch(error => {
+               console.log("Autoplay bloqueado. Mostrando botón de Play.");
+               // Oculta el poster o muestra un botón de play aquí
+               // video.style.display = 'none';
+            });
+         });
+      </script>
    </body>
 
 </html>
