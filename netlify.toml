@@ -7,7 +7,8 @@
   for = "css/fonts/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+    Content-Type = "video/mp4"
     Cache-Control = "public, max-age=31536000"
-
+    
 [[plugins]]
   package = "@netlify/plugin-sitemap"
