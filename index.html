@@ -122,11 +122,11 @@
                   </div>
                </div>
                <div class="texture-main">
-                  <video id="alphaVideo" muted playsinline webkit-playsinline autoplay loop preload="auto"
-                     disableRemotePlayback>
-                     <source src="img/hero.mov" type="video/quicktime" />
+                  <video id="alphaVideo" autoplay muted loop playsinline webkit-playsinline preload="auto"
+                     disablepictureinpicture disableRemotePlayback>
                      <source src="img/hero.mp4" type="video/mp4" />
                   </video>
+
                </div>
             </section>
 
@@ -1639,11 +1639,11 @@
       </script> -->
 
       <script>
-         (function () {
+         (() => {
             const v = document.getElementById("alphaVideo");
             if (!v) return;
 
-            // Clave: muted BEFORE play()
+            // clave: muted antes del play
             v.muted = true;
             v.setAttribute("muted", "");
             v.setAttribute("playsinline", "");
@@ -1651,18 +1651,17 @@
 
             const tryPlay = () => {
                const p = v.play();
-               if (p && typeof p.catch === "function") p.catch(() => { });
+               if (p && p.catch) p.catch(() => { });
             };
 
+            v.addEventListener("loadedmetadata", tryPlay, { once: true });
             v.addEventListener("canplay", tryPlay, { once: true });
-            document.addEventListener("visibilitychange", () => {
-               if (!document.hidden) tryPlay();
-            });
 
-            // Fallback: primer toque del usuario (por si Safari se pone duro)
+            // fallback: primer gesto del usuario
             window.addEventListener("touchstart", tryPlay, { once: true, passive: true });
          })();
       </script>
+
    </body>
 
 </html>
