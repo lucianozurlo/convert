@@ -602,26 +602,26 @@
    #intro .content .item .text .details p {
       text-align: center;
    }
-   #3Dprinting #intro .content .item .text .details {
+   #printing3D #intro .content .item .text .details {
       display: flex;
       flex-direction: column;
       align-items: center;
    }
 
-   #3Dprinting #intro .content .item .text .details.bottom {
+   #printing3D #intro .content .item .text .details.bottom {
       margin-bottom: 30px;
    }
-   #3Dprinting #intro .content-row .logos {
+   #printing3D #intro .content-row .logos {
       width: 100%;
       max-width: 100%;
       position: relative;
    }
 
-   #3Dprinting #intro .buttons {
+   #printing3D #intro .buttons {
       margin-bottom: 10px;
    }
 
-   #3Dprinting .content-row .logos div {
+   #printing3D .content-row .logos div {
       width: 100%;
       max-width: 100%;
       position: relative;
@@ -633,105 +633,105 @@
       gap: 20px;
    }
 
-   #3Dprinting #intro .content .item .item-image img {
+   #printing3D #intro .content .item .item-image img {
       transform: translateY(65px);
       margin-bottom: 130px;
    }
-   #3Dprinting #ourServices .content:last-child {
+   #printing3D #ourServices .content:last-child {
       margin-top: 0;
    }
-   #3Dprinting #ourServices .text {
+   #printing3D #ourServices .text {
       max-width: 100%;
    }
 
-   #3Dprinting #DesignPrint {
+   #printing3D #DesignPrint {
       max-width: 100%;
       padding: 100px 30px;
    }
 
-   #3Dprinting #DesignPrint .content {
+   #printing3D #DesignPrint .content {
       max-width: 100%;
       padding: 0;
    }
 
-   #3Dprinting #DesignPrint .title h1 {
+   #printing3D #DesignPrint .title h1 {
       font-size: 100px;
       line-height: 0.8;
    }
-   #3Dprinting #DesignPrint .details {
+   #printing3D #DesignPrint .details {
       flex-direction: column;
       gap: 60px;
       width: 100%;
       max-width: 100%;
    }
-   #3Dprinting #DesignPrint .details .item {
+   #printing3D #DesignPrint .details .item {
       max-width: 100%;
    }
-   #3Dprinting #DesignPrint .title h1.right {
+   #printing3D #DesignPrint .title h1.right {
       margin-top: 100px;
       text-align: left;
       margin-bottom: 0;
    }
-   #3Dprinting #DesignPrint .title p {
+   #printing3D #DesignPrint .title p {
       max-width: 100%;
       text-align: left;
       line-height: 1.4;
       position: relative;
       transform: unset;
    }
-   #3Dprinting #DesignPrint .title img {
+   #printing3D #DesignPrint .title img {
       display: none;
    }
 
-   #3Dprinting #banner3dprint {
+   #printing3D #banner3dprint {
       height: 190px;
    }
-   #3Dprinting #banner3dprint .info {
+   #printing3D #banner3dprint .info {
       padding: 0;
    }
-   #3Dprinting #banner3dprint .info div {
+   #printing3D #banner3dprint .info div {
       width: 33.33333%;
    }
-   #3Dprinting #banner3dprint .info h2 {
+   #printing3D #banner3dprint .info h2 {
       font-size: 50px;
    }
-   #3Dprinting #banner3dprint .info p {
+   #printing3D #banner3dprint .info p {
       height: 60px;
    }
 
-   #3Dprinting #differences {
+   #printing3D #differences {
       padding: 100px 30px;
    }
-   #3Dprinting #differences .content {
+   #printing3D #differences .content {
       max-width: 100% !important;
       padding: 0 !important;
    }
-   #3Dprinting #differences table {
+   #printing3D #differences table {
       max-width: 100% !important;
       padding: 0 !important;
    }
-   #3Dprinting #differences table thead th {
+   #printing3D #differences table thead th {
       padding: 0 0 15px;
    }
-   #3Dprinting #differences table th {
+   #printing3D #differences table th {
       font-size: 30px;
       line-height: 1;
    }
-   #3Dprinting #differences table td {
+   #printing3D #differences table td {
       padding-right: 10px !important;
       font-size: 14px !important;
       min-width: unset !important;
    }
-   #3Dprinting #differences table td:last-child {
+   #printing3D #differences table td:last-child {
       padding-right: 0 !important;
    }
-   #3Dprinting #differences table td img {
+   #printing3D #differences table td img {
       padding-right: 6px;
       transform: translateY(1px);
       height: 13px;
    }
-   #3Dprinting #productIdea .ready-to-print-1,
-   #3Dprinting #productIdea .ready-to-print-2 {
+   #printing3D #productIdea .ready-to-print-1,
+   #printing3D #productIdea .ready-to-print-2 {
       display: none;
    }
    /**/
@@ -2064,7 +2064,7 @@
       line-height: 210% !important;
       margin-top: 40px;
    }
-   #3Dprinting #productIdea .title h4 {
+   #printing3D #productIdea .title h4 {
       margin-top: 20px;
    }
 }

@@ -4,7 +4,7 @@
    /* --to: #330900; */
 }
 
-#3Dprinting #intro {
+#printing3D #intro {
    background-image: unset !important;
 }
 
@@ -16,7 +16,7 @@
    transform: translate(-3%, -4%);
 }
 
-#3Dprinting #intro .content-row .logos {
+#printing3D #intro .content-row .logos {
    gap: 0;
    margin-top: 18px;
    margin-bottom: 0;
@@ -31,7 +31,7 @@
    left: 0;
 }
 
-#3Dprinting .content-row .logos div {
+#printing3D .content-row .logos div {
    display: flex;
    flex-direction: row;
    align-items: center;
@@ -39,7 +39,7 @@
    width: 100%;
 }
 
-#3Dprinting .content-row .logos img {
+#printing3D .content-row .logos img {
    opacity: 0.8;
    height: auto;
    -webkit-filter: invert(1);
