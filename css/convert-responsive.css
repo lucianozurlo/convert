@@ -541,8 +541,8 @@
       /* height: 100%; */
       padding: 110px 0 80px;
       /* padding: 0; */
-      /* align-items: center; */
-      align-items: flex-start;
+      align-items: center;
+      /*align-items: flex-start; */
       height: auto !important;
       min-height: 100vh;
       background-size: cover;
