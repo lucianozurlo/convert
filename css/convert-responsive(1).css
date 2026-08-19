@@ -541,8 +541,8 @@
       /* height: 100%; */
       padding: 110px 0 80px;
       /* padding: 0; */
-      align-items: center;
-      /*align-items: flex-start; */
+      /* align-items: center; */
+      align-items: flex-start;
       height: auto !important;
       min-height: 100vh;
       background-size: cover;
@@ -568,7 +568,6 @@
       width: unset;
       min-width: unset;
       gap: 20px;
-      max-width: 100%;
    }
 
    #intro .content .item .text h1 {
@@ -578,14 +577,10 @@
    #intro .content .item .text h2 {
       font-size: 50px;
    }
-   #intro .content .item .text .details {
-      max-width: 100%;
-   }
    #intro .content .item .text .details p {
       font-size: 18px;
       font-weight: 300;
-      line-height: 1.4;
-      max-width: 100%;
+      line-height: 1.2;
    }
    #intro .buttons {
       align-items: center;
